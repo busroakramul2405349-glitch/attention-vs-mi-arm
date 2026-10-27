@@ -1,0 +1,4 @@
+IF stalk-surface-above-ring=k AND ring-number=o THEN poisonous=p  (support=0.262, confidence=1.000)
+IF bruises=f AND stalk-color-above-ring=p THEN poisonous=p  (support=0.159, confidence=1.000)
+IF ring-number=t THEN poisonous=e  (support=0.062, confidence=0.865)
+IF stalk-surface-above-ring=s AND ring-type=p THEN poisonous=e  (support=0.364, confidence=0.814)

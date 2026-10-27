@@ -1,0 +1,39 @@
+pyaerial 1.1.0 | Python 3.13.14 | Windows-11-10.0.26200-SP0
+Mushroom: 8124 baris, 23 kolom
+
+=== seed 0 ===
+  association rules: 926 | runtime 9.64s | stats {'rule_count': 926, 'average_support': 0.417, 'average_confidence': 0.949, 'average_zhangs_metric': 0.128, 'average_coverage': 0.44, 'data_coverage': 1.0}
+  class rules: 14 | akurasi uji 0.5178 | coverage uji 0.6266
+  contoh rule pertama (cek format): {'antecedents': [{'feature': 'cap-shape', 'value': 'f'}], 'consequent': {'feature': 'gill-attachment', 'value': 'f'}, 'support': 0.381, 'confidence': 0.983, 'zhangs_metric': 0.014, 'rule_coverage': 0.388}
+
+=== seed 1 ===
+  association rules: 982 | runtime 1.37s | stats {'rule_count': 982, 'average_support': 0.411, 'average_confidence': 0.945, 'average_zhangs_metric': 0.135, 'average_coverage': 0.436, 'data_coverage': 1.0}
+  class rules: 9 | akurasi uji 0.8794 | coverage uji 0.8867
+
+=== seed 2 ===
+  association rules: 838 | runtime 1.48s | stats {'rule_count': 838, 'average_support': 0.425, 'average_confidence': 0.945, 'average_zhangs_metric': 0.12, 'average_coverage': 0.45, 'data_coverage': 1.0}
+  class rules: 19 | akurasi uji 0.9027 | coverage uji 0.9967
+
+=== seed 3 ===
+  association rules: 868 | runtime 1.39s | stats {'rule_count': 868, 'average_support': 0.425, 'average_confidence': 0.944, 'average_zhangs_metric': 0.142, 'average_coverage': 0.451, 'data_coverage': 1.0}
+  class rules: 16 | akurasi uji 0.5178 | coverage uji 0.6266
+
+=== seed 4 ===
+  association rules: 911 | runtime 1.35s | stats {'rule_count': 911, 'average_support': 0.427, 'average_confidence': 0.948, 'average_zhangs_metric': 0.125, 'average_coverage': 0.452, 'data_coverage': 1.0}
+  class rules: 12 | akurasi uji 0.9331 | coverage uji 0.9754
+
+PyAerial 1.1.0 on UCI Mushroom (n=8124), seeds=[0, 1, 2, 3, 4]
+Setup: epochs=2, layer_dims=[10], max_antecedents=2, ant_similarity=0.5, cons_similarity=0.8, test_size=0.3
+
+n_rules             : 905.0000 +/- 55.3715
+support             : 0.4210 +/- 0.0068
+confidence          : 0.9462 +/- 0.0022
+data_coverage       : 1.0000 +/- 0.0000
+avg_rule_coverage   : 0.4458 +/- 0.0073
+zhangs_metric       : 0.1300 +/- 0.0086
+runtime_s           : 3.0492 +/- 3.6875
+n_class_rules       : 14.0000 +/- 3.8079
+test_accuracy       : 0.7502 +/- 0.2130
+test_rule_coverage  : 0.8224 +/- 0.1834
+
+SELESAI. Hasil tersimpan di pyaerial_mushroom_results.csv dan pyaerial_mushroom_summary.txt

@@ -1,0 +1,11 @@
+UCI Mushroom, seeds=[0, 1, 2, 3, 4], split train/val/test=56/14/30, min_support=0.05, min_conf=0.8, max_antecedents=2
+VATTEN: d=64, heads=4, epochs=30, top_k=6, RL episodes=1000, lambda1=1.0, lambda2=0.05
+
+FP-Growth        n_rules=709.0000±14.4741  n_all_association_rules=14421.4000±237.2442  test_accuracy=0.9928±0.0020  test_coverage=1.0000±0.0000  avg_support=0.1191±0.0012  avg_confidence=0.9512±0.0012  runtime_s=0.8058±0.0575
+Apriori          n_rules=709.0000±14.4741  n_all_association_rules=14421.4000±237.2442  test_accuracy=0.9928±0.0020  test_coverage=1.0000±0.0000  avg_support=0.1191±0.0012  avg_confidence=0.9512±0.0012  runtime_s=0.4220±0.0585
+PyAerial         n_rules=21.6000±6.6933  n_all_association_rules=878.0000±41.3098  test_accuracy=0.9391±0.0052  test_coverage=1.0000±0.0000  avg_support=0.3220±0.0175  avg_confidence=0.9296±0.0086  runtime_s=1.7028±0.7025
+VATTEN-noRL      n_rules=57.0000±13.8203  test_accuracy=0.9350±0.0509  test_coverage=0.9854±0.0223  avg_support=0.1513±0.0207  avg_confidence=0.9571±0.0123  runtime_s=27.2524±2.5431
+VATTEN-Rule      n_rules=3.8000±0.4472  test_accuracy=0.9275±0.0549  test_coverage=0.9412±0.0691  avg_support=0.3100±0.0641  avg_confidence=0.9228±0.0257  runtime_s=32.8488±2.6789
+MI-noRL          n_rules=97.0000±3.1623  test_accuracy=0.9344±0.0016  test_coverage=1.0000±0.0000  avg_support=0.1259±0.0027  avg_confidence=0.9530±0.0031  runtime_s=0.2358±0.0079
+MI+RL            n_rules=4.0000±0.0000  test_accuracy=0.9183±0.0143  test_coverage=0.9791±0.0156  avg_support=0.3096±0.0088  avg_confidence=0.9332±0.0182  runtime_s=5.9386±0.2232
+RandomFeat+RL    n_rules=4.4000±1.1402  test_accuracy=0.8880±0.0583  test_coverage=0.8260±0.1322  avg_support=0.2036±0.0691  avg_confidence=0.9583±0.0266  runtime_s=5.5832±0.0650

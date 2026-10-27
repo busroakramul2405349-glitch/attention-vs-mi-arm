@@ -1,0 +1,157 @@
+Python 3.13.14 | Windows-11-10.0.26200-SP0
+  numpy 2.4.6
+  pandas 3.0.3
+  torch 2.13.0
+  mlxtend 0.25.0
+  pyaerial 1.1.0
+Mushroom: 8124 baris, 22 fitur + kelas
+
+=== seed 0 ===
+C:\Users\COMPUTER\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\mlxtend\frequent_patterns\association_rules.py:184: RuntimeWarning: invalid value encountered in divide
+  cert_metric = np.where(certainty_denom == 0, 0, certainty_num / certainty_denom)
+  FP-Growth        rules=  689 acc=0.9922 cov=1.0000 time=0.76s
+C:\Users\COMPUTER\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\mlxtend\frequent_patterns\association_rules.py:184: RuntimeWarning: invalid value encountered in divide
+  cert_metric = np.where(certainty_denom == 0, 0, certainty_num / certainty_denom)
+  Apriori          rules=  689 acc=0.9922 cov=1.0000 time=0.52s
+[94m2026-10-26 05:40:21,775 - aerial - INFO - Auto batch_size: 32 (based on 4550 samples)[0m
+[94m2026-10-26 05:40:24,478 - aerial - INFO - Mining association rules...[0m
+[94m2026-10-26 05:40:24,675 - aerial - INFO - Post-filtering: 956 -> 887 rules[0m
+[94m2026-10-26 05:40:24,700 - aerial - INFO - Mining complete: 887 rules with avg support=0.419, avg confidence=0.947[0m
+[94m2026-10-26 05:40:24,700 - aerial - INFO - Mining association rules...[0m
+[94m2026-10-26 05:40:24,712 - aerial - INFO - Post-filtering: 27 -> 22 rules[0m
+[94m2026-10-26 05:40:24,714 - aerial - INFO - Mining complete: 22 rules with avg support=0.333, avg confidence=0.924[0m
+  PyAerial         rules=   22 acc=0.9417 cov=1.0000 time=2.94s
+    VATTEN epoch 10/30 loss 0.0864
+    VATTEN epoch 20/30 loss 0.0666
+    VATTEN epoch 30/30 loss 0.0590
+  Top fitur menurut attention ke kelas: ['bruises', 'ring-type', 'stalk-color-above-ring', 'ring-number', 'stalk-surface-above-ring', 'stalk-surface-below-ring']
+  VATTEN-noRL      rules=   46 acc=0.8445 cov=0.9471 time=23.90s
+  VATTEN-Rule      rules=    4 acc=0.8408 cov=0.8178 time=29.41s
+  Top fitur menurut MI ke kelas: ['odor', 'spore-print-color', 'gill-color', 'ring-type', 'stalk-surface-above-ring', 'stalk-surface-below-ring']
+  MI-noRL          rules=   96 acc=0.9323 cov=1.0000 time=0.25s
+  MI+RL            rules=    4 acc=0.9204 cov=0.9709 time=5.77s
+  RandomFeat+RL    rules=    4 acc=0.8063 cov=0.5987 time=5.59s
+
+=== seed 1 ===
+C:\Users\COMPUTER\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\mlxtend\frequent_patterns\association_rules.py:184: RuntimeWarning: invalid value encountered in divide
+  cert_metric = np.where(certainty_denom == 0, 0, certainty_num / certainty_denom)
+  FP-Growth        rules=  712 acc=0.9943 cov=1.0000 time=0.91s
+C:\Users\COMPUTER\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\mlxtend\frequent_patterns\association_rules.py:184: RuntimeWarning: invalid value encountered in divide
+  cert_metric = np.where(certainty_denom == 0, 0, certainty_num / certainty_denom)
+  Apriori          rules=  712 acc=0.9943 cov=1.0000 time=0.41s
+[94m2026-10-26 05:41:07,267 - aerial - INFO - Auto batch_size: 32 (based on 4550 samples)[0m
+[94m2026-10-26 05:41:08,341 - aerial - INFO - Mining association rules...[0m
+[94m2026-10-26 05:41:08,452 - aerial - INFO - Post-filtering: 951 -> 862 rules[0m
+[94m2026-10-26 05:41:08,482 - aerial - INFO - Mining complete: 862 rules with avg support=0.421, avg confidence=0.950[0m
+[94m2026-10-26 05:41:08,482 - aerial - INFO - Mining association rules...[0m
+[94m2026-10-26 05:41:08,492 - aerial - INFO - Post-filtering: 20 -> 17 rules[0m
+[94m2026-10-26 05:41:08,493 - aerial - INFO - Mining complete: 17 rules with avg support=0.307, avg confidence=0.933[0m
+  PyAerial         rules=   17 acc=0.9446 cov=1.0000 time=1.23s
+    VATTEN epoch 10/30 loss 0.0857
+    VATTEN epoch 20/30 loss 0.0640
+    VATTEN epoch 30/30 loss 0.0591
+  Top fitur menurut attention ke kelas: ['gill-spacing', 'gill-size', 'odor', 'stalk-shape', 'gill-color', 'stalk-surface-below-ring']
+  VATTEN-noRL      rules=   72 acc=0.9668 cov=0.9955 time=26.07s
+  VATTEN-Rule      rules=    4 acc=0.9684 cov=0.9741 time=31.53s
+  Top fitur menurut MI ke kelas: ['odor', 'spore-print-color', 'gill-color', 'ring-type', 'stalk-surface-above-ring', 'stalk-surface-below-ring']
+  MI-noRL          rules=   95 acc=0.9352 cov=1.0000 time=0.23s
+  MI+RL            rules=    4 acc=0.8933 cov=0.9622 time=5.86s
+  RandomFeat+RL    rules=    6 acc=0.8547 cov=0.8831 time=5.48s
+
+=== seed 2 ===
+C:\Users\COMPUTER\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\mlxtend\frequent_patterns\association_rules.py:184: RuntimeWarning: invalid value encountered in divide
+  cert_metric = np.where(certainty_denom == 0, 0, certainty_num / certainty_denom)
+  FP-Growth        rules=  729 acc=0.9955 cov=1.0000 time=0.78s
+C:\Users\COMPUTER\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\mlxtend\frequent_patterns\association_rules.py:184: RuntimeWarning: invalid value encountered in divide
+  cert_metric = np.where(certainty_denom == 0, 0, certainty_num / certainty_denom)
+  Apriori          rules=  729 acc=0.9955 cov=1.0000 time=0.38s
+[94m2026-10-26 05:41:52,973 - aerial - INFO - Auto batch_size: 32 (based on 4550 samples)[0m
+[94m2026-10-26 05:41:54,184 - aerial - INFO - Mining association rules...[0m
+[94m2026-10-26 05:41:54,290 - aerial - INFO - Post-filtering: 987 -> 933 rules[0m
+[94m2026-10-26 05:41:54,315 - aerial - INFO - Mining complete: 933 rules with avg support=0.395, avg confidence=0.954[0m
+[94m2026-10-26 05:41:54,316 - aerial - INFO - Mining association rules...[0m
+[94m2026-10-26 05:41:54,324 - aerial - INFO - Post-filtering: 35 -> 29 rules[0m
+[94m2026-10-26 05:41:54,325 - aerial - INFO - Mining complete: 29 rules with avg support=0.299, avg confidence=0.942[0m
+  PyAerial         rules=   29 acc=0.9409 cov=1.0000 time=1.35s
+    VATTEN epoch 10/30 loss 0.0899
+    VATTEN epoch 20/30 loss 0.0657
+    VATTEN epoch 30/30 loss 0.0594
+  Top fitur menurut attention ke kelas: ['gill-spacing', 'ring-number', 'stalk-color-below-ring', 'odor', 'habitat', 'bruises']
+  VATTEN-noRL      rules=   72 acc=0.9516 cov=1.0000 time=26.84s
+  VATTEN-Rule      rules=    3 acc=0.9056 cov=0.9758 time=32.29s
+  Top fitur menurut MI ke kelas: ['odor', 'spore-print-color', 'gill-color', 'ring-type', 'stalk-surface-above-ring', 'stalk-surface-below-ring']
+  MI-noRL          rules=  102 acc=0.9331 cov=1.0000 time=0.23s
+  MI+RL            rules=    4 acc=0.9233 cov=0.9951 time=5.80s
+  RandomFeat+RL    rules=    3 acc=0.9003 cov=0.9389 time=5.59s
+
+=== seed 3 ===
+C:\Users\COMPUTER\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\mlxtend\frequent_patterns\association_rules.py:184: RuntimeWarning: invalid value encountered in divide
+  cert_metric = np.where(certainty_denom == 0, 0, certainty_num / certainty_denom)
+  FP-Growth        rules=  704 acc=0.9906 cov=1.0000 time=0.80s
+C:\Users\COMPUTER\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\mlxtend\frequent_patterns\association_rules.py:184: RuntimeWarning: invalid value encountered in divide
+  cert_metric = np.where(certainty_denom == 0, 0, certainty_num / certainty_denom)
+  Apriori          rules=  704 acc=0.9906 cov=1.0000 time=0.40s
+[94m2026-10-26 05:42:39,668 - aerial - INFO - Auto batch_size: 32 (based on 4550 samples)[0m
+[94m2026-10-26 05:42:40,938 - aerial - INFO - Mining association rules...[0m
+[94m2026-10-26 05:42:41,041 - aerial - INFO - Post-filtering: 885 -> 820 rules[0m
+[94m2026-10-26 05:42:41,075 - aerial - INFO - Mining complete: 820 rules with avg support=0.433, avg confidence=0.949[0m
+[94m2026-10-26 05:42:41,075 - aerial - INFO - Mining association rules...[0m
+[94m2026-10-26 05:42:41,087 - aerial - INFO - Post-filtering: 15 -> 13 rules[0m
+[94m2026-10-26 05:42:41,089 - aerial - INFO - Mining complete: 13 rules with avg support=0.336, avg confidence=0.930[0m
+  PyAerial         rules=   13 acc=0.9372 cov=1.0000 time=1.42s
+    VATTEN epoch 10/30 loss 0.0841
+    VATTEN epoch 20/30 loss 0.0643
+    VATTEN epoch 30/30 loss 0.0599
+  Top fitur menurut attention ke kelas: ['ring-type', 'gill-size', 'ring-number', 'stalk-shape', 'spore-print-color', 'gill-spacing']
+  VATTEN-noRL      rules=   50 acc=0.9581 cov=1.0000 time=29.04s
+  VATTEN-Rule      rules=    4 acc=0.9553 cov=0.9676 time=34.91s
+  Top fitur menurut MI ke kelas: ['odor', 'spore-print-color', 'gill-color', 'ring-type', 'stalk-surface-above-ring', 'stalk-surface-below-ring']
+  MI-noRL          rules=   94 acc=0.9360 cov=1.0000 time=0.23s
+  MI+RL            rules=    4 acc=0.9282 cov=0.9963 time=5.94s
+  RandomFeat+RL    rules=    5 acc=0.9528 cov=0.8724 time=5.65s
+
+=== seed 4 ===
+C:\Users\COMPUTER\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\mlxtend\frequent_patterns\association_rules.py:184: RuntimeWarning: invalid value encountered in divide
+  cert_metric = np.where(certainty_denom == 0, 0, certainty_num / certainty_denom)
+  FP-Growth        rules=  711 acc=0.9914 cov=1.0000 time=0.78s
+C:\Users\COMPUTER\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\mlxtend\frequent_patterns\association_rules.py:184: RuntimeWarning: invalid value encountered in divide
+  cert_metric = np.where(certainty_denom == 0, 0, certainty_num / certainty_denom)
+  Apriori          rules=  711 acc=0.9914 cov=1.0000 time=0.40s
+[94m2026-10-26 05:43:29,240 - aerial - INFO - Auto batch_size: 32 (based on 4550 samples)[0m
+[94m2026-10-26 05:43:30,653 - aerial - INFO - Mining association rules...[0m
+[94m2026-10-26 05:43:30,773 - aerial - INFO - Post-filtering: 986 -> 888 rules[0m
+[94m2026-10-26 05:43:30,803 - aerial - INFO - Mining complete: 888 rules with avg support=0.431, avg confidence=0.944[0m
+[94m2026-10-26 05:43:30,803 - aerial - INFO - Mining association rules...[0m
+[94m2026-10-26 05:43:30,814 - aerial - INFO - Post-filtering: 43 -> 27 rules[0m
+[94m2026-10-26 05:43:30,816 - aerial - INFO - Mining complete: 27 rules with avg support=0.335, avg confidence=0.919[0m
+  PyAerial         rules=   27 acc=0.9311 cov=1.0000 time=1.58s
+    VATTEN epoch 10/30 loss 0.0851
+    VATTEN epoch 20/30 loss 0.0642
+    VATTEN epoch 30/30 loss 0.0574
+  Top fitur menurut attention ke kelas: ['veil-type', 'gill-attachment', 'gill-size', 'odor', 'stalk-surface-below-ring', 'habitat']
+  VATTEN-noRL      rules=   45 acc=0.9540 cov=0.9844 time=30.40s
+  VATTEN-Rule      rules=    4 acc=0.9676 cov=0.9709 time=36.10s
+  Top fitur menurut MI ke kelas: ['odor', 'spore-print-color', 'gill-color', 'ring-type', 'stalk-surface-above-ring', 'stalk-surface-below-ring']
+  MI-noRL          rules=   98 acc=0.9356 cov=1.0000 time=0.24s
+  MI+RL            rules=    4 acc=0.9261 cov=0.9709 time=6.32s
+  RandomFeat+RL    rules=    4 acc=0.9261 cov=0.8367 time=5.61s
+
+UCI Mushroom, seeds=[0, 1, 2, 3, 4], split train/val/test=56/14/30, min_support=0.05, min_conf=0.8, max_antecedents=2
+VATTEN: d=64, heads=4, epochs=30, top_k=6, RL episodes=1000, lambda1=1.0, lambda2=0.05
+
+FP-Growth        n_rules=709.0000±14.4741  n_all_association_rules=14421.4000±237.2442  test_accuracy=0.9928±0.0020  test_coverage=1.0000±0.0000  avg_support=0.1191±0.0012  avg_confidence=0.9512±0.0012  runtime_s=0.8058±0.0575
+Apriori          n_rules=709.0000±14.4741  n_all_association_rules=14421.4000±237.2442  test_accuracy=0.9928±0.0020  test_coverage=1.0000±0.0000  avg_support=0.1191±0.0012  avg_confidence=0.9512±0.0012  runtime_s=0.4220±0.0585
+PyAerial         n_rules=21.6000±6.6933  n_all_association_rules=878.0000±41.3098  test_accuracy=0.9391±0.0052  test_coverage=1.0000±0.0000  avg_support=0.3220±0.0175  avg_confidence=0.9296±0.0086  runtime_s=1.7028±0.7025
+VATTEN-noRL      n_rules=57.0000±13.8203  test_accuracy=0.9350±0.0509  test_coverage=0.9854±0.0223  avg_support=0.1513±0.0207  avg_confidence=0.9571±0.0123  runtime_s=27.2524±2.5431
+VATTEN-Rule      n_rules=3.8000±0.4472  test_accuracy=0.9275±0.0549  test_coverage=0.9412±0.0691  avg_support=0.3100±0.0641  avg_confidence=0.9228±0.0257  runtime_s=32.8488±2.6789
+MI-noRL          n_rules=97.0000±3.1623  test_accuracy=0.9344±0.0016  test_coverage=1.0000±0.0000  avg_support=0.1259±0.0027  avg_confidence=0.9530±0.0031  runtime_s=0.2358±0.0079
+MI+RL            n_rules=4.0000±0.0000  test_accuracy=0.9183±0.0143  test_coverage=0.9791±0.0156  avg_support=0.3096±0.0088  avg_confidence=0.9332±0.0182  runtime_s=5.9386±0.2232
+RandomFeat+RL    n_rules=4.4000±1.1402  test_accuracy=0.8880±0.0583  test_coverage=0.8260±0.1322  avg_support=0.2036±0.0691  avg_confidence=0.9583±0.0266  runtime_s=5.5832±0.0650
+
+Rule akhir VATTEN-Rule (seed 0):
+IF stalk-surface-above-ring=k AND ring-number=o THEN poisonous=p  (support=0.262, confidence=1.000)
+IF bruises=f AND stalk-color-above-ring=p THEN poisonous=p  (support=0.159, confidence=1.000)
+IF ring-number=t THEN poisonous=e  (support=0.062, confidence=0.865)
+IF stalk-surface-above-ring=s AND ring-type=p THEN poisonous=e  (support=0.364, confidence=0.814)
+
+SELESAI. Kirimkan file mi_results_summary.txt, mi_results_per_seed.csv, mi_rules_seed0.txt, dan mi_experiment_log.txt.

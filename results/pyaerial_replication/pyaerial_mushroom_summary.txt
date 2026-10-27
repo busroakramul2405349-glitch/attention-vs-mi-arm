@@ -1,0 +1,13 @@
+PyAerial 1.1.0 on UCI Mushroom (n=8124), seeds=[0, 1, 2, 3, 4]
+Setup: epochs=2, layer_dims=[10], max_antecedents=2, ant_similarity=0.5, cons_similarity=0.8, test_size=0.3
+
+n_rules             : 905.0000 +/- 55.3715
+support             : 0.4210 +/- 0.0068
+confidence          : 0.9462 +/- 0.0022
+data_coverage       : 1.0000 +/- 0.0000
+avg_rule_coverage   : 0.4458 +/- 0.0073
+zhangs_metric       : 0.1300 +/- 0.0086
+runtime_s           : 3.0492 +/- 3.6875
+n_class_rules       : 14.0000 +/- 3.8079
+test_accuracy       : 0.7502 +/- 0.2130
+test_rule_coverage  : 0.8224 +/- 0.1834

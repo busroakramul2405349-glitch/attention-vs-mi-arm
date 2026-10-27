@@ -1,0 +1,4 @@
+IF spore-print-color=h THEN poisonous=p  (support=0.193, confidence=0.967)
+IF odor=n THEN poisonous=e  (support=0.422, confidence=0.966)
+IF ring-type=e AND spore-print-color=w THEN poisonous=p  (support=0.220, confidence=0.877)
+IF stalk-surface-below-ring=s AND ring-type=p THEN poisonous=e  (support=0.342, confidence=0.804)

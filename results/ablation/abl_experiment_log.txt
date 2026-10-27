@@ -1,0 +1,90 @@
+Python 3.13.14 | Windows-11-10.0.26200-SP0
+  numpy 2.4.6
+  pandas 3.0.3
+  torch 2.13.0
+Dataset: D:\NS ARM BARU VS\data\cell_cancertype_NonSmallCellLungCarcinoma_lnic50.csv -> (86, 18108)
+
+=== 100 kolom (min_support=0.4613) | MI dihitung 0.00s ===
+  seed 0 Attention   rules=  60 lift=1.042 zhang=0.129 conf=0.850 cov=1.000 genes=34 lift>1.2=0.02
+  seed 0 Random      rules=  51 lift=1.020 zhang=0.069 conf=0.845 cov=1.000 genes=30 lift>1.2=0.00
+  seed 0 AttnBottom  rules=  62 lift=1.017 zhang=0.058 conf=0.847 cov=1.000 genes=27 lift>1.2=0.00
+  seed 0 MutualInfo  rules=  92 lift=1.126 zhang=0.303 conf=0.871 cov=1.000 genes=46 lift>1.2=0.12
+  seed 0: overlap gen pilihan Attention vs MutualInfo = 0.025
+  seed 1 Attention   rules=  64 lift=1.023 zhang=0.075 conf=0.850 cov=1.000 genes=30 lift>1.2=0.00
+  seed 1 Random      rules=  56 lift=1.037 zhang=0.099 conf=0.853 cov=1.000 genes=30 lift>1.2=0.02
+  seed 1 AttnBottom  rules=  72 lift=1.023 zhang=0.085 conf=0.846 cov=1.000 genes=32 lift>1.2=0.00
+  seed 1 MutualInfo  rules=  92 lift=1.126 zhang=0.303 conf=0.871 cov=1.000 genes=46 lift>1.2=0.12
+  seed 1: overlap gen pilihan Attention vs MutualInfo = 0.030
+  seed 2 Attention   rules=  77 lift=1.037 zhang=0.133 conf=0.849 cov=1.000 genes=34 lift>1.2=0.00
+  seed 2 Random      rules=  63 lift=1.028 zhang=0.099 conf=0.851 cov=1.000 genes=30 lift>1.2=0.00
+  seed 2 AttnBottom  rules=  66 lift=1.027 zhang=0.086 conf=0.849 cov=1.000 genes=31 lift>1.2=0.00
+  seed 2 MutualInfo  rules=  92 lift=1.126 zhang=0.303 conf=0.871 cov=1.000 genes=46 lift>1.2=0.12
+  seed 2: overlap gen pilihan Attention vs MutualInfo = 0.020
+
+=== 300 kolom (min_support=0.438) | MI dihitung 0.01s ===
+  seed 0 Attention   rules= 170 lift=1.028 zhang=0.080 conf=0.852 cov=1.000 genes=83 lift>1.2=0.01
+  seed 0 Random      rules= 159 lift=1.029 zhang=0.089 conf=0.856 cov=1.000 genes=76 lift>1.2=0.00
+  seed 0 AttnBottom  rules= 183 lift=1.026 zhang=0.089 conf=0.855 cov=1.000 genes=74 lift>1.2=0.01
+  seed 0 MutualInfo  rules= 325 lift=1.125 zhang=0.323 conf=0.875 cov=1.000 genes=158 lift>1.2=0.11
+  seed 0: overlap gen pilihan Attention vs MutualInfo = 0.010
+  seed 1 Attention   rules= 182 lift=1.029 zhang=0.089 conf=0.853 cov=1.000 genes=81 lift>1.2=0.00
+  seed 1 Random      rules= 160 lift=1.023 zhang=0.076 conf=0.850 cov=1.000 genes=78 lift>1.2=0.00
+  seed 1 AttnBottom  rules= 196 lift=1.032 zhang=0.106 conf=0.851 cov=1.000 genes=86 lift>1.2=0.01
+  seed 1 MutualInfo  rules= 325 lift=1.125 zhang=0.323 conf=0.875 cov=1.000 genes=158 lift>1.2=0.11
+  seed 1: overlap gen pilihan Attention vs MutualInfo = 0.017
+  seed 2 Attention   rules= 164 lift=1.031 zhang=0.095 conf=0.854 cov=1.000 genes=83 lift>1.2=0.00
+  seed 2 Random      rules= 159 lift=1.024 zhang=0.070 conf=0.849 cov=1.000 genes=79 lift>1.2=0.01
+  seed 2 AttnBottom  rules= 195 lift=1.025 zhang=0.096 conf=0.851 cov=1.000 genes=81 lift>1.2=0.00
+  seed 2 MutualInfo  rules= 325 lift=1.125 zhang=0.323 conf=0.875 cov=1.000 genes=158 lift>1.2=0.11
+  seed 2: overlap gen pilihan Attention vs MutualInfo = 0.012
+
+=== 1000 kolom (min_support=0.512) | MI dihitung 0.18s ===
+  seed 0 Attention   rules= 305 lift=1.028 zhang=0.094 conf=0.850 cov=1.000 genes=189 lift>1.2=0.00
+  seed 0 Random      rules= 297 lift=1.022 zhang=0.073 conf=0.851 cov=1.000 genes=174 lift>1.2=0.00
+  seed 0 AttnBottom  rules= 412 lift=1.028 zhang=0.110 conf=0.851 cov=1.000 genes=200 lift>1.2=0.00
+  seed 0 MutualInfo  rules= 869 lift=1.126 zhang=0.378 conf=0.867 cov=1.000 genes=493 lift>1.2=0.07
+  seed 0: overlap gen pilihan Attention vs MutualInfo = 0.003
+  seed 1 Attention   rules= 304 lift=1.029 zhang=0.092 conf=0.854 cov=1.000 genes=186 lift>1.2=0.00
+  seed 1 Random      rules= 294 lift=1.023 zhang=0.073 conf=0.850 cov=1.000 genes=179 lift>1.2=0.00
+  seed 1 AttnBottom  rules= 377 lift=1.026 zhang=0.110 conf=0.855 cov=1.000 genes=175 lift>1.2=0.00
+  seed 1 MutualInfo  rules= 869 lift=1.126 zhang=0.378 conf=0.867 cov=1.000 genes=493 lift>1.2=0.07
+  seed 1: overlap gen pilihan Attention vs MutualInfo = 0.001
+  seed 2 Attention   rules= 330 lift=1.035 zhang=0.111 conf=0.855 cov=1.000 genes=197 lift>1.2=0.00
+  seed 2 Random      rules= 301 lift=1.025 zhang=0.081 conf=0.850 cov=1.000 genes=184 lift>1.2=0.00
+  seed 2 AttnBottom  rules= 440 lift=1.030 zhang=0.114 conf=0.851 cov=1.000 genes=207 lift>1.2=0.01
+  seed 2 MutualInfo  rules= 869 lift=1.126 zhang=0.378 conf=0.867 cov=1.000 genes=493 lift>1.2=0.07
+  seed 2: overlap gen pilihan Attention vs MutualInfo = 0.002
+
+Ablasi pemilihan antecedent (anggaran 2 gen/konsekuen), seeds=[0, 1, 2]
+
+[100 kolom]
+  Attention   rule_count=67.0000±8.8882  average_support=0.6192±0.0075  average_confidence=0.8499±0.0005  average_lift=1.0342±0.0101  average_zhang=0.1123±0.0325  data_coverage=1.0000±0.0000  consequent_genes_explained=32.6667±2.3094  share_lift_gt_1_2=0.0056±0.0096  selection_time_s=4.0233±0.9413
+  Random      rule_count=56.6667±6.0277  average_support=0.5984±0.0088  average_confidence=0.8496±0.0044  average_lift=1.0282±0.0089  average_zhang=0.0888±0.0172  data_coverage=1.0000±0.0000  consequent_genes_explained=30.0000±0.0000  share_lift_gt_1_2=0.0060±0.0103  selection_time_s=0.0000±0.0000
+  AttnBottom  rule_count=66.6667±5.0332  average_support=0.6188±0.0120  average_confidence=0.8475±0.0015  average_lift=1.0226±0.0050  average_zhang=0.0763±0.0155  data_coverage=1.0000±0.0000  consequent_genes_explained=30.0000±2.6458  share_lift_gt_1_2=0.0000±0.0000  selection_time_s=4.0233±0.9413
+  MutualInfo  rule_count=92.0000±0.0000  average_support=0.5866±0.0000  average_confidence=0.8706±0.0000  average_lift=1.1257±0.0000  average_zhang=0.3031±0.0000  data_coverage=1.0000±0.0000  consequent_genes_explained=46.0000±0.0000  share_lift_gt_1_2=0.1196±0.0000  selection_time_s=0.0000±0.0000
+[300 kolom]
+  Attention   rule_count=172.0000±9.1652  average_support=0.5897±0.0012  average_confidence=0.8531±0.0013  average_lift=1.0291±0.0017  average_zhang=0.0876±0.0076  data_coverage=1.0000±0.0000  consequent_genes_explained=82.3333±1.1547  share_lift_gt_1_2=0.0020±0.0034  selection_time_s=14.4633±0.4378
+  Random      rule_count=159.3333±0.5774  average_support=0.5880±0.0014  average_confidence=0.8514±0.0037  average_lift=1.0256±0.0032  average_zhang=0.0783±0.0097  data_coverage=1.0000±0.0000  consequent_genes_explained=77.6667±1.5275  share_lift_gt_1_2=0.0021±0.0036  selection_time_s=0.0000±0.0000
+  AttnBottom  rule_count=191.3333±7.2342  average_support=0.6360±0.0155  average_confidence=0.8525±0.0023  average_lift=1.0277±0.0036  average_zhang=0.0971±0.0087  data_coverage=1.0000±0.0000  consequent_genes_explained=80.3333±6.0277  share_lift_gt_1_2=0.0035±0.0031  selection_time_s=14.4633±0.4378
+  MutualInfo  rule_count=325.0000±0.0000  average_support=0.5806±0.0000  average_confidence=0.8752±0.0000  average_lift=1.1248±0.0000  average_zhang=0.3229±0.0000  data_coverage=1.0000±0.0000  consequent_genes_explained=158.0000±0.0000  share_lift_gt_1_2=0.1077±0.0000  selection_time_s=0.0100±0.0000
+[1000 kolom]
+  Attention   rule_count=313.0000±14.7309  average_support=0.6068±0.0046  average_confidence=0.8529±0.0024  average_lift=1.0309±0.0035  average_zhang=0.0988±0.0108  data_coverage=1.0000±0.0000  consequent_genes_explained=190.6667±5.6862  share_lift_gt_1_2=0.0010±0.0017  selection_time_s=155.9300±2.1669
+  Random      rule_count=297.3333±3.5119  average_support=0.6064±0.0009  average_confidence=0.8502±0.0010  average_lift=1.0232±0.0012  average_zhang=0.0757±0.0044  data_coverage=1.0000±0.0000  consequent_genes_explained=179.0000±5.0000  share_lift_gt_1_2=0.0022±0.0019  selection_time_s=0.0000±0.0000
+  AttnBottom  rule_count=409.6667±31.5647  average_support=0.6574±0.0080  average_confidence=0.8521±0.0027  average_lift=1.0281±0.0023  average_zhang=0.1113±0.0023  data_coverage=1.0000±0.0000  consequent_genes_explained=194.0000±16.8226  share_lift_gt_1_2=0.0023±0.0039  selection_time_s=155.9300±2.1669
+  MutualInfo  rule_count=869.0000±0.0000  average_support=0.6083±0.0000  average_confidence=0.8672±0.0000  average_lift=1.1257±0.0000  average_zhang=0.3776±0.0000  data_coverage=1.0000±0.0000  consequent_genes_explained=493.0000±0.0000  share_lift_gt_1_2=0.0656±0.0000  selection_time_s=0.1800±0.0000
+
+Perbandingan berpasangan (per kolom x seed), Attention dikurangi strategi lain:
+  vs Random     average_lift                rata-rata selisih=+0.0058  Attention lebih tinggi 7/9
+  vs Random     average_zhang               rata-rata selisih=+0.0186  Attention lebih tinggi 7/9
+  vs Random     rule_count                  rata-rata selisih=+12.8889  Attention lebih tinggi 9/9
+  vs Random     consequent_genes_explained  rata-rata selisih=+6.3333  Attention lebih tinggi 8/9
+  vs AttnBottom average_lift                rata-rata selisih=+0.0053  Attention lebih tinggi 7/9
+  vs AttnBottom average_zhang               rata-rata selisih=+0.0047  Attention lebih tinggi 2/9
+  vs AttnBottom rule_count                  rata-rata selisih=-38.5556  Attention lebih tinggi 1/9
+  vs AttnBottom consequent_genes_explained  rata-rata selisih=+0.4444  Attention lebih tinggi 5/9
+  vs MutualInfo average_lift                rata-rata selisih=-0.0940  Attention lebih tinggi 0/9
+  vs MutualInfo average_zhang               rata-rata selisih=-0.2350  Attention lebih tinggi 0/9
+  vs MutualInfo rule_count                  rata-rata selisih=-244.6667  Attention lebih tinggi 0/9
+  vs MutualInfo consequent_genes_explained  rata-rata selisih=-130.4444  Attention lebih tinggi 0/9
+
+SELESAI. Kirimkan abl_results_summary.txt, abl_results_per_run.csv, abl_experiment_log.txt.

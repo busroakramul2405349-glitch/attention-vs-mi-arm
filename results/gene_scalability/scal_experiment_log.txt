@@ -1,0 +1,200 @@
+Python 3.13.14 | Windows-11-10.0.26200-SP0
+  numpy 2.4.6
+  pandas 3.0.3
+  torch 2.13.0
+  mlxtend 0.25.0
+  pyaerial 1.1.0
+Dataset: D:\NS ARM BARU VS\data\cell_cancertype_NonSmallCellLungCarcinoma_lnic50.csv -> 86 baris x 18108 gen
+
+=== 50 kolom ===
+    PyAerial     rules=5275 sup=0.519 conf=0.855 cov=1.000 time=2.91s
+    PyAerial     rules=8403 sup=0.501 conf=0.852 cov=1.000 time=3.17s
+    PyAerial     rules=8808 sup=0.501 conf=0.851 cov=1.000 time=3.35s
+  min_support (90% rule PyAerial) = 0.4267
+    FP-Growth    rules=8612 sup=0.510 conf=0.855 cov=1.000 time=0.43s
+    VATTEN-noRL  rules=36 sup=0.617 conf=0.854 cov=1.000 time=4.22s
+    VATTEN-Rule  rules=2 sup=0.703 conf=0.858 cov=0.988 time=4.82s
+    VATTEN-noRL  rules=41 sup=0.572 conf=0.852 cov=1.000 time=2.97s
+    VATTEN-Rule  rules=3 sup=0.721 conf=0.885 cov=1.000 time=3.55s
+    VATTEN-noRL  rules=37 sup=0.569 conf=0.847 cov=1.000 time=2.78s
+    VATTEN-Rule  rules=2 sup=0.756 conf=0.885 cov=0.988 time=3.34s
+
+=== 100 kolom ===
+    PyAerial     rules=50520 sup=0.503 conf=0.858 cov=1.000 time=9.26s
+    PyAerial     rules=41217 sup=0.511 conf=0.859 cov=1.000 time=7.94s
+    PyAerial     rules=6944 sup=0.574 conf=0.878 cov=1.000 time=4.28s
+  min_support (90% rule PyAerial) = 0.4613
+    FP-Growth    rules=54333 sup=0.524 conf=0.857 cov=1.000 time=4.42s
+    VATTEN-noRL  rules=60 sup=0.612 conf=0.850 cov=1.000 time=4.23s
+    VATTEN-Rule  rules=2 sup=0.727 conf=0.918 cov=0.965 time=4.81s
+    VATTEN-noRL  rules=64 sup=0.627 conf=0.850 cov=1.000 time=4.32s
+    VATTEN-Rule  rules=2 sup=0.785 conf=0.895 cov=0.965 time=4.89s
+    VATTEN-noRL  rules=77 sup=0.619 conf=0.849 cov=1.000 time=4.22s
+    VATTEN-Rule  rules=2 sup=0.738 conf=0.901 cov=0.977 time=4.81s
+
+=== 200 kolom ===
+    PyAerial     rules=206322 sup=0.528 conf=0.866 cov=1.000 time=25.60s
+    PyAerial     rules=783602 sup=0.460 conf=0.854 cov=1.000 time=125.39s
+    PyAerial     rules=8963 sup=0.620 conf=0.894 cov=1.000 time=6.49s
+  min_support (90% rule PyAerial) = 0.4650
+    FP-Growth    rules=381363 sup=0.522 conf=0.861 cov=1.000 time=53.92s
+    VATTEN-noRL  rules=107 sup=0.611 conf=0.855 cov=1.000 time=9.11s
+    VATTEN-Rule  rules=3 sup=0.671 conf=0.947 cov=0.988 time=9.73s
+    VATTEN-noRL  rules=104 sup=0.600 conf=0.852 cov=1.000 time=9.05s
+    VATTEN-Rule  rules=3 sup=0.609 conf=0.910 cov=1.000 time=9.64s
+    VATTEN-noRL  rules=111 sup=0.603 conf=0.852 cov=1.000 time=10.04s
+    VATTEN-Rule  rules=2 sup=0.663 conf=0.934 cov=0.895 time=10.62s
+
+=== 300 kolom ===
+    PyAerial     rules=1196916 sup=0.500 conf=0.862 cov=1.000 time=130.74s
+    PyAerial     rules=432940 sup=0.540 conf=0.873 cov=1.000 time=48.62s
+    PyAerial     rules=1719981 sup=0.484 conf=0.859 cov=1.000 time=207.19s
+  min_support (90% rule PyAerial) = 0.4380
+    FP-Growth    rules=1649181 sup=0.503 conf=0.860 cov=1.000 time=471.24s
+    VATTEN-noRL  rules=170 sup=0.590 conf=0.852 cov=1.000 time=16.85s
+    VATTEN-Rule  rules=2 sup=0.663 conf=0.935 cov=0.930 time=17.47s
+    VATTEN-noRL  rules=182 sup=0.589 conf=0.853 cov=1.000 time=16.78s
+    VATTEN-Rule  rules=1 sup=0.756 conf=0.915 cov=0.826 time=17.47s
+    VATTEN-noRL  rules=164 sup=0.591 conf=0.854 cov=1.000 time=16.44s
+    VATTEN-Rule  rules=2 sup=0.733 conf=0.888 cov=0.977 time=17.04s
+
+=== 500 kolom ===
+    PyAerial     rules=1366883 sup=0.525 conf=0.865 cov=1.000 time=172.17s
+    PyAerial ERROR:
+Traceback (most recent call last):
+  File "C:\Users\COMPUTER\Downloads\vatten_scalability_experiment.py", line 127, in worker_pyaerial
+    res = rule_extraction.generate_rules(ae, max_antecedents=ANTECEDENTS,
+                                         min_rule_frequency=ANT_SIM,
+                                         min_rule_strength=CONS_SIM)
+  File "C:\Users\COMPUTER\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\aerial\rule_extraction.py", line 78, in generate_rules
+    result = _generate_rules_core(autoencoder, features_of_interest, min_rule_frequency, min_rule_strength,
+                                  max_antecedents, target_classes, quality_metrics, num_workers)
+  File "C:\Users\COMPUTER\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\aerial\rule_extraction.py", line 265, in _generate_rules_core
+    all_metrics = calculate_rule_metrics(
+        rules_with_indices, transaction_array, quality_metrics, num_workers=num_workers
+    )
+  File "C:\Users\COMPUTER\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\aerial\rule_quality.py", line 215, in calculate_rule_metrics
+    results = [process_single_rule(rule) for rule in rules_with_indices]
+               ~~~~~~~~~~~~~~~~~~~^^^^^^
+  File "C:\Users\COMPUTER\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\aerial\rule_quality.py", line 209, in process_single_rule
+    return _calculate_rule_quality_from_indices(
+        ant_indices, cons_index, transaction_array, num_transactions, quality_metrics
+    )
+  File "C:\Users\COMPUTER\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\aerial\rule_quality.py", line 110, in _calculate_rule_quality_from_indices
+    antecedent_mask = np.all(transaction_array[:, antecedent_indices] == 1, axis=1)
+                             ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^
+SystemError: error return without exception set
+
+    PyAerial     error
+    PyAerial     rules=1443996 sup=0.537 conf=0.872 cov=1.000 time=172.54s
+  min_support (90% rule PyAerial) = 0.4650
+    FP-Growth    timeout >1000s
+    VATTEN-noRL  rules=237 sup=0.594 conf=0.851 cov=1.000 time=40.94s
+    VATTEN-Rule  rules=1 sup=0.663 conf=0.934 cov=0.709 time=41.56s
+    VATTEN-noRL  rules=243 sup=0.605 conf=0.856 cov=1.000 time=40.45s
+    VATTEN-Rule  rules=1 sup=0.663 conf=0.950 cov=0.698 time=41.06s
+    VATTEN-noRL  rules=246 sup=0.593 conf=0.850 cov=1.000 time=39.49s
+    VATTEN-Rule  rules=1 sup=0.616 conf=0.898 cov=0.686 time=40.10s
+
+=== 1000 kolom ===
+    PyAerial     rules=2060301 sup=0.570 conf=0.882 cov=1.000 time=319.13s
+    PyAerial ERROR:
+Traceback (most recent call last):
+  File "C:\Users\COMPUTER\Downloads\vatten_scalability_experiment.py", line 127, in worker_pyaerial
+    res = rule_extraction.generate_rules(ae, max_antecedents=ANTECEDENTS,
+                                         min_rule_frequency=ANT_SIM,
+                                         min_rule_strength=CONS_SIM)
+  File "C:\Users\COMPUTER\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\aerial\rule_extraction.py", line 78, in generate_rules
+    result = _generate_rules_core(autoencoder, features_of_interest, min_rule_frequency, min_rule_strength,
+                                  max_antecedents, target_classes, quality_metrics, num_workers)
+  File "C:\Users\COMPUTER\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\aerial\rule_extraction.py", line 255, in _generate_rules_core
+    implications_batch = _forward([antecedents for antecedents, _ in extended_combinations])
+  File "C:\Users\COMPUTER\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\aerial\rule_extraction.py", line 181, in _forward
+    test_vectors = np.tile(unmarked_features, (len(antecedent_lists), 1))
+  File "C:\Users\COMPUTER\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\numpy\lib\_shape_base_impl.py", line 1287, in tile
+    c = c.reshape(-1, n).repeat(nrep, 0)
+numpy._core._exceptions._ArrayMemoryError: Unable to allocate 10.3 GiB for an array with shape (476697, 2901) and data type float64
+
+    PyAerial     error
+    PyAerial ERROR:
+Traceback (most recent call last):
+  File "C:\Users\COMPUTER\Downloads\vatten_scalability_experiment.py", line 127, in worker_pyaerial
+    res = rule_extraction.generate_rules(ae, max_antecedents=ANTECEDENTS,
+                                         min_rule_frequency=ANT_SIM,
+                                         min_rule_strength=CONS_SIM)
+  File "C:\Users\COMPUTER\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\aerial\rule_extraction.py", line 78, in generate_rules
+    result = _generate_rules_core(autoencoder, features_of_interest, min_rule_frequency, min_rule_strength,
+                                  max_antecedents, target_classes, quality_metrics, num_workers)
+  File "C:\Users\COMPUTER\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\aerial\rule_extraction.py", line 255, in _generate_rules_core
+    implications_batch = _forward([antecedents for antecedents, _ in extended_combinations])
+  File "C:\Users\COMPUTER\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\aerial\rule_extraction.py", line 188, in _forward
+    return autoencoder(batch, feature_value_indices).detach().cpu().numpy()
+           ~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\COMPUTER\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\torch\nn\modules\module.py", line 1778, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "C:\Users\COMPUTER\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\torch\nn\modules\module.py", line 1789, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "C:\Users\COMPUTER\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\aerial\model.py", line 120, in forward
+    y = self.decoder(y)
+  File "C:\Users\COMPUTER\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\torch\nn\modules\module.py", line 1778, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "C:\Users\COMPUTER\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\torch\nn\modules\module.py", line 1789, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "C:\Users\COMPUTER\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\torch\nn\modules\container.py", line 253, in forward
+    input = module(input)
+  File "C:\Users\COMPUTER\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\torch\nn\modules\module.py", line 1778, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "C:\Users\COMPUTER\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\torch\nn\modules\module.py", line 1789, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "C:\Users\COMPUTER\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\torch\nn\modules\linear.py", line 134, in forward
+    return F.linear(input, self.weight, self.bias)
+           ~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+RuntimeError: [enforce fail at alloc_cpu.cpp:117] data. DefaultCPUAllocator: not enough memory: you tried to allocate 2777649480 bytes.
+
+    PyAerial     error
+  min_support (90% rule PyAerial) = 0.5120
+    FP-Growth    timeout >1000s
+    VATTEN-noRL  rules=305 sup=0.603 conf=0.850 cov=1.000 time=145.15s
+    VATTEN-Rule  rules=1 sup=0.674 conf=0.967 cov=0.698 time=145.76s
+    VATTEN-noRL  rules=304 sup=0.605 conf=0.854 cov=1.000 time=142.91s
+    VATTEN-Rule  rules=1 sup=0.698 conf=0.984 cov=0.709 time=143.49s
+    VATTEN-noRL  rules=330 sup=0.612 conf=0.855 cov=1.000 time=146.62s
+    VATTEN-Rule  rules=1 sup=0.779 conf=0.931 cov=0.837 time=147.22s
+
+Gene expression (86 baris), kolom=[50, 100, 200, 300, 500, 1000], runs=3, timeout=1000s, antecedent<=2, min_conf=0.8
+
+[50 kolom]
+  PyAerial     rule_count=7495.3333±1933.4985  average_support=0.5070±0.0104  average_confidence=0.8527±0.0021  data_coverage=1.0000±0.0000  exec_time=3.1439±0.2214
+  FP-Growth    rule_count=8612.0000  average_support=0.5103  average_confidence=0.8551  data_coverage=1.0000  exec_time=0.4293
+  VATTEN-noRL  rule_count=38.0000±2.6458  average_support=0.5859±0.0269  average_confidence=0.8511±0.0036  data_coverage=1.0000±0.0000  exec_time=3.3244±0.7848
+  VATTEN-Rule  rule_count=2.3333±0.5774  average_support=0.7267±0.0266  average_confidence=0.8762±0.0153  data_coverage=0.9922±0.0067  exec_time=3.9040±0.7964
+[100 kolom]
+  PyAerial     rule_count=32893.6667±22949.4085  average_support=0.5293±0.0389  average_confidence=0.8650±0.0113  data_coverage=1.0000±0.0000  exec_time=7.1628±2.5804
+  FP-Growth    rule_count=54333.0000  average_support=0.5236  average_confidence=0.8569  data_coverage=1.0000  exec_time=4.4214
+  VATTEN-noRL  rule_count=67.0000±8.8882  average_support=0.6192±0.0075  average_confidence=0.8499±0.0005  data_coverage=1.0000±0.0000  exec_time=4.2561±0.0519
+  VATTEN-Rule  rule_count=2.0000±0.0000  average_support=0.7500±0.0308  average_confidence=0.9046±0.0121  data_coverage=0.9690±0.0067  exec_time=4.8341±0.0450
+[200 kolom]
+  PyAerial     rule_count=332962.3333±402547.7929  average_support=0.5360±0.0803  average_confidence=0.8713±0.0205  data_coverage=1.0000±0.0000  exec_time=52.4922±63.8482
+  FP-Growth    rule_count=381363.0000  average_support=0.5217  average_confidence=0.8615  data_coverage=1.0000  exec_time=53.9247
+  VATTEN-noRL  rule_count=107.3333±3.5119  average_support=0.6047±0.0056  average_confidence=0.8531±0.0020  data_coverage=1.0000±0.0000  exec_time=9.3993±0.5519
+  VATTEN-Rule  rule_count=2.6667±0.5774  average_support=0.6473±0.0338  average_confidence=0.9305±0.0187  data_coverage=0.9612±0.0574  exec_time=9.9958±0.5406
+[300 kolom]
+  PyAerial     rule_count=1116612.3333±647267.4432  average_support=0.5080±0.0288  average_confidence=0.8647±0.0074  data_coverage=1.0000±0.0000  exec_time=128.8498±79.3010
+  FP-Growth    rule_count=1649181.0000  average_support=0.5034  average_confidence=0.8604  data_coverage=1.0000  exec_time=471.2444
+  VATTEN-noRL  rule_count=172.0000±9.1652  average_support=0.5897±0.0012  average_confidence=0.8531±0.0013  data_coverage=1.0000±0.0000  exec_time=16.6926±0.2194
+  VATTEN-Rule  rule_count=1.6667±0.5774  average_support=0.7171±0.0484  average_confidence=0.9128±0.0240  data_coverage=0.9109±0.0774  exec_time=17.3287±0.2505
+[500 kolom]
+  PyAerial     rule_count=1405439.5000±54527.1252  average_support=0.5310±0.0085  average_confidence=0.8685±0.0049  data_coverage=1.0000±0.0000  exec_time=172.3557±0.2566
+  FP-Growth    timeout >1000s
+  VATTEN-noRL  rule_count=242.0000±4.5826  average_support=0.5974±0.0066  average_confidence=0.8523±0.0032  data_coverage=1.0000±0.0000  exec_time=40.2936±0.7389
+  VATTEN-Rule  rule_count=1.0000±0.0000  average_support=0.6473±0.0269  average_confidence=0.9276±0.0265  data_coverage=0.6977±0.0116  exec_time=40.9060±0.7454
+[1000 kolom]
+  PyAerial     rule_count=2060301.0000  average_support=0.5700  average_confidence=0.8820  data_coverage=1.0000  exec_time=319.1253
+  FP-Growth    timeout >1000s
+  VATTEN-noRL  rule_count=313.0000±14.7309  average_support=0.6068±0.0046  average_confidence=0.8529±0.0024  data_coverage=1.0000±0.0000  exec_time=144.8942±1.8732
+  VATTEN-Rule  rule_count=1.0000±0.0000  average_support=0.7171±0.0550  average_confidence=0.9603±0.0271  data_coverage=0.7481±0.0774  exec_time=145.4916±1.8766
+
+SELESAI. Kirimkan scal_results_summary.txt, scal_results_per_run.csv, dan scal_experiment_log.txt.

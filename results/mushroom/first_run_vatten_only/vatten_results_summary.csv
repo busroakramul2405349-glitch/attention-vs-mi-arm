@@ -1,0 +1,9 @@
+,n_rules,n_rules,n_all_association_rules,n_all_association_rules,test_accuracy,test_accuracy,test_coverage,test_coverage,avg_support,avg_support,avg_confidence,avg_confidence,runtime_s,runtime_s
+,mean,std,mean,std,mean,std,mean,std,mean,std,mean,std,mean,std
+method,,,,,,,,,,,,,,
+FP-Growth,709.0,14.4741,14421.4,237.2442,0.9928,0.002,1.0,0.0,0.1191,0.0012,0.9512,0.0012,0.8054,0.0504
+Apriori,709.0,14.4741,14421.4,237.2442,0.9928,0.002,1.0,0.0,0.1191,0.0012,0.9512,0.0012,0.635,0.1867
+PyAerial,23.6,8.1731,890.6,52.7617,0.9407,0.007,1.0,0.0,0.315,0.0191,0.9349,0.0121,2.8888,3.0424
+VATTEN-noRL,57.0,13.8203,,,0.935,0.0509,0.9854,0.0223,0.1513,0.0207,0.9571,0.0123,29.0604,1.5176
+VATTEN-Rule,3.8,0.4472,,,0.9275,0.0549,0.9412,0.0691,0.31,0.0641,0.9228,0.0257,34.7912,1.5605
+RandomFeat+RL,4.4,1.1402,,,0.888,0.0583,0.826,0.1322,0.2036,0.0691,0.9583,0.0266,5.7564,0.2163
