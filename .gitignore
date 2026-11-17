@@ -1,0 +1,9 @@
+# Hasil run lokal dari GUI (setiap run membuat folder baru)
+runs/
+gui/settings.json
+
+# Dataset tidak didistribusikan ulang (lihat data/README.md)
+data/*.csv
+
+__pycache__/
+*.pyc
