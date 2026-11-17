@@ -1,0 +1,127 @@
+[A] Equal-budget guide comparison (.\md_unsup_per_run.csv)
+
+  A/average_zhang: 10 datasets x 5 methods
+    average rank (1 = best): CramerV 1.40, MutualInfo 1.90, Attention 3.00, Random 4.10, AttnBottom 4.60
+    Friedman chi2 = 30.465, p = 3.94e-06; Nemenyi CD (alpha 0.05) = 1.929
+    MutualInfo vs Attention: mean 0.3827 vs 0.3039, MutualInfo better on 8/10 (ties 0), Wilcoxon p = 0.0273 (Holm 0.0547), rank-biserial r = +0.78; over runs n=50, p=3.04e-07, r=+0.77
+    CramerV vs Attention: mean 0.3989 vs 0.3039, CramerV better on 9/10 (ties 0), Wilcoxon p = 0.00586 (Holm 0.0293), rank-biserial r = +0.93; over runs n=50, p=2.56e-09, r=+0.87
+    Attention vs Random: mean 0.3039 vs 0.2349, Attention better on 9/10 (ties 0), Wilcoxon p = 0.00586 (Holm 0.0293), rank-biserial r = +0.93; over runs n=50, p=5.34e-08, r=+0.81
+    Attention vs AttnBottom: mean 0.3039 vs 0.1726, Attention better on 8/10 (ties 0), Wilcoxon p = 0.00977 (Holm 0.0293), rank-biserial r = +0.89; over runs n=50, p=2.33e-09, r=+0.87
+    MutualInfo vs Random: mean 0.3827 vs 0.2349, MutualInfo better on 10/10 (ties 0), Wilcoxon p = 0.00195 (Holm 0.0117), rank-biserial r = +1.00; over runs n=50, p=8.88e-15, r=+1.00
+    MutualInfo vs CramerV: mean 0.3827 vs 0.3989, MutualInfo better on 2/10 (ties 2), Wilcoxon p = 0.25 (Holm 0.25), rank-biserial r = -0.50; over runs n=50, p=0.00577, r=-0.50
+
+  A/average_lift: 10 datasets x 5 methods
+    average rank (1 = best): CramerV 1.50, MutualInfo 1.70, Attention 3.00, Random 4.10, AttnBottom 4.70
+    Friedman chi2 = 32.485, p = 1.52e-06; Nemenyi CD (alpha 0.05) = 1.929
+    MutualInfo vs Attention: mean 1.4461 vs 1.3495, MutualInfo better on 9/10 (ties 0), Wilcoxon p = 0.0137 (Holm 0.0293), rank-biserial r = +0.85; over runs n=50, p=1.86e-06, r=+0.73
+    CramerV vs Attention: mean 1.4521 vs 1.3495, CramerV better on 9/10 (ties 0), Wilcoxon p = 0.00977 (Holm 0.0293), rank-biserial r = +0.89; over runs n=50, p=3.73e-07, r=+0.77
+    Attention vs Random: mean 1.3495 vs 1.2781, Attention better on 9/10 (ties 0), Wilcoxon p = 0.00586 (Holm 0.0293), rank-biserial r = +0.93; over runs n=50, p=1.86e-06, r=+0.73
+    Attention vs AttnBottom: mean 1.3495 vs 1.1883, Attention better on 9/10 (ties 0), Wilcoxon p = 0.00586 (Holm 0.0293), rank-biserial r = +0.93; over runs n=50, p=1.45e-09, r=+0.87
+    MutualInfo vs Random: mean 1.4461 vs 1.2781, MutualInfo better on 10/10 (ties 0), Wilcoxon p = 0.00195 (Holm 0.0117), rank-biserial r = +1.00; over runs n=50, p=7.64e-14, r=+0.98
+    MutualInfo vs CramerV: mean 1.4461 vs 1.4521, MutualInfo better on 3/10 (ties 2), Wilcoxon p = 0.641 (Holm 0.641), rank-biserial r = -0.22; over runs n=50, p=0.226, r=-0.22
+
+  A/consequents_explained: 10 datasets x 5 methods
+    average rank (1 = best): CramerV 1.35, MutualInfo 1.65, Attention 3.70, Random 3.95, AttnBottom 4.35
+    Friedman chi2 = 32.166, p = 1.77e-06; Nemenyi CD (alpha 0.05) = 1.929
+    MutualInfo vs Attention: mean 61.8000 vs 28.4800, MutualInfo better on 10/10 (ties 0), Wilcoxon p = 0.00195 (Holm 0.0117), rank-biserial r = +1.00; over runs n=50, p=1.05e-08, r=+1.00
+    CramerV vs Attention: mean 64.6000 vs 28.4800, CramerV better on 10/10 (ties 0), Wilcoxon p = 0.00195 (Holm 0.0117), rank-biserial r = +1.00; over runs n=50, p=1.05e-08, r=+1.00
+    Attention vs Random: mean 28.4800 vs 27.1800, Attention better on 6/10 (ties 1), Wilcoxon p = 0.316 (Holm 0.75), rank-biserial r = +0.40; over runs n=50, p=0.13, r=+0.27
+    Attention vs AttnBottom: mean 28.4800 vs 27.4000, Attention better on 6/10 (ties 1), Wilcoxon p = 0.359 (Holm 0.75), rank-biserial r = +0.38; over runs n=50, p=0.0285, r=+0.40
+    MutualInfo vs Random: mean 61.8000 vs 27.1800, MutualInfo better on 10/10 (ties 0), Wilcoxon p = 0.00195 (Holm 0.0117), rank-biserial r = +1.00; over runs n=50, p=3.09e-09, r=+1.00
+    MutualInfo vs CramerV: mean 61.8000 vs 64.6000, MutualInfo better on 1/10 (ties 5), Wilcoxon p = 0.25 (Holm 0.75), rank-biserial r = -0.73; over runs n=50, p=0.0007, r=-0.75
+
+  A/rule_count: 10 datasets x 5 methods
+    average rank (1 = best): CramerV 1.50, MutualInfo 1.55, Attention 3.65, Random 3.80, AttnBottom 4.50
+    Friedman chi2 = 31.286, p = 2.68e-06; Nemenyi CD (alpha 0.05) = 1.929
+    MutualInfo vs Attention: mean 145.8000 vs 73.5600, MutualInfo better on 10/10 (ties 0), Wilcoxon p = 0.00195 (Holm 0.0117), rank-biserial r = +1.00; over runs n=50, p=3.85e-09, r=+0.96
+    CramerV vs Attention: mean 160.7000 vs 73.5600, CramerV better on 9/10 (ties 1), Wilcoxon p = 0.00391 (Holm 0.0156), rank-biserial r = +1.00; over runs n=50, p=1.09e-08, r=+0.93
+    Attention vs Random: mean 73.5600 vs 69.7400, Attention better on 7/10 (ties 0), Wilcoxon p = 0.322 (Holm 0.967), rank-biserial r = +0.38; over runs n=50, p=0.0389, r=+0.34
+    Attention vs AttnBottom: mean 73.5600 vs 73.3600, Attention better on 6/10 (ties 0), Wilcoxon p = 0.625 (Holm 1), rank-biserial r = +0.20; over runs n=50, p=0.182, r=+0.22
+    MutualInfo vs Random: mean 145.8000 vs 69.7400, MutualInfo better on 10/10 (ties 0), Wilcoxon p = 0.00195 (Holm 0.0117), rank-biserial r = +1.00; over runs n=50, p=1.1e-09, r=+1.00
+    MutualInfo vs CramerV: mean 145.8000 vs 160.7000, MutualInfo better on 3/10 (ties 3), Wilcoxon p = 0.922 (Holm 1), rank-biserial r = -0.07; over runs n=50, p=0.742, r=-0.06
+
+  A/average_zhang incl. FP-Growth and PyAerial (unbudgeted): 9 datasets x 5 methods
+    average rank (1 = best): CramerV 1.44, MutualInfo 1.89, Attention 3.00, FP-Growth 3.78, PyAerial 4.89
+    Friedman chi2 = 28.494, p = 9.9e-06; Nemenyi CD (alpha 0.05) = 2.033
+    MutualInfo vs PyAerial: mean 0.3832 vs 0.1834, MutualInfo better on 9/9 (ties 0), Wilcoxon p = 0.00391 (Holm 0.0117), rank-biserial r = +1.00
+    MutualInfo vs FP-Growth: mean 0.3832 vs 0.2507, MutualInfo better on 9/9 (ties 0), Wilcoxon p = 0.00391 (Holm 0.0117), rank-biserial r = +1.00
+    Attention vs PyAerial: mean 0.3268 vs 0.1834, Attention better on 8/9 (ties 0), Wilcoxon p = 0.00781 (Holm 0.0117), rank-biserial r = +0.96
+
+[B] Supervised class rules (.\md_sup_per_run.csv)
+
+  B/test_accuracy: 9 datasets x 6 methods
+    average rank (1 = best): FP-Growth 2.44, MutualInfo+RL 3.28, Attention+RL 3.50, CramerV+RL 3.50, Random+RL 3.83, PyAerial 4.44
+    Friedman chi2 = 6.623, p = 0.25; Nemenyi CD (alpha 0.05) = 2.513
+    MutualInfo+RL vs Attention+RL: mean 0.8587 vs 0.8316, MutualInfo+RL better on 5/9 (ties 1), Wilcoxon p = 0.195 (Holm 0.977), rank-biserial r = +0.56; over runs n=45, p=0.0308, r=+0.51
+    CramerV+RL vs Attention+RL: mean 0.8549 vs 0.8316, CramerV+RL better on 4/9 (ties 1), Wilcoxon p = 0.383 (Holm 0.977), rank-biserial r = +0.39; over runs n=45, p=0.0883, r=+0.42
+    Attention+RL vs Random+RL: mean 0.8316 vs 0.8104, Attention+RL better on 4/9 (ties 3), Wilcoxon p = 0.312 (Holm 0.977), rank-biserial r = +0.52; over runs n=45, p=0.271, r=+0.26
+    FP-Growth vs MutualInfo+RL: mean 0.8746 vs 0.8587, FP-Growth better on 5/9 (ties 1), Wilcoxon p = 0.461 (Holm 0.977), rank-biserial r = +0.33; over runs n=45, p=0.0382, r=+0.45
+    PyAerial vs MutualInfo+RL: mean 0.7796 vs 0.8587, PyAerial better on 3/9 (ties 1), Wilcoxon p = 0.195 (Holm 0.977), rank-biserial r = -0.56; over runs n=45, p=0.00295, r=-0.60
+
+  B/test_coverage: 9 datasets x 6 methods
+    average rank (1 = best): FP-Growth 1.17, Attention+RL 3.11, Random+RL 3.78, PyAerial 4.17, MutualInfo+RL 4.28, CramerV+RL 4.50
+    Friedman chi2 = 20.375, p = 0.00106; Nemenyi CD (alpha 0.05) = 2.513
+    MutualInfo+RL vs Attention+RL: mean 0.8786 vs 0.8623, MutualInfo+RL better on 3/9 (ties 0), Wilcoxon p = 0.25 (Holm 0.5), rank-biserial r = -0.47; over runs n=45, p=0.209, r=-0.24
+    CramerV+RL vs Attention+RL: mean 0.8830 vs 0.8623, CramerV+RL better on 1/9 (ties 0), Wilcoxon p = 0.129 (Holm 0.438), rank-biserial r = -0.60; over runs n=45, p=0.212, r=-0.23
+    Attention+RL vs Random+RL: mean 0.8623 vs 0.8157, Attention+RL better on 5/9 (ties 2), Wilcoxon p = 0.109 (Holm 0.438), rank-biserial r = +0.71; over runs n=45, p=0.11, r=+0.31
+    FP-Growth vs MutualInfo+RL: mean 0.9976 vs 0.8786, FP-Growth better on 9/9 (ties 0), Wilcoxon p = 0.00391 (Holm 0.0195), rank-biserial r = +1.00; over runs n=45, p=2.47e-07, r=+1.00
+    PyAerial vs MutualInfo+RL: mean 0.6396 vs 0.8786, PyAerial better on 4/9 (ties 0), Wilcoxon p = 0.496 (Holm 0.5), rank-biserial r = -0.29; over runs n=45, p=0.0461, r=-0.37
+
+  B/n_rules (fewer = better): 9 datasets x 6 methods
+    average rank (1 = best): Random+RL 2.50, MutualInfo+RL 2.78, CramerV+RL 3.00, Attention+RL 3.06, PyAerial 3.67, FP-Growth 6.00
+    Friedman chi2 = 22.119, p = 0.000497; Nemenyi CD (alpha 0.05) = 2.513
+    MutualInfo+RL vs Attention+RL: mean 3.3778 vs 3.1111, MutualInfo+RL better on 4/9 (ties 2), Wilcoxon p = 0.578 (Holm 0.984), rank-biserial r = -0.29; over runs n=45, p=0.166, r=-0.30
+    CramerV+RL vs Attention+RL: mean 3.4444 vs 3.1111, CramerV+RL better on 4/9 (ties 1), Wilcoxon p = 0.328 (Holm 0.984), rank-biserial r = -0.42; over runs n=45, p=0.0754, r=-0.40
+    Attention+RL vs Random+RL: mean 3.1111 vs 2.9333, Attention+RL better on 2/9 (ties 2), Wilcoxon p = 0.469 (Holm 0.984), rank-biserial r = -0.32; over runs n=45, p=0.342, r=-0.20
+    FP-Growth vs MutualInfo+RL: mean 334.2444 vs 3.3778, FP-Growth better on 0/9 (ties 0), Wilcoxon p = 0.00391 (Holm 0.0195), rank-biserial r = -1.00; over runs n=45, p=5.17e-09, r=-1.00
+    PyAerial vs MutualInfo+RL: mean 102.8444 vs 3.3778, PyAerial better on 3/9 (ties 0), Wilcoxon p = 0.0547 (Holm 0.219), rank-biserial r = -0.73; over runs n=45, p=1.63e-05, r=-0.74
+
+[C] Attention robustness (.\rob_per_run.csv)
+
+  k = 1: mean Zhang over 12 (dataset, seed) blocks
+    Attention[base]              0.3178
+    Random                       0.2441
+    MutualInfo                   0.4913
+    Attention[base] vs Random: 10/12 better, p = 0.0342 (Holm 0.0342), r = +0.69
+    MutualInfo vs Attention[base]: 11/12 better, p = 0.00146 (Holm 0.00293), r = +0.95
+
+  k = 2: mean Zhang over 12 (dataset, seed) blocks
+    Attention[base]              0.3104
+    Attention[beta0]             0.3029
+    Attention[beta1e-2]          0.3218
+    Attention[d128]              0.3150
+    Attention[epochs150]         0.3129
+    Attention[heads1]            0.3236
+    Attention[heads8]            0.3114
+    Attention[noVAE]             0.2950
+    Attention[sink]              0.3180
+    Random                       0.2523
+    MutualInfo                   0.4433
+    Attention[base] vs Random: 10/12 better, p = 0.0342 (Holm 0.0742), r = +0.69
+    Attention[beta0] vs Random: 10/12 better, p = 0.0425 (Holm 0.0742), r = +0.67
+    Attention[beta1e-2] vs Random: 11/12 better, p = 0.0122 (Holm 0.0742), r = +0.79
+    Attention[d128] vs Random: 11/12 better, p = 0.00928 (Holm 0.0742), r = +0.82
+    Attention[epochs150] vs Random: 11/12 better, p = 0.00928 (Holm 0.0742), r = +0.82
+    Attention[heads1] vs Random: 9/12 better, p = 0.00684 (Holm 0.0615), r = +0.85
+    Attention[heads8] vs Random: 9/12 better, p = 0.0122 (Holm 0.0742), r = +0.79
+    Attention[noVAE] vs Random: 12/12 better, p = 0.000488 (Holm 0.00879), r = +1.00
+    Attention[sink] vs Random: 11/12 better, p = 0.00928 (Holm 0.0742), r = +0.82
+    MutualInfo vs Attention[base]: 12/12 better, p = 0.000488 (Holm 0.00879), r = +1.00
+    MutualInfo vs Attention[beta0]: 12/12 better, p = 0.000488 (Holm 0.00879), r = +1.00
+    MutualInfo vs Attention[beta1e-2]: 9/12 better, p = 0.00928 (Holm 0.0742), r = +0.82
+    MutualInfo vs Attention[d128]: 12/12 better, p = 0.000488 (Holm 0.00879), r = +1.00
+    MutualInfo vs Attention[epochs150]: 12/12 better, p = 0.000488 (Holm 0.00879), r = +1.00
+    MutualInfo vs Attention[heads1]: 12/12 better, p = 0.000488 (Holm 0.00879), r = +1.00
+    MutualInfo vs Attention[heads8]: 12/12 better, p = 0.000488 (Holm 0.00879), r = +1.00
+    MutualInfo vs Attention[noVAE]: 12/12 better, p = 0.000488 (Holm 0.00879), r = +1.00
+    MutualInfo vs Attention[sink]: 11/12 better, p = 0.00146 (Holm 0.0146), r = +0.95
+
+  k = 3: mean Zhang over 12 (dataset, seed) blocks
+    Attention[base]              0.3125
+    Random                       0.2404
+    MutualInfo                   0.4171
+    Attention[base] vs Random: 11/12 better, p = 0.00146 (Holm 0.00146), r = +0.95
+    MutualInfo vs Attention[base]: 12/12 better, p = 0.000488 (Holm 0.000977), r = +1.00
+
+Notes: Friedman/Nemenyi and Wilcoxon over datasets use per-dataset means (Demsar 2006). Deterministic guides (MutualInfo, CramerV, FP-Growth) have the same value in every seed. Rank-biserial r ranges from -1 to 1; positive values mean the first method of the pair is better (for rule counts in part B: has fewer rules).
+Figures: stats_cd_zhang.png, stats_cd_accuracy.png

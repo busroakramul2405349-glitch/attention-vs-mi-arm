@@ -255,7 +255,10 @@ class _Tee:
 
     def flush(self):
         for st in self.streams:
-            st.flush()
+            try:
+                st.flush()
+            except Exception:  # log file already closed at interpreter exit
+                pass
 
 
 if __name__ == "__main__":
@@ -275,6 +278,6 @@ if __name__ == "__main__":
         traceback.print_exc()
         print("\nKirimkan isi file pyaerial_mushroom_log.txt untuk diperbaiki.")
     finally:
+        sys.stdout, sys.stderr = sys.__stdout__, sys.__stderr__
         log.close()
-        sys.stdout = sys.__stdout__
         input("\nTekan Enter untuk menutup jendela...")

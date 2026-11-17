@@ -1,0 +1,72 @@
+{
+  "DATASETS": [
+    "acute_inflammations",
+    "autism_screening_adolescent",
+    "breast_cancer",
+    "cervical_cancer_behavior_risk",
+    "chess_king_rook_vs_king_pawn",
+    "congressional_voting",
+    "fertility",
+    "hepatitis",
+    "mushroom"
+  ],
+  "INCLUDE_GENE": true,
+  "GENE_COLS": 1000,
+  "GENE_MIN_SUPPORT": 0.512,
+  "SEEDS": [
+    0,
+    1,
+    2,
+    3,
+    4
+  ],
+  "RUN_SUPERVISED": true,
+  "RUN_BASELINES": true,
+  "MIN_SUPPORT": 0.1,
+  "MIN_CONF": 0.8,
+  "TOP_ANT": 2,
+  "STRATEGIES": [
+    "Attention",
+    "AttnBottom",
+    "Random",
+    "MutualInfo",
+    "CramerV"
+  ],
+  "SUP_MIN_SUPPORT": 0.05,
+  "TOP_K_FEATURES": 6,
+  "SUP_GUIDES": [
+    "Attention",
+    "MutualInfo",
+    "CramerV",
+    "Random"
+  ],
+  "PYAERIAL_EPOCHS": 10,
+  "PYAERIAL_MIN_RULE_FREQUENCY": 0.1,
+  "PYAERIAL_MIN_RULE_STRENGTH": 0.8,
+  "MAX_ANT": 2,
+  "D_MODEL": 64,
+  "N_HEADS": 4,
+  "V_EPOCHS": 50,
+  "LR": 0.003,
+  "BETA_KL": 0.001,
+  "RL_EPISODES": 1000,
+  "RL_SAMPLES": 16,
+  "RL_LR": 0.1,
+  "LAMBDA1": 1.0,
+  "LAMBDA2": 0.05,
+  "GENE_FILE": "cell_cancertype_NonSmallCellLungCarcinoma_lnic50.csv",
+  "DATA_DIRS": [
+    ".",
+    "pyaerial_benchmark",
+    "..\\data\\pyaerial_benchmark",
+    "data\\pyaerial_benchmark"
+  ],
+  "GENE_DIRS": [
+    ".",
+    "..\\data",
+    "D:\\NS ARM BARU VS\\data",
+    "D:\\NS ARM BARU VS"
+  ],
+  "LOG_FILE": "md_experiment_log.txt",
+  "HAS_PYAERIAL": true
+}

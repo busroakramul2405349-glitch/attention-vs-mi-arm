@@ -1,0 +1,11 @@
+dataset,rows,features,items,target,min_support_unsup,sha256,sha256_ok,file
+acute_inflammations,120,7,17,bladder-inflammation,0.1,7a992356eac452f8835866e3ffe65c9163cac14015f58fca3b5251d899e5af5d,True,.\acute_inflammations.csv
+autism_screening_adolescent,104,21,90,Class/ASD,0.1,19dc0851e0b10063803458c4889bbd27f895fba3b295c73ee011136c90439d05,True,.\autism_screening_adolescent.csv
+breast_cancer,277,10,43,Class,0.1,68fc2ca428d0a05449a4136883850748fc234aa8ad3f94e978a4dd6363ec1225,True,.\breast_cancer.csv
+cervical_cancer_behavior_risk,72,20,75,ca_cervix,0.1,d8b207ff86fe805796c286b95018cfbfaf776e7e7571a3b9e27a42a885acbe67,True,.\cervical_cancer_behavior_risk.csv
+chess_king_rook_vs_king_pawn,3196,36,73,wtoeg,0.1,4e771d74e1253c9352ce1002d245bb2bf5ee1b11a0e06b6bcf89d6c25c2dd522,True,.\chess_king_rook_vs_king_pawn.csv
+congressional_voting,232,17,34,Class,0.1,ff6def8ff72ba647dc7bc7499330bdeac426afb9c0c48fb48f1582c8886a4f54,True,.\congressional_voting.csv
+fertility,100,10,33,diagnosis,0.1,3e18d8d16b6381493aee95ee5c730e28366dfd732e38dd6a1feb47e8a05e1ea4,True,.\fertility.csv
+hepatitis,80,20,58,Class,0.1,8f1f69fa2c6a6528cce9a18a8d5f319a330dd899f2461fee500cf5ccc5ba0c7e,True,.\hepatitis.csv
+mushroom,5644,23,100,poisonous,0.1,0479d653aaaed91545a90364ddd8604f3fb64bd5db3b9d648fe81ab62f9bf887,True,.\mushroom.csv
+gene_1000,86,1000,2901,,0.512,1a8ed010cba48820024e21c604ef5e05af65325fe292bb4f8ce081a820fb6525,True,.\cell_cancertype_NonSmallCellLungCarcinoma_lnic50.csv

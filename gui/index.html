@@ -1,0 +1,396 @@
+<!doctype html>
+<html lang="id">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>ARM Experiment Runner</title>
+<style>
+:root{
+  --bg:#f6f6f3; --panel:#ffffff; --ink:#1f2328; --ink2:#59606a; --muted:#8a9099; --line:#e2e2dc;
+  --accent:#2a78d6; --accent-ink:#ffffff; --ok:#1a7f37; --okbg:#e8f5ec; --warn:#9a6700; --warnbg:#fff6dc;
+  --bad:#b42318; --badbg:#fdecec; --mi:#6250d6; --vat:#1b9e6e; --code:#f2f2ee;
+}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font:14px/1.5 "Segoe UI",system-ui,-apple-system,Roboto,Arial,sans-serif}
+header{background:#14213d;color:#fff;padding:14px 24px;display:flex;align-items:center;gap:16px;flex-wrap:wrap}
+header h1{font-size:17px;margin:0;font-weight:600;letter-spacing:.2px}
+header .sub{font-size:12.5px;color:#c9d1e3}
+#statuspill{margin-left:auto;padding:5px 12px;border-radius:999px;font-size:12.5px;background:#2b3a5c;color:#dfe6f5;white-space:nowrap}
+#statuspill.run{background:#f4b400;color:#1f1f1f}
+nav{display:flex;gap:2px;background:#fff;border-bottom:1px solid var(--line);padding:0 16px;overflow-x:auto}
+nav button{border:0;background:none;padding:12px 14px;font:inherit;color:var(--ink2);cursor:pointer;border-bottom:2px solid transparent;white-space:nowrap}
+nav button.on{color:var(--accent);border-bottom-color:var(--accent);font-weight:600}
+main{max-width:1180px;margin:0 auto;padding:20px 16px 60px}
+section{display:none} section.on{display:block}
+h2{font-size:18px;margin:4px 0 12px} h3{font-size:15px;margin:0 0 6px}
+.card{background:var(--panel);border:1px solid var(--line);border-radius:10px;padding:16px;margin-bottom:14px}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(330px,1fr));gap:14px}
+.muted{color:var(--ink2)} .small{font-size:12.5px}
+.btn{border:1px solid var(--line);background:#fff;color:var(--ink);padding:7px 13px;border-radius:7px;font:inherit;cursor:pointer}
+.btn:hover{border-color:#b9b9b0}
+.btn.primary{background:var(--accent);color:var(--accent-ink);border-color:var(--accent)}
+.btn.danger{color:var(--bad);border-color:#f0c2be}
+.btn:disabled{opacity:.45;cursor:not-allowed}
+.row{display:flex;gap:8px;flex-wrap:wrap;align-items:center}
+.tag{display:inline-block;font-size:11.5px;padding:2px 8px;border-radius:999px;background:#eef2f8;color:#2d4a7a;margin-right:4px}
+.ok{color:var(--ok)} .bad{color:var(--bad)} .warn{color:var(--warn)}
+.badge{display:inline-block;padding:2px 9px;border-radius:999px;font-size:12px;font-weight:600}
+.badge.ok{background:var(--okbg)} .badge.bad{background:var(--badbg)} .badge.warn{background:var(--warnbg)}
+table{border-collapse:collapse;width:100%}
+td,th{border-bottom:1px solid var(--line);padding:6px 8px;text-align:left;vertical-align:top;font-size:13px}
+th{color:var(--ink2);font-weight:600;width:200px}
+pre{background:var(--code);border:1px solid var(--line);border-radius:8px;padding:10px;overflow:auto;font:12px/1.45 Consolas,"Cascadia Mono",monospace;white-space:pre;margin:0}
+#logbox{height:62vh;background:#0f1419;color:#d6dde6;border-color:#0f1419}
+.flow{display:flex;flex-wrap:wrap;gap:10px;align-items:stretch}
+.step{flex:1 1 170px;background:#fff;border:1px solid var(--line);border-left:4px solid var(--accent);border-radius:8px;padding:10px 12px}
+.step b{display:block;font-size:13px}
+.step span{font-size:12px;color:var(--ink2)}
+.arrow{align-self:center;color:var(--muted);font-size:18px}
+.split{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.split>div,.grid>div{min-width:0}
+@media (max-width:860px){.split{grid-template-columns:1fr}}
+.runitem{padding:8px 10px;border:1px solid var(--line);border-radius:8px;margin-bottom:6px;cursor:pointer;background:#fff}
+.runitem.sel{border-color:var(--accent);box-shadow:0 0 0 1px var(--accent) inset}
+.tblcard{margin-bottom:14px}.tblwrap{overflow-x:auto}.datatbl th{background:#eef2f7;white-space:nowrap}.datatbl td,.datatbl th{padding:5px 8px;border-bottom:1px solid var(--line)}
+.figs img{width:100%;border:1px solid var(--line);border-radius:8px;background:#fff}
+.kv{font-family:Consolas,monospace;font-size:12px;word-break:break-all}
+input[type=text]{font:inherit;padding:7px 9px;border:1px solid var(--line);border-radius:7px;width:100%}
+.note{background:#f3f6fb;border:1px solid #dbe4f3;border-radius:8px;padding:10px 12px;font-size:13px}
+</style>
+</head>
+<body>
+<header>
+  <div>
+    <h1>ARM Experiment Runner</h1>
+    <div class="sub">Does Attention Help Neuro-Symbolic Association Rule Mining? &middot; seluruh eksperimen, dijalankan nyata</div>
+  </div>
+  <div id="statuspill">Siap</div>
+  <button class="btn danger" id="stophdr" onclick="stopRun()" style="display:none;background:#fff">Hentikan</button>
+</header>
+<nav id="tabs">
+  <button data-t="alur" class="on">1. Alur Penelitian</button>
+  <button data-t="env">2. Lingkungan &amp; Data</button>
+  <button data-t="run">3. Jalankan Eksperimen</button>
+  <button data-t="log">4. Log Langsung</button>
+  <button data-t="hasil">5. Hasil vs Arsip</button>
+  <button data-t="gambar">6. Gambar</button>
+  <button data-t="tabel">7. Tabel</button>
+</nav>
+<main>
+
+<section id="alur" class="on">
+  <h2>Alur penelitian, dari awal sampai akhir</h2>
+  <div class="card">
+    <div class="flow" id="flow"></div>
+  </div>
+  <div class="grid">
+    <div class="card">
+      <h3>Pertanyaan penelitian</h3>
+      <p class="small"><b>RQ1.</b> Apakah attention + RL pruning menghasilkan rule yang ringkas dan akurat dibanding baseline? &rarr; Eksperimen 2</p>
+      <p class="small"><b>RQ2.</b> Bagaimana skalabilitas pemilihan kandidat terarah terhadap dimensi data? &rarr; Eksperimen 3 dan 5</p>
+      <p class="small"><b>RQ3.</b> Dengan anggaran sama, apakah attention memilih antecedent lebih baik dari acak atau MI? &rarr; Eksperimen 4</p>
+    </div>
+    <div class="card">
+      <h3>Cara membuktikan di depan penguji</h3>
+      <ol class="small" style="padding-left:18px;margin:0">
+        <li>Tab 2: tunjukkan spesifikasi laptop dan bahwa file dataset gen <b>identik</b> (SHA-256) dengan dataset paper PyAerial.</li>
+        <li>Tab 3: klik <b>Jalankan semua (cepat)</b>. Seluruh eksperimen berjalan nyata dalam &plusmn; 10 menit.</li>
+        <li>Tab 4: penguji melihat log yang keluar langsung dari program.</li>
+        <li>Tab 5: bandingkan hasil run saat itu dengan arsip yang dipublikasikan di Zenodo.</li>
+      </ol>
+      <p class="small muted" style="margin-bottom:0">Mode <b>cepat</b> menjalankan kode yang sama dengan jumlah seed/kolom lebih sedikit. Mode <b>penuh</b> mereproduksi semua angka di naskah.</p>
+    </div>
+  </div>
+  <div class="card small">
+    Kode dan hasil: <span class="kv">github.com/busroakramul2405349-glitch/attention-vs-mi-arm</span> &middot; arsip DOI <span class="kv">10.5281/zenodo.23683115</span>
+  </div>
+</section>
+
+<section id="env">
+  <h2>Lingkungan komputer &amp; verifikasi data</h2>
+  <div class="grid">
+    <div class="card"><h3>Komputer</h3><table id="envtbl"></table></div>
+    <div class="card"><h3>Pustaka Python</h3><table id="libtbl"></table></div>
+  </div>
+  <div class="card">
+    <h3>Dataset gene expression (benchmark PyAerial)</h3>
+    <div id="genebox" class="small"></div>
+    <div class="row" style="margin-top:10px">
+      <input type="text" id="genepath" placeholder="Lokasi file atau folder cell_cancertype_NonSmallCellLungCarcinoma_lnic50.csv">
+      <button class="btn" onclick="setGene()">Gunakan lokasi ini</button>
+    </div>
+  </div>
+  <div class="card">
+    <h3>Dataset UCI Mushroom</h3>
+    <div id="mushbox" class="small"></div>
+    <div class="row" style="margin-top:10px">
+      <button class="btn" onclick="cacheMush()">Unduh &amp; simpan untuk mode offline (sekali, perlu internet)</button>
+      <span id="mushmsg" class="small muted"></span>
+    </div>
+  </div>
+</section>
+
+<section id="run">
+  <h2>Jalankan eksperimen</h2>
+  <div class="card row" style="justify-content:space-between">
+    <div class="small">Semua eksperimen berjalan berurutan; hasil tiap run disimpan di folder <span class="kv">runs/</span> beserta <span class="kv">run_info.json</span>.</div>
+    <div class="row">
+      <button class="btn primary" id="allcepat" onclick="startAll('cepat')">Jalankan semua (cepat, &plusmn; 10 menit)</button>
+      <button class="btn" id="allfull" onclick="startAll('full')">Jalankan semua (penuh, &plusmn; 3,5 jam)</button>
+      <button class="btn danger" id="stopbtn" onclick="stopRun()" disabled>Hentikan</button>
+    </div>
+  </div>
+  <div class="grid" id="expcards"></div>
+</section>
+
+<section id="log">
+  <h2>Log langsung <span id="logtitle" class="muted small"></span></h2>
+  <pre id="logbox"></pre>
+</section>
+
+<section id="hasil">
+  <h2>Hasil run vs arsip yang dipublikasikan</h2>
+  <div class="split" style="grid-template-columns:300px 1fr">
+    <div>
+      <div class="row" style="margin-bottom:8px"><button class="btn" onclick="loadRuns()">Muat ulang</button>
+        <button class="btn" onclick="openRuns()">Buka folder runs</button></div>
+      <div id="runlist"></div>
+    </div>
+    <div>
+      <div class="card" id="runinfo"><span class="muted">Pilih salah satu run di kiri.</span></div>
+      <div class="card" id="cmpcard" style="display:none">
+        <h3>Angka kunci: run ini vs arsip yang dipublikasikan</h3>
+        <div id="cmpnote" class="small muted" style="margin-bottom:6px"></div>
+        <div style="max-height:46vh;overflow:auto"><table id="cmptbl"></table></div>
+        <div class="small muted" style="margin-top:6px">Metode berbasis neural network (VATTEN, PyAerial) dapat berbeda sedikit antar komputer karena urutan operasi floating-point di CPU. Waktu eksekusi selalu bergantung pada perangkat keras.</div>
+      </div>
+      <div class="split">
+        <div><h3>Run ini</h3><pre id="runsum" style="height:52vh"></pre></div>
+        <div><h3>Arsip (Zenodo) <span id="archpath" class="muted small"></span></h3><pre id="archsum" style="height:52vh"></pre></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="gambar">
+  <h2>Gambar naskah</h2>
+  <div class="card row" style="justify-content:space-between">
+    <div class="small">Gambar 2&ndash;4 dibuat ulang dari file hasil di <span class="kv">results/</span> oleh <span class="kv">scripts/make_figures.py</span>; Gambar 5 dibuat oleh eksperimen 8 (uji statistik).</div>
+    <div class="row">
+      <label class="small">Sumber Gambar 5:&nbsp;<select id="figsrc" onchange="loadFigs()">
+        <option value="auto">Run penuh terbaru (jika belum ada: arsip)</option>
+        <option value="latest">Run terbaru, termasuk mode cepat</option>
+        <option value="archive">Arsip naskah</option></select></label>
+      <button class="btn primary" onclick="regenFigs()">Buat ulang Gambar 2&ndash;4 sekarang</button>
+    </div>
+  </div>
+  <div class="figs grid" id="figs"></div>
+</section>
+
+<section id="tabel">
+  <h2>Tabel naskah</h2>
+  <div class="card row" style="justify-content:space-between">
+    <div class="small">Semua tabel dihitung langsung dari file hasil (CSV/TXT), bukan diketik. Sumber tiap tabel tertulis di bawah judulnya.</div>
+    <div class="row">
+      <label class="small">Sumber data:&nbsp;<select id="tabsrc" onchange="loadTables()">
+        <option value="auto">Run penuh terbaru (jika belum ada: arsip naskah)</option>
+        <option value="latest">Run terbaru, termasuk mode cepat</option>
+        <option value="archive">Arsip naskah (angka di naskah)</option></select></label>
+      <button class="btn" onclick="loadTables()">Muat ulang</button>
+    </div>
+  </div>
+  <div id="tables"></div>
+</section>
+</main>
+
+<script>
+const $ = s => document.querySelector(s);
+const esc = s => (s ?? '').toString().replace(/[&<>]/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;'}[c]));
+let EXPS = [], logOffset = 0, lastRunning = false, selRun = null;
+
+document.querySelectorAll('#tabs button').forEach(b => b.onclick = () => show(b.dataset.t));
+function show(t){
+  document.querySelectorAll('#tabs button').forEach(b => b.classList.toggle('on', b.dataset.t === t));
+  document.querySelectorAll('main section').forEach(s => s.classList.toggle('on', s.id === t));
+  if (t === 'hasil') loadRuns();
+  if (t === 'env') loadEnv();
+  if (t === 'gambar') loadFigs();
+  if (t === 'tabel') loadTables();
+}
+async function api(path, body){
+  const r = await fetch(path, body === undefined ? {} : {method:'POST', headers:{'Content-Type':'application/json'}, body: JSON.stringify(body)});
+  return r.json();
+}
+
+async function loadExps(){
+  EXPS = await api('/api/experiments');
+  EXPS.forEach(e => { e.cepat = e.cepat || e.demo || {}; e.est_cepat = e.est_cepat || e.est_demo || ''; });
+  const stale = EXPS.length < 8 || EXPS.some(e => e.demo !== undefined);
+  let warn = document.getElementById('stalewarn');
+  if (stale && !warn) {
+    warn = document.createElement('div'); warn.id = 'stalewarn';
+    warn.style.cssText = 'background:#fde7c8;border-bottom:2px solid #c07a1a;padding:10px 24px;font-weight:600';
+    warn.textContent = 'Server GUI yang berjalan masih versi lama (hanya ' + EXPS.length + ' eksperimen). Tutup SEMUA jendela hitam ARM Experiment Runner, lalu klik dua kali JALANKAN_GUI.bat lagi.';
+    document.body.insertBefore(warn, document.body.children[1] || null);
+  }
+  $('#flow').innerHTML = [
+    ['0. Lingkungan & data', 'Spesifikasi laptop, verifikasi SHA-256 dataset'],
+    ...EXPS.map(e => [`${e.no}. ${e.title}`, e.manuscript])
+  ].map((s,i) => (i ? '<div class="arrow">&rarr;</div>' : '') + `<div class="step"><b>${esc(s[0])}</b><span>${esc(s[1])}</span></div>`).join('')
+   + '<div class="arrow">&rarr;</div><div class="step" style="border-left-color:var(--mi)"><b>9. Gambar & tabel naskah</b><span>Gambar 1&ndash;5 dan Tabel 1&ndash;8 dari file hasil</span></div>';
+  $('#expcards').innerHTML = EXPS.map(e => `
+    <div class="card">
+      <div class="row" style="justify-content:space-between"><h3>${e.no}. ${esc(e.title)}</h3></div>
+      <div class="small muted" style="margin:4px 0 8px">${esc(e.purpose)}</div>
+      <div class="small" style="margin-bottom:8px"><span class="tag">${esc(e.manuscript)}</span><span class="tag">${({gene:'data gen', mushroom:'UCI Mushroom', benchmark:'9 dataset benchmark PyAerial + data gen', stats:'hasil run 6 & 7'})[e.needs] || esc(e.needs)}</span></div>
+      <table class="small">
+        <tr><th>Skrip</th><td class="kv">scripts/${esc(e.script)}</td></tr>
+        <tr><th>Mode cepat</th><td>${Object.entries(e.cepat).map(([k,v]) => `<span class="kv">${k} = ${esc(v)}</span>`).join('<br>')} &middot; ${esc(e.est_cepat)}</td></tr>
+        <tr><th>Mode penuh</th><td>setelan naskah &middot; ${esc(e.est_full)}</td></tr>
+      </table>
+      <div class="row" style="margin-top:10px">
+        <button class="btn primary runbtn" onclick="startOne('${e.key}','cepat')">Jalankan cepat</button>
+        <button class="btn runbtn" onclick="startOne('${e.key}','full')">Jalankan penuh</button>
+      </div>
+    </div>`).join('');
+}
+
+async function startOne(k, mode){ const r = await api('/api/start', {keys:[k], mode}); afterStart(r); }
+async function startAll(mode){
+  if (mode === 'full' && !confirm('Mode penuh memakai setelan naskah dan bisa memakan waktu lama (semua eksperimen sekitar 3,5 jam). Lanjutkan?')) return;
+  const r = await api('/api/start', {keys: EXPS.map(e => e.key), mode}); afterStart(r);
+}
+function afterStart(r){
+  if (!r.ok){ alert(r.message); return; }
+  $('#logbox').textContent = ''; logOffset = 0; show('log'); poll();
+}
+async function stopRun(){ await api('/api/stop', {}); }
+
+async function poll(){
+  try{
+    const s = await api('/api/status?offset=' + logOffset);
+    if (s.log.length){
+      const L = $('#logbox'), atEnd = L.scrollTop + L.clientHeight >= L.scrollHeight - 30;
+      L.textContent += s.log.join('\n') + '\n';
+      if (atEnd) L.scrollTop = L.scrollHeight;
+    }
+    logOffset = s.offset;
+    const pill = $('#statuspill');
+    if (s.running){
+      const c = s.current;
+      pill.className = 'run';
+      pill.textContent = `Berjalan: ${c.title} (${c.mode}) · ${Math.floor(c.elapsed/60)}m ${Math.round(c.elapsed%60)}d` + (s.queue.length ? ` · antrean ${s.queue.length}` : '');
+      $('#logtitle').textContent = '— ' + c.title + ' (' + c.mode + ')';
+    } else { pill.className = ''; pill.textContent = 'Siap'; }
+    document.querySelectorAll('.runbtn,#allcepat,#allfull').forEach(b => b.disabled = s.running);
+    $('#stopbtn').disabled = !s.running;
+    $('#stophdr').style.display = s.running ? '' : 'none';
+    if (lastRunning && !s.running) loadRuns();
+    lastRunning = s.running;
+  } catch(e){ $('#statuspill').textContent = 'Server tidak merespons'; }
+}
+setInterval(poll, 1000);
+
+async function loadEnv(){
+  const e = await api('/api/env');
+  $('#envtbl').innerHTML = [['CPU', e.cpu], ['Core logis', e.cores], ['RAM', e.ram_gb ? e.ram_gb + ' GB' : '-'],
+    ['Sistem operasi', e.os], ['Nama komputer', e.machine], ['Python', e.python + '<div class="kv muted">' + esc(e.python_exe) + '</div>'],
+    ['Folder aplikasi', '<span class="kv">' + esc(e.root) + '</span>']]
+    .map(([k,v]) => `<tr><th>${k}</th><td>${k==='Python'||k==='Folder aplikasi'? v : esc(v)}</td></tr>`).join('');
+  $('#libtbl').innerHTML = Object.entries(e.libs).map(([k,v]) =>
+    `<tr><th>${k}</th><td>${v ? esc(v) : '<span class="warn">belum terpasang</span>'}</td></tr>`).join('') +
+    '<tr><td colspan="2" class="small muted">Versi pada run naskah: numpy 2.4.6, pandas 3.0.3, torch 2.13.0, mlxtend 0.25.0, pyaerial 1.1.0. Pustaka yang belum terpasang akan dipasang otomatis oleh skrip saat run pertama (perlu internet).</td></tr>';
+  const g = e.gene;
+  $('#genebox').innerHTML = g.found
+    ? `<div>File: <span class="kv">${esc(g.path)}</span></div><div>SHA-256: <span class="kv">${g.sha256}</span></div>
+       <div style="margin-top:6px">${g.match ? '<span class="badge ok">IDENTIK dengan dataset paper PyAerial</span>' : '<span class="badge bad">TIDAK identik dengan dataset paper</span>'}</div>`
+    : '<span class="badge bad">File belum ditemukan</span> <span class="muted">Isi lokasinya di bawah.</span>';
+  const m = e.mushroom;
+  $('#mushbox').innerHTML = m.cached
+    ? `<span class="badge ok">Tersedia offline</span> <span class="kv">${esc(m.path)}</span><div class="kv muted">SHA-256 ${m.sha256}</div>`
+    : '<span class="badge warn">Belum ada cache offline</span> <span class="muted">Eksperimen 1 dan 2 akan mengunduh langsung dari UCI (perlu internet). Untuk ujian, simpan cache sekarang.</span>';
+  const b = e.benchmark;
+  $('#mushbox').innerHTML += `<div style="margin-top:10px"><b>9 dataset benchmark PyAerial</b> (eksperimen 6&ndash;7): `
+    + (b.found === b.total && b.all_match ? `<span class="badge ok">${b.found}/${b.total} file, SHA-256 identik</span>`
+       : `<span class="badge bad">${b.found}/${b.total} file, ${b.matched} cocok</span>`)
+    + `<div class="kv muted">${esc(b.dir)}</div></div>`;
+}
+async function setGene(){
+  const r = await api('/api/gene_path', {path: $('#genepath').value});
+  if (!r.ok) alert(r.message); loadEnv();
+}
+async function cacheMush(){
+  $('#mushmsg').textContent = 'Mengunduh...';
+  const r = await api('/api/cache_mushroom', {});
+  $('#mushmsg').textContent = r.message; loadEnv();
+}
+
+async function loadRuns(){
+  const runs = await api('/api/runs');
+  $('#runlist').innerHTML = runs.length ? runs.map(r => `
+    <div class="runitem ${r.run_id===selRun?'sel':''}" onclick="openRun('${r.run_id}')">
+      <div><b class="small">${esc(r.title)}</b></div>
+      <div class="small muted">${esc(r.started?.replace('T',' '))} · ${r.mode} · ${r.duration_s ?? '-'} d</div>
+      <div class="small">${badge(r.status)}</div>
+    </div>`).join('') : '<div class="muted small">Belum ada run.</div>';
+}
+function badge(s){ return s==='selesai' ? '<span class="badge ok">selesai</span>' : s==='dihentikan' ? '<span class="badge warn">dihentikan</span>' : '<span class="badge bad">'+esc(s)+'</span>'; }
+async function openRun(id){
+  selRun = id; loadRuns();
+  const d = await api('/api/run?id=' + encodeURIComponent(id));
+  const i = d.info;
+  const ov = Object.entries(i.overrides || {}).map(([k,v]) => `${k}: ${esc(v.asli)} &rarr; ${esc(v.cepat ?? v.demo)}`).join('<br>') || 'tidak ada (setelan naskah)';
+  $('#runinfo').innerHTML = `<table class="small">
+    <tr><th>Eksperimen</th><td>${esc(i.title)} ${badge(i.status)}</td></tr>
+    <tr><th>Mode</th><td>${esc(i.mode)}</td></tr><tr><th>Perubahan mode cepat</th><td class="kv">${ov}</td></tr>
+    <tr><th>Waktu</th><td>${esc(i.started)} &rarr; ${esc(i.finished)} (${i.duration_s} detik)</td></tr>
+    <tr><th>Dataset</th><td class="kv">${esc(JSON.stringify(i.dataset || {}))}</td></tr>
+    <tr><th>Skrip asli (SHA-256)</th><td class="kv">${esc(i.script_sha256_original)}</td></tr>
+    <tr><th>Folder</th><td class="kv">${esc(i.run_dir)} <button class="btn small" onclick="openRuns('${id}')">Buka</button></td></tr></table>`;
+  const c = await api('/api/compare?id=' + encodeURIComponent(id));
+  $('#cmpcard').style.display = '';
+  $('#cmpnote').textContent = c.note || '';
+  const fmt = v => Math.abs(v) >= 100 ? v.toLocaleString('id-ID', {maximumFractionDigits:1}) : v.toFixed(4);
+  const vb = v => v==='identik' ? '<span class="badge ok">identik</span>' : v==='selisih kecil' ? '<span class="badge warn">selisih kecil</span>'
+              : v==='waktu' ? '<span class="badge" style="background:#eef2f8">waktu</span>' : '<span class="badge bad">berbeda</span>';
+  $('#cmptbl').innerHTML = c.rows.length ? '<tr><th style="width:auto">Kelompok</th><th style="width:auto">Metrik</th><th style="width:auto">Run ini</th><th style="width:auto">Arsip</th><th style="width:auto">Selisih</th><th style="width:auto"></th></tr>' +
+    c.rows.map(r => `<tr><td>${esc(r.group)}</td><td class="kv">${esc(r.metric)}</td><td>${fmt(r.run)}</td><td>${fmt(r.archive)}</td><td>${(r.diff>=0?'+':'')+fmt(r.diff)}</td><td>${vb(r.verdict)}</td></tr>`).join('')
+    : '<tr><td class="muted">Tidak ada angka yang bisa dibandingkan untuk run ini.</td></tr>';
+  $('#runsum').textContent = d.summary || '(file ringkasan tidak ada; lihat log)';
+  $('#archsum').textContent = d.archive || '-';
+  $('#archpath').textContent = d.archive_path || '';
+}
+async function openRuns(id){ const r = await api('/api/open_runs', {run_id: id || ''}); if (!r.ok) alert(r.message || r.path); }
+
+async function loadFigs(){
+  const t = Date.now();
+  const figs = await api('/api/figlist?source=' + ($('#figsrc')?.value || 'auto'));
+  $('#figs').innerHTML = figs.map(f => `<div class="card"><h3>${esc(f.title)}</h3>
+      <div class="small muted" style="margin-bottom:6px">Sumber: <span class="kv">${esc(f.source)}</span></div>
+      ${f.url ? `<a href="${f.url}" target="_blank" title="Klik untuk memperbesar"><img src="${f.url}${f.url.includes('?') ? '&' : '?'}t=${t}" alt="${esc(f.title)}" style="cursor:zoom-in"></a>`
+              : `<div class="badge warn">${esc(f.missing || 'Belum ada')}</div>`}</div>`).join('');
+}
+function cell(v){
+  const s = esc(v);
+  return s.startsWith('**') && s.endsWith('**') ? '<b>' + s.slice(2, -2) + '</b>' : s;
+}
+async function loadTables(){
+  $('#tables').innerHTML = '<div class="muted small">Memuat...</div>';
+  const ts = await api('/api/tables?source=' + ($('#tabsrc')?.value || 'auto'));
+  $('#tables').innerHTML = ts.map(t => `<div class="card tblcard">
+      <h3>Tabel ${esc(t.no)}. ${esc(t.title)}</h3>
+      <div class="small muted" style="margin-bottom:8px">Sumber: <span class="kv">${esc(t.source)}</span>${t.note ? ' &middot; ' + esc(t.note) : ''}</div>
+      ${t.missing ? `<div class="badge warn">${esc(t.missing)}</div>` :
+        `<div class="tblwrap"><table class="small datatbl"><thead><tr>${t.header.map(h => `<th>${esc(h)}</th>`).join('')}</tr></thead>
+         <tbody>${t.rows.map(r => `<tr>${r.map(c => `<td>${cell(c)}</td>`).join('')}</tr>`).join('')}</tbody></table></div>`}
+    </div>`).join('');
+}
+async function regenFigs(){
+  const r = await api('/api/figures', {});
+  if (!r.ok) alert('Gagal membuat gambar:\n' + r.output); loadFigs();
+}
+
+loadExps(); poll();
+</script>
+</body>
+</html>

@@ -1,0 +1,1011 @@
+Python 3.13.0 | Windows-11-10.0.26200-SP0
+  numpy 2.5.4
+  pandas 3.1.0
+  torch 2.14.1
+  mlxtend 0.25.0
+  pyaerial 1.1.0
+  scipy 1.18.1
+acute_inflammations                120 rows     7 features  sha256 ok=True
+autism_screening_adolescent        104 rows    21 features  sha256 ok=True
+breast_cancer                      277 rows    10 features  sha256 ok=True
+cervical_cancer_behavior_risk       72 rows    20 features  sha256 ok=True
+chess_king_rook_vs_king_pawn      3196 rows    36 features  sha256 ok=True
+congressional_voting               232 rows    17 features  sha256 ok=True
+fertility                          100 rows    10 features  sha256 ok=True
+hepatitis                           80 rows    20 features  sha256 ok=True
+mushroom                          5644 rows    23 features  sha256 ok=True
+gene_1000                           86 rows  1000 features  sha256 ok=True
+
+=== [A] acute_inflammations: 120 rows x 7 features, min_support=0.1 (MI 0.00s, Cramer's V 0.00s) ===
+  seed -1 FP-Growth   rules=    167 lift=1.734 zhang=0.506 conf=0.965 cov=1.000 cons=6
+  seed 0 Attention   rules=     24 lift=1.731 zhang=0.634 conf=0.950 cov=1.000 cons=5
+  seed 0 AttnBottom  rules=     18 lift=1.466 zhang=0.345 conf=0.899 cov=0.925 cons=6
+  seed 0 Random      rules=     17 lift=1.622 zhang=0.512 conf=0.945 cov=1.000 cons=6
+  seed 0 MutualInfo  rules=     34 lift=1.725 zhang=0.561 conf=0.954 cov=1.000 cons=6
+  seed 0 CramerV     rules=     34 lift=1.725 zhang=0.561 conf=0.954 cov=1.000 cons=6
+  seed 0: overlap of chosen features, Attention vs MI 0.714, vs Cramer's V 0.714, vs Random 0.429
+  seed 0 PyAerial    rules=    127 lift=1.661 zhang=0.492 conf=0.968 cov=1.000 cons=6
+  seed 1 Attention   rules=     28 lift=1.770 zhang=0.617 conf=0.956 cov=1.000 cons=6
+  seed 1 AttnBottom  rules=     22 lift=1.501 zhang=0.371 conf=0.910 cov=1.000 cons=6
+  seed 1 Random      rules=     20 lift=1.583 zhang=0.399 conf=0.947 cov=0.942 cons=5
+  seed 1 MutualInfo  rules=     34 lift=1.725 zhang=0.561 conf=0.954 cov=1.000 cons=6
+  seed 1 CramerV     rules=     34 lift=1.725 zhang=0.561 conf=0.954 cov=1.000 cons=6
+  seed 1: overlap of chosen features, Attention vs MI 0.714, vs Cramer's V 0.714, vs Random 0.214
+  seed 1 PyAerial    rules=    104 lift=1.646 zhang=0.494 conf=0.969 cov=1.000 cons=6
+  seed 2 Attention   rules=     25 lift=1.753 zhang=0.586 conf=0.964 cov=1.000 cons=6
+  seed 2 AttnBottom  rules=     18 lift=1.565 zhang=0.397 conf=0.945 cov=0.892 cons=6
+  seed 2 Random      rules=     20 lift=1.768 zhang=0.572 conf=0.912 cov=1.000 cons=5
+  seed 2 MutualInfo  rules=     34 lift=1.725 zhang=0.561 conf=0.954 cov=1.000 cons=6
+  seed 2 CramerV     rules=     34 lift=1.725 zhang=0.561 conf=0.954 cov=1.000 cons=6
+  seed 2: overlap of chosen features, Attention vs MI 0.643, vs Cramer's V 0.643, vs Random 0.286
+  seed 2 PyAerial    rules=    104 lift=1.642 zhang=0.483 conf=0.969 cov=1.000 cons=6
+  seed 3 Attention   rules=     20 lift=1.780 zhang=0.599 conf=0.932 cov=1.000 cons=6
+  seed 3 AttnBottom  rules=     20 lift=1.464 zhang=0.344 conf=0.923 cov=0.892 cons=6
+  seed 3 Random      rules=     16 lift=1.728 zhang=0.547 conf=0.923 cov=1.000 cons=5
+  seed 3 MutualInfo  rules=     34 lift=1.725 zhang=0.561 conf=0.954 cov=1.000 cons=6
+  seed 3 CramerV     rules=     34 lift=1.725 zhang=0.561 conf=0.954 cov=1.000 cons=6
+  seed 3: overlap of chosen features, Attention vs MI 0.429, vs Cramer's V 0.429, vs Random 0.643
+  seed 3 PyAerial    rules=    119 lift=1.615 zhang=0.477 conf=0.962 cov=1.000 cons=6
+  seed 4 Attention   rules=     24 lift=1.821 zhang=0.625 conf=0.972 cov=1.000 cons=5
+  seed 4 AttnBottom  rules=      9 lift=1.543 zhang=0.386 conf=0.925 cov=0.917 cons=4
+  seed 4 Random      rules=     17 lift=1.657 zhang=0.521 conf=0.930 cov=1.000 cons=4
+  seed 4 MutualInfo  rules=     34 lift=1.725 zhang=0.561 conf=0.954 cov=1.000 cons=6
+  seed 4 CramerV     rules=     34 lift=1.725 zhang=0.561 conf=0.954 cov=1.000 cons=6
+  seed 4: overlap of chosen features, Attention vs MI 0.571, vs Cramer's V 0.571, vs Random 0.500
+  seed 4 PyAerial    rules=    111 lift=1.612 zhang=0.450 conf=0.971 cov=1.000 cons=6
+
+=== [A] autism_screening_adolescent: 104 rows x 21 features, min_support=0.1 (MI 0.01s, Cramer's V 0.01s) ===
+  seed -1 FP-Growth   rules=   3814 lift=1.156 zhang=0.138 conf=0.904 cov=1.000 cons=17
+  seed 0 Attention   rules=     46 lift=1.219 zhang=0.232 conf=0.907 cov=1.000 cons=13
+  seed 0 AttnBottom  rules=     37 lift=1.077 zhang=0.104 conf=0.904 cov=1.000 cons=9
+  seed 0 Random      rules=     38 lift=1.079 zhang=0.092 conf=0.895 cov=1.000 cons=12
+  seed 0 MutualInfo  rules=     56 lift=1.296 zhang=0.237 conf=0.933 cov=1.000 cons=16
+  seed 0 CramerV     rules=     57 lift=1.337 zhang=0.250 conf=0.932 cov=1.000 cons=17
+  seed 0: overlap of chosen features, Attention vs MI 0.095, vs Cramer's V 0.095, vs Random 0.143
+  seed 0 PyAerial    rules=   1830 lift=1.028 zhang=0.035 conf=0.935 cov=1.000 cons=7
+  seed 1 Attention   rules=     46 lift=1.114 zhang=0.142 conf=0.889 cov=1.000 cons=12
+  seed 1 AttnBottom  rules=     33 lift=1.131 zhang=0.124 conf=0.891 cov=1.000 cons=9
+  seed 1 Random      rules=     36 lift=1.062 zhang=0.094 conf=0.910 cov=1.000 cons=8
+  seed 1 MutualInfo  rules=     56 lift=1.296 zhang=0.237 conf=0.933 cov=1.000 cons=16
+  seed 1 CramerV     rules=     57 lift=1.337 zhang=0.250 conf=0.932 cov=1.000 cons=17
+  seed 1: overlap of chosen features, Attention vs MI 0.048, vs Cramer's V 0.048, vs Random 0.024
+  seed 1 PyAerial    rules=   2486 lift=1.036 zhang=0.046 conf=0.923 cov=1.000 cons=8
+  seed 2 Attention   rules=     47 lift=1.183 zhang=0.160 conf=0.889 cov=1.000 cons=13
+  seed 2 AttnBottom  rules=     29 lift=1.025 zhang=0.080 conf=0.889 cov=1.000 cons=8
+  seed 2 Random      rules=     44 lift=1.097 zhang=0.125 conf=0.891 cov=1.000 cons=11
+  seed 2 MutualInfo  rules=     56 lift=1.296 zhang=0.237 conf=0.933 cov=1.000 cons=16
+  seed 2 CramerV     rules=     57 lift=1.337 zhang=0.250 conf=0.932 cov=1.000 cons=17
+  seed 2: overlap of chosen features, Attention vs MI 0.095, vs Cramer's V 0.119, vs Random 0.071
+  seed 2 PyAerial    rules=   2739 lift=1.051 zhang=0.065 conf=0.919 cov=1.000 cons=8
+  seed 3 Attention   rules=     63 lift=1.225 zhang=0.206 conf=0.921 cov=1.000 cons=12
+  seed 3 AttnBottom  rules=     35 lift=1.033 zhang=0.071 conf=0.895 cov=1.000 cons=7
+  seed 3 Random      rules=     51 lift=1.143 zhang=0.151 conf=0.895 cov=1.000 cons=12
+  seed 3 MutualInfo  rules=     56 lift=1.296 zhang=0.237 conf=0.933 cov=1.000 cons=16
+  seed 3 CramerV     rules=     57 lift=1.337 zhang=0.250 conf=0.932 cov=1.000 cons=17
+  seed 3: overlap of chosen features, Attention vs MI 0.119, vs Cramer's V 0.119, vs Random 0.095
+  seed 3 PyAerial    rules=   2109 lift=1.022 zhang=0.026 conf=0.926 cov=1.000 cons=7
+  seed 4 Attention   rules=     58 lift=1.247 zhang=0.234 conf=0.897 cov=1.000 cons=12
+  seed 4 AttnBottom  rules=     38 lift=1.063 zhang=0.085 conf=0.889 cov=1.000 cons=10
+  seed 4 Random      rules=     45 lift=1.139 zhang=0.134 conf=0.889 cov=1.000 cons=11
+  seed 4 MutualInfo  rules=     56 lift=1.296 zhang=0.237 conf=0.933 cov=1.000 cons=16
+  seed 4 CramerV     rules=     57 lift=1.337 zhang=0.250 conf=0.932 cov=1.000 cons=17
+  seed 4: overlap of chosen features, Attention vs MI 0.119, vs Cramer's V 0.119, vs Random 0.119
+  seed 4 PyAerial    rules=   1952 lift=1.038 zhang=0.049 conf=0.933 cov=1.000 cons=8
+
+=== [A] breast_cancer: 277 rows x 10 features, min_support=0.1 (MI 0.00s, Cramer's V 0.00s) ===
+  seed -1 FP-Growth   rules=    222 lift=1.193 zhang=0.210 conf=0.881 cov=1.000 cons=6
+  seed 0 Attention   rules=     17 lift=1.368 zhang=0.364 conf=0.903 cov=0.982 cons=5
+  seed 0 AttnBottom  rules=      6 lift=1.025 zhang=0.031 conf=0.807 cov=0.845 cons=3
+  seed 0 Random      rules=     10 lift=1.143 zhang=0.193 conf=0.891 cov=0.924 cons=4
+  seed 0 MutualInfo  rules=     18 lift=1.293 zhang=0.366 conf=0.906 cov=0.939 cons=5
+  seed 0 CramerV     rules=     15 lift=1.310 zhang=0.477 conf=0.897 cov=0.975 cons=5
+  seed 0: overlap of chosen features, Attention vs MI 0.400, vs Cramer's V 0.350, vs Random 0.100
+  seed 0 PyAerial    rules=    229 lift=1.204 zhang=0.212 conf=0.895 cov=1.000 cons=5
+  seed 1 Attention   rules=     12 lift=1.135 zhang=0.351 conf=0.876 cov=0.971 cons=4
+  seed 1 AttnBottom  rules=      7 lift=1.037 zhang=0.046 conf=0.814 cov=0.910 cons=3
+  seed 1 Random      rules=     16 lift=1.323 zhang=0.361 conf=0.903 cov=0.960 cons=4
+  seed 1 MutualInfo  rules=     18 lift=1.293 zhang=0.366 conf=0.906 cov=0.939 cons=5
+  seed 1 CramerV     rules=     15 lift=1.310 zhang=0.477 conf=0.897 cov=0.975 cons=5
+  seed 1: overlap of chosen features, Attention vs MI 0.400, vs Cramer's V 0.350, vs Random 0.250
+  seed 1 PyAerial    rules=    234 lift=1.155 zhang=0.186 conf=0.888 cov=1.000 cons=5
+  seed 2 Attention   rules=     14 lift=1.340 zhang=0.395 conf=0.899 cov=0.957 cons=5
+  seed 2 AttnBottom  rules=      7 lift=1.110 zhang=0.142 conf=0.855 cov=0.881 cons=4
+  seed 2 Random      rules=      7 lift=1.053 zhang=0.104 conf=0.823 cov=0.921 cons=3
+  seed 2 MutualInfo  rules=     18 lift=1.293 zhang=0.366 conf=0.906 cov=0.939 cons=5
+  seed 2 CramerV     rules=     15 lift=1.310 zhang=0.477 conf=0.897 cov=0.975 cons=5
+  seed 2: overlap of chosen features, Attention vs MI 0.400, vs Cramer's V 0.300, vs Random 0.150
+  seed 2 PyAerial    rules=    221 lift=1.157 zhang=0.190 conf=0.888 cov=1.000 cons=5
+  seed 3 Attention   rules=     22 lift=1.355 zhang=0.365 conf=0.919 cov=0.939 cons=5
+  seed 3 AttnBottom  rules=     11 lift=1.102 zhang=0.162 conf=0.862 cov=0.805 cons=3
+  seed 3 Random      rules=      8 lift=1.147 zhang=0.275 conf=0.900 cov=0.906 cons=3
+  seed 3 MutualInfo  rules=     18 lift=1.293 zhang=0.366 conf=0.906 cov=0.939 cons=5
+  seed 3 CramerV     rules=     15 lift=1.310 zhang=0.477 conf=0.897 cov=0.975 cons=5
+  seed 3: overlap of chosen features, Attention vs MI 0.500, vs Cramer's V 0.450, vs Random 0.250
+  seed 3 PyAerial    rules=    190 lift=1.158 zhang=0.198 conf=0.894 cov=0.993 cons=5
+  seed 4 Attention   rules=     10 lift=1.147 zhang=0.458 conf=0.888 cov=0.946 cons=3
+  seed 4 AttnBottom  rules=      9 lift=1.066 zhang=0.113 conf=0.822 cov=0.949 cons=3
+  seed 4 Random      rules=     11 lift=1.179 zhang=0.290 conf=0.909 cov=0.942 cons=4
+  seed 4 MutualInfo  rules=     18 lift=1.293 zhang=0.366 conf=0.906 cov=0.939 cons=5
+  seed 4 CramerV     rules=     15 lift=1.310 zhang=0.477 conf=0.897 cov=0.975 cons=5
+  seed 4: overlap of chosen features, Attention vs MI 0.300, vs Cramer's V 0.300, vs Random 0.250
+  seed 4 PyAerial    rules=    203 lift=1.193 zhang=0.220 conf=0.895 cov=0.986 cons=5
+
+=== [A] cervical_cancer_behavior_risk: 72 rows x 20 features, min_support=0.1 (MI 0.00s, Cramer's V 0.00s) ===
+D:\laragon\bin\python\python-3.13\Lib\site-packages\mlxtend\frequent_patterns\association_rules.py:184: RuntimeWarning: invalid value encountered in divide
+  cert_metric = np.where(certainty_denom == 0, 0, certainty_num / certainty_denom)
+  seed -1 FP-Growth   rules=   1276 lift=1.474 zhang=0.272 conf=0.952 cov=1.000 cons=18
+  seed 0 Attention   rules=     30 lift=1.998 zhang=0.493 conf=0.921 cov=1.000 cons=10
+  seed 0 AttnBottom  rules=     20 lift=1.179 zhang=0.135 conf=0.942 cov=1.000 cons=3
+  seed 0 Random      rules=     25 lift=1.635 zhang=0.335 conf=0.919 cov=1.000 cons=5
+  seed 0 MutualInfo  rules=     50 lift=1.948 zhang=0.500 conf=0.915 cov=1.000 cons=13
+  seed 0 CramerV     rules=     54 lift=1.902 zhang=0.487 conf=0.908 cov=1.000 cons=14
+  seed 0: overlap of chosen features, Attention vs MI 0.200, vs Cramer's V 0.175, vs Random 0.150
+  seed 0 PyAerial    rules=    754 lift=1.061 zhang=0.054 conf=0.991 cov=1.000 cons=2
+  seed 1 Attention   rules=     21 lift=1.623 zhang=0.365 conf=0.916 cov=1.000 cons=6
+  seed 1 AttnBottom  rules=     23 lift=1.313 zhang=0.232 conf=0.924 cov=0.986 cons=7
+  seed 1 Random      rules=     21 lift=1.598 zhang=0.271 conf=0.927 cov=1.000 cons=8
+  seed 1 MutualInfo  rules=     50 lift=1.948 zhang=0.500 conf=0.915 cov=1.000 cons=13
+  seed 1 CramerV     rules=     54 lift=1.902 zhang=0.487 conf=0.908 cov=1.000 cons=14
+  seed 1: overlap of chosen features, Attention vs MI 0.150, vs Cramer's V 0.175, vs Random 0.075
+  seed 1 PyAerial    rules=    683 lift=1.010 zhang=0.008 conf=0.998 cov=1.000 cons=3
+  seed 2 Attention   rules=     27 lift=1.546 zhang=0.375 conf=0.937 cov=1.000 cons=6
+  seed 2 AttnBottom  rules=     19 lift=1.227 zhang=0.162 conf=0.963 cov=1.000 cons=6
+  seed 2 Random      rules=     22 lift=1.542 zhang=0.314 conf=0.960 cov=1.000 cons=6
+  seed 2 MutualInfo  rules=     50 lift=1.948 zhang=0.500 conf=0.915 cov=1.000 cons=13
+  seed 2 CramerV     rules=     54 lift=1.902 zhang=0.487 conf=0.908 cov=1.000 cons=14
+  seed 2: overlap of chosen features, Attention vs MI 0.275, vs Cramer's V 0.250, vs Random 0.075
+  seed 2 PyAerial    rules=    836 lift=1.070 zhang=0.060 conf=0.991 cov=1.000 cons=3
+  seed 3 Attention   rules=     23 lift=1.621 zhang=0.421 conf=0.906 cov=1.000 cons=8
+  seed 3 AttnBottom  rules=     14 lift=1.142 zhang=0.120 conf=0.970 cov=1.000 cons=4
+  seed 3 Random      rules=     27 lift=1.453 zhang=0.298 conf=0.936 cov=1.000 cons=8
+  seed 3 MutualInfo  rules=     50 lift=1.948 zhang=0.500 conf=0.915 cov=1.000 cons=13
+  seed 3 CramerV     rules=     54 lift=1.902 zhang=0.487 conf=0.908 cov=1.000 cons=14
+  seed 3: overlap of chosen features, Attention vs MI 0.250, vs Cramer's V 0.275, vs Random 0.100
+  seed 3 PyAerial    rules=    582 lift=1.003 zhang=0.003 conf=1.000 cov=1.000 cons=2
+  seed 4 Attention   rules=     25 lift=1.470 zhang=0.306 conf=0.961 cov=1.000 cons=5
+  seed 4 AttnBottom  rules=     20 lift=1.238 zhang=0.190 conf=0.942 cov=1.000 cons=5
+  seed 4 Random      rules=     20 lift=1.315 zhang=0.228 conf=0.949 cov=1.000 cons=6
+  seed 4 MutualInfo  rules=     50 lift=1.948 zhang=0.500 conf=0.915 cov=1.000 cons=13
+  seed 4 CramerV     rules=     54 lift=1.902 zhang=0.487 conf=0.908 cov=1.000 cons=14
+  seed 4: overlap of chosen features, Attention vs MI 0.175, vs Cramer's V 0.150, vs Random 0.150
+  seed 4 PyAerial    rules=    713 lift=1.023 zhang=0.018 conf=0.998 cov=1.000 cons=2
+
+=== [A] chess_king_rook_vs_king_pawn: 3196 rows x 36 features, min_support=0.1 (MI 0.00s, Cramer's V 0.00s) ===
+  seed -1 FP-Growth   rules=  27352 lift=1.044 zhang=0.047 conf=0.943 cov=1.000 cons=34
+  seed 0 Attention   rules=    130 lift=1.105 zhang=0.108 conf=0.949 cov=1.000 cons=29
+  seed 0 AttnBottom  rules=     78 lift=1.002 zhang=0.054 conf=0.941 cov=1.000 cons=19
+  seed 0 Random      rules=    116 lift=1.044 zhang=0.048 conf=0.943 cov=1.000 cons=25
+  seed 0 MutualInfo  rules=    153 lift=1.223 zhang=0.233 conf=0.956 cov=1.000 cons=34
+  seed 0 CramerV     rules=    139 lift=1.237 zhang=0.274 conf=0.951 cov=1.000 cons=34
+  seed 0: overlap of chosen features, Attention vs MI 0.181, vs Cramer's V 0.181, vs Random 0.083
+  seed 0 PyAerial    rules=  26419 lift=1.012 zhang=0.020 conf=0.949 cov=1.000 cons=25
+  seed 1 Attention   rules=    138 lift=1.106 zhang=0.089 conf=0.945 cov=1.000 cons=26
+  seed 1 AttnBottom  rules=     70 lift=1.001 zhang=0.023 conf=0.939 cov=1.000 cons=18
+  seed 1 Random      rules=    101 lift=1.035 zhang=0.056 conf=0.942 cov=1.000 cons=25
+  seed 1 MutualInfo  rules=    153 lift=1.223 zhang=0.233 conf=0.956 cov=1.000 cons=34
+  seed 1 CramerV     rules=    139 lift=1.237 zhang=0.274 conf=0.951 cov=1.000 cons=34
+  seed 1: overlap of chosen features, Attention vs MI 0.153, vs Cramer's V 0.167, vs Random 0.056
+  seed 1 PyAerial    rules=  26154 lift=1.012 zhang=0.020 conf=0.950 cov=1.000 cons=27
+  seed 2 Attention   rules=    133 lift=1.125 zhang=0.125 conf=0.955 cov=1.000 cons=30
+  seed 2 AttnBottom  rules=     68 lift=1.002 zhang=0.017 conf=0.943 cov=1.000 cons=18
+  seed 2 Random      rules=     95 lift=1.074 zhang=0.078 conf=0.938 cov=1.000 cons=22
+  seed 2 MutualInfo  rules=    153 lift=1.223 zhang=0.233 conf=0.956 cov=1.000 cons=34
+  seed 2 CramerV     rules=    139 lift=1.237 zhang=0.274 conf=0.951 cov=1.000 cons=34
+  seed 2: overlap of chosen features, Attention vs MI 0.208, vs Cramer's V 0.222, vs Random 0.056
+  seed 2 PyAerial    rules=  26223 lift=1.019 zhang=0.027 conf=0.949 cov=1.000 cons=26
+  seed 3 Attention   rules=    136 lift=1.089 zhang=0.093 conf=0.953 cov=1.000 cons=28
+  seed 3 AttnBottom  rules=     79 lift=1.002 zhang=0.015 conf=0.930 cov=1.000 cons=20
+  seed 3 Random      rules=    104 lift=1.034 zhang=0.031 conf=0.944 cov=1.000 cons=21
+  seed 3 MutualInfo  rules=    153 lift=1.223 zhang=0.233 conf=0.956 cov=1.000 cons=34
+  seed 3 CramerV     rules=    139 lift=1.237 zhang=0.274 conf=0.951 cov=1.000 cons=34
+  seed 3: overlap of chosen features, Attention vs MI 0.139, vs Cramer's V 0.111, vs Random 0.042
+  seed 3 PyAerial    rules=  26407 lift=1.019 zhang=0.027 conf=0.952 cov=1.000 cons=26
+  seed 4 Attention   rules=    116 lift=1.067 zhang=0.072 conf=0.951 cov=1.000 cons=24
+  seed 4 AttnBottom  rules=     87 lift=1.033 zhang=0.045 conf=0.943 cov=1.000 cons=21
+  seed 4 Random      rules=     99 lift=1.010 zhang=0.033 conf=0.937 cov=1.000 cons=23
+  seed 4 MutualInfo  rules=    153 lift=1.223 zhang=0.233 conf=0.956 cov=1.000 cons=34
+  seed 4 CramerV     rules=    139 lift=1.237 zhang=0.274 conf=0.951 cov=1.000 cons=34
+  seed 4: overlap of chosen features, Attention vs MI 0.153, vs Cramer's V 0.139, vs Random 0.069
+  seed 4 PyAerial    rules=  25794 lift=1.017 zhang=0.024 conf=0.952 cov=1.000 cons=24
+
+=== [A] congressional_voting: 232 rows x 17 features, min_support=0.1 (MI 0.00s, Cramer's V 0.00s) ===
+  seed -1 FP-Growth   rules=   3158 lift=1.666 zhang=0.586 conf=0.902 cov=1.000 cons=17
+  seed 0 Attention   rules=     63 lift=1.712 zhang=0.777 conf=0.905 cov=1.000 cons=13
+  seed 0 AttnBottom  rules=     22 lift=1.489 zhang=0.427 conf=0.900 cov=1.000 cons=10
+  seed 0 Random      rules=     51 lift=1.623 zhang=0.631 conf=0.880 cov=1.000 cons=14
+  seed 0 MutualInfo  rules=     69 lift=1.708 zhang=0.779 conf=0.912 cov=1.000 cons=15
+  seed 0 CramerV     rules=     69 lift=1.708 zhang=0.779 conf=0.912 cov=1.000 cons=15
+  seed 0: overlap of chosen features, Attention vs MI 0.471, vs Cramer's V 0.471, vs Random 0.088
+  seed 0 PyAerial    rules=   1537 lift=1.586 zhang=0.559 conf=0.928 cov=1.000 cons=13
+  seed 1 Attention   rules=     63 lift=1.698 zhang=0.747 conf=0.904 cov=1.000 cons=14
+  seed 1 AttnBottom  rules=     36 lift=1.577 zhang=0.522 conf=0.892 cov=1.000 cons=14
+  seed 1 Random      rules=     45 lift=1.660 zhang=0.629 conf=0.895 cov=1.000 cons=13
+  seed 1 MutualInfo  rules=     69 lift=1.708 zhang=0.779 conf=0.912 cov=1.000 cons=15
+  seed 1 CramerV     rules=     69 lift=1.708 zhang=0.779 conf=0.912 cov=1.000 cons=15
+  seed 1: overlap of chosen features, Attention vs MI 0.324, vs Cramer's V 0.324, vs Random 0.059
+  seed 1 PyAerial    rules=   1449 lift=1.596 zhang=0.557 conf=0.932 cov=1.000 cons=13
+  seed 2 Attention   rules=     59 lift=1.701 zhang=0.739 conf=0.913 cov=1.000 cons=14
+  seed 2 AttnBottom  rules=     36 lift=1.581 zhang=0.537 conf=0.882 cov=1.000 cons=11
+  seed 2 Random      rules=     53 lift=1.619 zhang=0.615 conf=0.879 cov=1.000 cons=15
+  seed 2 MutualInfo  rules=     69 lift=1.708 zhang=0.779 conf=0.912 cov=1.000 cons=15
+  seed 2 CramerV     rules=     69 lift=1.708 zhang=0.779 conf=0.912 cov=1.000 cons=15
+  seed 2: overlap of chosen features, Attention vs MI 0.353, vs Cramer's V 0.353, vs Random 0.147
+  seed 2 PyAerial    rules=   1543 lift=1.584 zhang=0.552 conf=0.931 cov=1.000 cons=14
+  seed 3 Attention   rules=     60 lift=1.708 zhang=0.716 conf=0.907 cov=1.000 cons=14
+  seed 3 AttnBottom  rules=     33 lift=1.539 zhang=0.521 conf=0.865 cov=1.000 cons=12
+  seed 3 Random      rules=     56 lift=1.651 zhang=0.662 conf=0.875 cov=1.000 cons=13
+  seed 3 MutualInfo  rules=     69 lift=1.708 zhang=0.779 conf=0.912 cov=1.000 cons=15
+  seed 3 CramerV     rules=     69 lift=1.708 zhang=0.779 conf=0.912 cov=1.000 cons=15
+  seed 3: overlap of chosen features, Attention vs MI 0.235, vs Cramer's V 0.235, vs Random 0.265
+  seed 3 PyAerial    rules=   1336 lift=1.602 zhang=0.558 conf=0.935 cov=1.000 cons=13
+  seed 4 Attention   rules=     68 lift=1.698 zhang=0.756 conf=0.905 cov=1.000 cons=15
+  seed 4 AttnBottom  rules=     27 lift=1.544 zhang=0.503 conf=0.868 cov=1.000 cons=9
+  seed 4 Random      rules=     55 lift=1.596 zhang=0.583 conf=0.882 cov=1.000 cons=15
+  seed 4 MutualInfo  rules=     69 lift=1.708 zhang=0.779 conf=0.912 cov=1.000 cons=15
+  seed 4 CramerV     rules=     69 lift=1.708 zhang=0.779 conf=0.912 cov=1.000 cons=15
+  seed 4: overlap of chosen features, Attention vs MI 0.412, vs Cramer's V 0.412, vs Random 0.147
+  seed 4 PyAerial    rules=   1416 lift=1.587 zhang=0.554 conf=0.932 cov=1.000 cons=13
+
+=== [A] fertility: 100 rows x 10 features, min_support=0.1 (MI 0.00s, Cramer's V 0.00s) ===
+  seed -1 FP-Growth   rules=    299 lift=1.093 zhang=0.079 conf=0.903 cov=1.000 cons=7
+  seed 0 Attention   rules=     22 lift=1.072 zhang=0.067 conf=0.909 cov=1.000 cons=3
+  seed 0 AttnBottom  rules=     14 lift=1.072 zhang=0.067 conf=0.871 cov=1.000 cons=4
+  seed 0 Random      rules=     21 lift=1.067 zhang=0.065 conf=0.901 cov=1.000 cons=3
+  seed 0 MutualInfo  rules=     21 lift=1.107 zhang=0.098 conf=0.911 cov=1.000 cons=4
+  seed 0 CramerV     rules=     21 lift=1.121 zhang=0.102 conf=0.921 cov=1.000 cons=4
+  seed 0: overlap of chosen features, Attention vs MI 0.200, vs Cramer's V 0.350, vs Random 0.250
+  seed 0 PyAerial    rules=    267 lift=1.040 zhang=0.042 conf=0.910 cov=1.000 cons=2
+  seed 1 Attention   rules=     17 lift=1.058 zhang=0.065 conf=0.888 cov=1.000 cons=3
+  seed 1 AttnBottom  rules=     20 lift=1.059 zhang=0.062 conf=0.910 cov=1.000 cons=3
+  seed 1 Random      rules=     19 lift=1.059 zhang=0.060 conf=0.891 cov=1.000 cons=3
+  seed 1 MutualInfo  rules=     21 lift=1.107 zhang=0.098 conf=0.911 cov=1.000 cons=4
+  seed 1 CramerV     rules=     21 lift=1.121 zhang=0.102 conf=0.921 cov=1.000 cons=4
+  seed 1: overlap of chosen features, Attention vs MI 0.050, vs Cramer's V 0.150, vs Random 0.150
+  seed 1 PyAerial    rules=    228 lift=1.044 zhang=0.042 conf=0.904 cov=1.000 cons=4
+  seed 2 Attention   rules=     19 lift=1.022 zhang=0.024 conf=0.895 cov=1.000 cons=2
+  seed 2 AttnBottom  rules=     13 lift=1.011 zhang=0.016 conf=0.885 cov=1.000 cons=2
+  seed 2 Random      rules=     17 lift=1.103 zhang=0.089 conf=0.887 cov=1.000 cons=4
+  seed 2 MutualInfo  rules=     21 lift=1.107 zhang=0.098 conf=0.911 cov=1.000 cons=4
+  seed 2 CramerV     rules=     21 lift=1.121 zhang=0.102 conf=0.921 cov=1.000 cons=4
+  seed 2: overlap of chosen features, Attention vs MI 0.250, vs Cramer's V 0.250, vs Random 0.250
+  seed 2 PyAerial    rules=    264 lift=1.039 zhang=0.040 conf=0.909 cov=1.000 cons=2
+  seed 3 Attention   rules=     13 lift=1.013 zhang=0.016 conf=0.887 cov=1.000 cons=2
+  seed 3 AttnBottom  rules=     21 lift=1.070 zhang=0.057 conf=0.895 cov=1.000 cons=4
+  seed 3 Random      rules=     18 lift=1.015 zhang=0.016 conf=0.888 cov=1.000 cons=2
+  seed 3 MutualInfo  rules=     21 lift=1.107 zhang=0.098 conf=0.911 cov=1.000 cons=4
+  seed 3 CramerV     rules=     21 lift=1.121 zhang=0.102 conf=0.921 cov=1.000 cons=4
+  seed 3: overlap of chosen features, Attention vs MI 0.050, vs Cramer's V 0.300, vs Random 0.400
+  seed 3 PyAerial    rules=    248 lift=1.034 zhang=0.035 conf=0.904 cov=1.000 cons=2
+  seed 4 Attention   rules=     16 lift=1.019 zhang=0.023 conf=0.890 cov=1.000 cons=2
+  seed 4 AttnBottom  rules=     21 lift=1.097 zhang=0.081 conf=0.897 cov=1.000 cons=4
+  seed 4 Random      rules=     20 lift=1.049 zhang=0.046 conf=0.894 cov=1.000 cons=3
+  seed 4 MutualInfo  rules=     21 lift=1.107 zhang=0.098 conf=0.911 cov=1.000 cons=4
+  seed 4 CramerV     rules=     21 lift=1.121 zhang=0.102 conf=0.921 cov=1.000 cons=4
+  seed 4: overlap of chosen features, Attention vs MI 0.050, vs Cramer's V 0.050, vs Random 0.150
+  seed 4 PyAerial    rules=    216 lift=1.045 zhang=0.048 conf=0.913 cov=1.000 cons=3
+
+=== [A] hepatitis: 80 rows x 20 features, min_support=0.1 (MI 0.00s, Cramer's V 0.00s) ===
+  seed -1 FP-Growth   rules=   4168 lift=1.161 zhang=0.143 conf=0.911 cov=1.000 cons=17
+  seed 0 Attention   rules=     48 lift=1.273 zhang=0.206 conf=0.895 cov=1.000 cons=12
+  seed 0 AttnBottom  rules=     50 lift=1.115 zhang=0.131 conf=0.905 cov=1.000 cons=11
+  seed 0 Random      rules=     61 lift=1.171 zhang=0.134 conf=0.907 cov=1.000 cons=13
+  seed 0 MutualInfo  rules=     83 lift=1.274 zhang=0.237 conf=0.943 cov=1.000 cons=14
+  seed 0 CramerV     rules=     87 lift=1.370 zhang=0.266 conf=0.937 cov=1.000 cons=16
+  seed 0: overlap of chosen features, Attention vs MI 0.075, vs Cramer's V 0.175, vs Random 0.050
+  seed 0 PyAerial    rules=   3304 lift=1.078 zhang=0.088 conf=0.913 cov=1.000 cons=8
+  seed 1 Attention   rules=     44 lift=1.261 zhang=0.165 conf=0.891 cov=1.000 cons=11
+  seed 1 AttnBottom  rules=     60 lift=1.072 zhang=0.085 conf=0.875 cov=1.000 cons=10
+  seed 1 Random      rules=     60 lift=1.231 zhang=0.127 conf=0.881 cov=1.000 cons=13
+  seed 1 MutualInfo  rules=     83 lift=1.274 zhang=0.237 conf=0.943 cov=1.000 cons=14
+  seed 1 CramerV     rules=     87 lift=1.370 zhang=0.266 conf=0.937 cov=1.000 cons=16
+  seed 1: overlap of chosen features, Attention vs MI 0.075, vs Cramer's V 0.125, vs Random 0.050
+  seed 1 PyAerial    rules=   2644 lift=1.083 zhang=0.096 conf=0.921 cov=1.000 cons=7
+  seed 2 Attention   rules=     46 lift=1.184 zhang=0.202 conf=0.900 cov=1.000 cons=11
+  seed 2 AttnBottom  rules=     57 lift=1.085 zhang=0.106 conf=0.891 cov=1.000 cons=10
+  seed 2 Random      rules=     65 lift=1.078 zhang=0.083 conf=0.886 cov=1.000 cons=10
+  seed 2 MutualInfo  rules=     83 lift=1.274 zhang=0.237 conf=0.943 cov=1.000 cons=14
+  seed 2 CramerV     rules=     87 lift=1.370 zhang=0.266 conf=0.937 cov=1.000 cons=16
+  seed 2: overlap of chosen features, Attention vs MI 0.125, vs Cramer's V 0.150, vs Random 0.075
+  seed 2 PyAerial    rules=   3381 lift=1.080 zhang=0.090 conf=0.915 cov=1.000 cons=10
+  seed 3 Attention   rules=     42 lift=1.234 zhang=0.211 conf=0.910 cov=1.000 cons=13
+  seed 3 AttnBottom  rules=     57 lift=1.088 zhang=0.087 conf=0.894 cov=1.000 cons=10
+  seed 3 Random      rules=     54 lift=1.118 zhang=0.127 conf=0.904 cov=1.000 cons=11
+  seed 3 MutualInfo  rules=     83 lift=1.274 zhang=0.237 conf=0.943 cov=1.000 cons=14
+  seed 3 CramerV     rules=     87 lift=1.370 zhang=0.266 conf=0.937 cov=1.000 cons=16
+  seed 3: overlap of chosen features, Attention vs MI 0.075, vs Cramer's V 0.225, vs Random 0.050
+  seed 3 PyAerial    rules=   3445 lift=1.083 zhang=0.092 conf=0.914 cov=1.000 cons=10
+  seed 4 Attention   rules=     48 lift=1.268 zhang=0.223 conf=0.914 cov=1.000 cons=11
+  seed 4 AttnBottom  rules=     67 lift=1.126 zhang=0.109 conf=0.891 cov=1.000 cons=11
+  seed 4 Random      rules=     67 lift=1.124 zhang=0.119 conf=0.898 cov=1.000 cons=13
+  seed 4 MutualInfo  rules=     83 lift=1.274 zhang=0.237 conf=0.943 cov=1.000 cons=14
+  seed 4 CramerV     rules=     87 lift=1.370 zhang=0.266 conf=0.937 cov=1.000 cons=16
+  seed 4: overlap of chosen features, Attention vs MI 0.150, vs Cramer's V 0.250, vs Random 0.000
+  seed 4 PyAerial    rules=   3361 lift=1.085 zhang=0.095 conf=0.915 cov=1.000 cons=8
+
+=== [A] mushroom: 5644 rows x 23 features, min_support=0.1 (MI 0.01s, Cramer's V 0.01s) ===
+D:\laragon\bin\python\python-3.13\Lib\site-packages\mlxtend\frequent_patterns\association_rules.py:184: RuntimeWarning: invalid value encountered in divide
+  cert_metric = np.where(certainty_denom == 0, 0, certainty_num / certainty_denom)
+  seed -1 FP-Growth   rules=   7594 lift=1.499 zhang=0.275 conf=0.965 cov=1.000 cons=18
+  seed 0 Attention   rules=     36 lift=1.098 zhang=0.144 conf=0.961 cov=1.000 cons=7
+  seed 0 AttnBottom  rules=     74 lift=1.364 zhang=0.252 conf=0.949 cov=1.000 cons=17
+  seed 0 Random      rules=     74 lift=1.551 zhang=0.324 conf=0.954 cov=1.000 cons=16
+  seed 0 MutualInfo  rules=    105 lift=1.762 zhang=0.438 conf=0.968 cov=1.000 cons=18
+  seed 0 CramerV     rules=     97 lift=1.689 zhang=0.399 conf=0.963 cov=1.000 cons=17
+  seed 0: overlap of chosen features, Attention vs MI 0.022, vs Cramer's V 0.065, vs Random 0.109
+  seed 0 PyAerial    rules=   7110 lift=1.322 zhang=0.176 conf=0.977 cov=1.000 cons=17
+  seed 1 Attention   rules=     52 lift=1.848 zhang=0.351 conf=0.958 cov=1.000 cons=13
+  seed 1 AttnBottom  rules=     58 lift=1.329 zhang=0.186 conf=0.964 cov=1.000 cons=12
+  seed 1 Random      rules=     75 lift=1.412 zhang=0.218 conf=0.973 cov=1.000 cons=13
+  seed 1 MutualInfo  rules=    105 lift=1.762 zhang=0.438 conf=0.968 cov=1.000 cons=18
+  seed 1 CramerV     rules=     97 lift=1.689 zhang=0.399 conf=0.963 cov=1.000 cons=17
+  seed 1: overlap of chosen features, Attention vs MI 0.043, vs Cramer's V 0.109, vs Random 0.109
+  seed 1 PyAerial    rules=   7530 lift=1.375 zhang=0.192 conf=0.978 cov=1.000 cons=17
+  seed 2 Attention   rules=     68 lift=1.595 zhang=0.383 conf=0.950 cov=1.000 cons=14
+  seed 2 AttnBottom  rules=     38 lift=1.092 zhang=0.084 conf=0.967 cov=1.000 cons=9
+  seed 2 Random      rules=     71 lift=1.297 zhang=0.195 conf=0.962 cov=1.000 cons=14
+  seed 2 MutualInfo  rules=    105 lift=1.762 zhang=0.438 conf=0.968 cov=1.000 cons=18
+  seed 2 CramerV     rules=     97 lift=1.689 zhang=0.399 conf=0.963 cov=1.000 cons=17
+  seed 2: overlap of chosen features, Attention vs MI 0.152, vs Cramer's V 0.109, vs Random 0.130
+  seed 2 PyAerial    rules=   7351 lift=1.289 zhang=0.174 conf=0.976 cov=1.000 cons=18
+  seed 3 Attention   rules=     39 lift=1.559 zhang=0.276 conf=0.942 cov=1.000 cons=10
+  seed 3 AttnBottom  rules=     59 lift=1.336 zhang=0.243 conf=0.962 cov=1.000 cons=14
+  seed 3 Random      rules=     72 lift=1.489 zhang=0.320 conf=0.941 cov=1.000 cons=16
+  seed 3 MutualInfo  rules=    105 lift=1.762 zhang=0.438 conf=0.968 cov=1.000 cons=18
+  seed 3 CramerV     rules=     97 lift=1.689 zhang=0.399 conf=0.963 cov=1.000 cons=17
+  seed 3: overlap of chosen features, Attention vs MI 0.065, vs Cramer's V 0.130, vs Random 0.130
+  seed 3 PyAerial    rules=   7694 lift=1.414 zhang=0.202 conf=0.979 cov=1.000 cons=18
+  seed 4 Attention   rules=     36 lift=1.368 zhang=0.200 conf=0.968 cov=1.000 cons=7
+  seed 4 AttnBottom  rules=     75 lift=1.281 zhang=0.198 conf=0.953 cov=1.000 cons=17
+  seed 4 Random      rules=     69 lift=1.414 zhang=0.251 conf=0.968 cov=1.000 cons=15
+  seed 4 MutualInfo  rules=    105 lift=1.762 zhang=0.438 conf=0.968 cov=1.000 cons=18
+  seed 4 CramerV     rules=     97 lift=1.689 zhang=0.399 conf=0.963 cov=1.000 cons=17
+  seed 4: overlap of chosen features, Attention vs MI 0.043, vs Cramer's V 0.043, vs Random 0.065
+  seed 4 PyAerial    rules=   7196 lift=1.307 zhang=0.176 conf=0.976 cov=1.000 cons=17
+
+=== [A] gene_1000: 86 rows x 1000 features, min_support=0.512 (MI 0.19s, Cramer's V 0.19s) ===
+  seed 0 Attention   rules=    305 lift=1.028 zhang=0.094 conf=0.850 cov=1.000 cons=189
+  seed 0 AttnBottom  rules=    412 lift=1.028 zhang=0.110 conf=0.851 cov=1.000 cons=200
+  seed 0 Random      rules=    297 lift=1.022 zhang=0.073 conf=0.851 cov=1.000 cons=174
+  seed 0 MutualInfo  rules=    869 lift=1.126 zhang=0.378 conf=0.867 cov=1.000 cons=493
+  seed 0 CramerV     rules=   1034 lift=1.121 zhang=0.395 conf=0.865 cov=1.000 cons=518
+  seed 0: overlap of chosen features, Attention vs MI 0.003, vs Cramer's V 0.004, vs Random 0.004
+  seed 1 Attention   rules=    304 lift=1.029 zhang=0.092 conf=0.854 cov=1.000 cons=186
+  seed 1 AttnBottom  rules=    377 lift=1.026 zhang=0.110 conf=0.855 cov=1.000 cons=175
+  seed 1 Random      rules=    294 lift=1.023 zhang=0.073 conf=0.850 cov=1.000 cons=179
+  seed 1 MutualInfo  rules=    869 lift=1.126 zhang=0.378 conf=0.867 cov=1.000 cons=493
+  seed 1 CramerV     rules=   1034 lift=1.121 zhang=0.395 conf=0.865 cov=1.000 cons=518
+  seed 1: overlap of chosen features, Attention vs MI 0.001, vs Cramer's V 0.001, vs Random 0.003
+  seed 2 Attention   rules=    330 lift=1.035 zhang=0.111 conf=0.855 cov=1.000 cons=197
+  seed 2 AttnBottom  rules=    440 lift=1.030 zhang=0.114 conf=0.851 cov=1.000 cons=207
+  seed 2 Random      rules=    301 lift=1.025 zhang=0.081 conf=0.850 cov=1.000 cons=184
+  seed 2 MutualInfo  rules=    869 lift=1.126 zhang=0.378 conf=0.867 cov=1.000 cons=493
+  seed 2 CramerV     rules=   1034 lift=1.121 zhang=0.395 conf=0.865 cov=1.000 cons=518
+  seed 2: overlap of chosen features, Attention vs MI 0.002, vs Cramer's V 0.004, vs Random 0.004
+  seed 3 Attention   rules=    340 lift=1.030 zhang=0.099 conf=0.850 cov=1.000 cons=203
+  seed 3 AttnBottom  rules=    418 lift=1.029 zhang=0.114 conf=0.851 cov=1.000 cons=196
+  seed 3 Random      rules=    288 lift=1.027 zhang=0.086 conf=0.854 cov=1.000 cons=178
+  seed 3 MutualInfo  rules=    869 lift=1.126 zhang=0.378 conf=0.867 cov=1.000 cons=493
+  seed 3 CramerV     rules=   1034 lift=1.121 zhang=0.395 conf=0.865 cov=1.000 cons=518
+  seed 3: overlap of chosen features, Attention vs MI 0.003, vs Cramer's V 0.004, vs Random 0.001
+  seed 4 Attention   rules=    305 lift=1.027 zhang=0.094 conf=0.854 cov=1.000 cons=174
+  seed 4 AttnBottom  rules=    406 lift=1.027 zhang=0.109 conf=0.853 cov=1.000 cons=190
+  seed 4 Random      rules=    298 lift=1.024 zhang=0.079 conf=0.850 cov=1.000 cons=179
+  seed 4 MutualInfo  rules=    869 lift=1.126 zhang=0.378 conf=0.867 cov=1.000 cons=493
+  seed 4 CramerV     rules=   1034 lift=1.121 zhang=0.395 conf=0.865 cov=1.000 cons=518
+  seed 4: overlap of chosen features, Attention vs MI 0.004, vs Cramer's V 0.004, vs Random 0.002
+
+=== [B] acute_inflammations: class 'bladder-inflammation' {'no': np.int64(61), 'yes': np.int64(59)}, K=6 features ===
+  seed 0 FP-Growth        rules=   44 acc=1.0000 cov=1.0000 time=0.02s
+  seed 0 PyAerial         rules=   13 acc=1.0000 cov=1.0000 time=0.71s
+  seed 0 Attention-noRL   rules=   44 acc=1.0000 cov=1.0000 time=1.66s
+  seed 0 Attention+RL     rules=    3 acc=0.9722 cov=0.9722 time=4.75s
+  seed 0 MutualInfo-noRL  rules=   44 acc=1.0000 cov=1.0000 time=0.09s
+  seed 0 MutualInfo+RL    rules=    3 acc=0.9722 cov=0.9722 time=2.92s
+  seed 0 CramerV-noRL     rules=   44 acc=1.0000 cov=1.0000 time=0.09s
+  seed 0 CramerV+RL       rules=    3 acc=0.9722 cov=0.9722 time=2.96s
+  seed 0 Random-noRL      rules=   44 acc=1.0000 cov=1.0000 time=0.02s
+  seed 0 Random+RL        rules=    3 acc=0.9722 cov=0.9722 time=2.92s
+  seed 1 FP-Growth        rules=   48 acc=1.0000 cov=1.0000 time=0.02s
+  seed 1 PyAerial         rules=   13 acc=1.0000 cov=1.0000 time=0.71s
+  seed 1 Attention-noRL   rules=   48 acc=1.0000 cov=1.0000 time=1.63s
+  seed 1 Attention+RL     rules=    3 acc=0.8611 cov=1.0000 time=4.83s
+  seed 1 MutualInfo-noRL  rules=   48 acc=1.0000 cov=1.0000 time=0.06s
+  seed 1 MutualInfo+RL    rules=    3 acc=0.8611 cov=1.0000 time=2.94s
+  seed 1 CramerV-noRL     rules=   48 acc=1.0000 cov=1.0000 time=0.06s
+  seed 1 CramerV+RL       rules=    3 acc=0.8611 cov=1.0000 time=2.93s
+  seed 1 Random-noRL      rules=   48 acc=1.0000 cov=1.0000 time=0.02s
+  seed 1 Random+RL        rules=    3 acc=0.8611 cov=1.0000 time=2.88s
+  seed 2 FP-Growth        rules=   49 acc=1.0000 cov=1.0000 time=0.02s
+  seed 2 PyAerial         rules=   14 acc=1.0000 cov=1.0000 time=0.78s
+  seed 2 Attention-noRL   rules=   49 acc=1.0000 cov=1.0000 time=1.87s
+  seed 2 Attention+RL     rules=    4 acc=1.0000 cov=1.0000 time=4.92s
+  seed 2 MutualInfo-noRL  rules=   49 acc=1.0000 cov=1.0000 time=0.07s
+  seed 2 MutualInfo+RL    rules=    3 acc=0.8889 cov=0.8056 time=2.94s
+  seed 2 CramerV-noRL     rules=   49 acc=1.0000 cov=1.0000 time=0.07s
+  seed 2 CramerV+RL       rules=    3 acc=0.8889 cov=0.8056 time=2.92s
+  seed 2 Random-noRL      rules=   49 acc=1.0000 cov=1.0000 time=0.02s
+  seed 2 Random+RL        rules=    4 acc=1.0000 cov=1.0000 time=2.91s
+  seed 3 FP-Growth        rules=   45 acc=1.0000 cov=1.0000 time=0.02s
+  seed 3 PyAerial         rules=   15 acc=1.0000 cov=1.0000 time=0.80s
+  seed 3 Attention-noRL   rules=   45 acc=1.0000 cov=1.0000 time=1.82s
+  seed 3 Attention+RL     rules=    4 acc=1.0000 cov=1.0000 time=5.02s
+  seed 3 MutualInfo-noRL  rules=   45 acc=1.0000 cov=1.0000 time=0.07s
+  seed 3 MutualInfo+RL    rules=    4 acc=1.0000 cov=1.0000 time=2.94s
+  seed 3 CramerV-noRL     rules=   45 acc=1.0000 cov=1.0000 time=0.07s
+  seed 3 CramerV+RL       rules=    4 acc=1.0000 cov=1.0000 time=2.96s
+  seed 3 Random-noRL      rules=   45 acc=1.0000 cov=1.0000 time=0.02s
+  seed 3 Random+RL        rules=    4 acc=1.0000 cov=1.0000 time=2.90s
+  seed 4 FP-Growth        rules=   45 acc=1.0000 cov=1.0000 time=0.02s
+  seed 4 PyAerial         rules=    1 acc=0.8889 cov=0.3889 time=0.73s
+  seed 4 Attention-noRL   rules=   45 acc=1.0000 cov=1.0000 time=1.65s
+  seed 4 Attention+RL     rules=    3 acc=0.8889 cov=1.0000 time=4.71s
+  seed 4 MutualInfo-noRL  rules=   45 acc=1.0000 cov=1.0000 time=0.06s
+  seed 4 MutualInfo+RL    rules=    3 acc=0.8889 cov=1.0000 time=2.93s
+  seed 4 CramerV-noRL     rules=   45 acc=1.0000 cov=1.0000 time=0.06s
+  seed 4 CramerV+RL       rules=    3 acc=0.8889 cov=1.0000 time=2.95s
+  seed 4 Random-noRL      rules=   45 acc=1.0000 cov=1.0000 time=0.02s
+  seed 4 Random+RL        rules=    3 acc=0.8889 cov=1.0000 time=2.88s
+
+=== [B] autism_screening_adolescent: class 'Class/ASD' {'NO': np.int64(41), 'YES': np.int64(63)}, K=6 features ===
+  seed 0 FP-Growth        rules=  300 acc=0.9355 cov=1.0000 time=0.44s
+  seed 0 PyAerial         rules=    0 acc=0.6129 cov=0.0000 time=0.93s
+  seed 0 Attention-noRL   rules=   40 acc=0.9355 cov=1.0000 time=1.90s
+  seed 0 Attention+RL     rules=    5 acc=0.9032 cov=0.9677 time=5.01s
+  seed 0 MutualInfo-noRL  rules=   61 acc=0.9032 cov=1.0000 time=0.21s
+  seed 0 MutualInfo+RL    rules=    5 acc=0.9032 cov=0.8065 time=3.13s
+  seed 0 CramerV-noRL     rules=   61 acc=0.9032 cov=1.0000 time=0.21s
+  seed 0 CramerV+RL       rules=    5 acc=0.9032 cov=0.8065 time=3.13s
+  seed 0 Random-noRL      rules=   25 acc=0.6774 cov=1.0000 time=0.02s
+  seed 0 Random+RL        rules=    4 acc=0.6774 cov=0.7742 time=2.77s
+  seed 1 FP-Growth        rules=  394 acc=0.9032 cov=1.0000 time=0.88s
+  seed 1 PyAerial         rules=    0 acc=0.6129 cov=0.0000 time=1.10s
+  seed 1 Attention-noRL   rules=   29 acc=0.8065 cov=1.0000 time=1.82s
+  seed 1 Attention+RL     rules=    4 acc=0.8065 cov=0.8387 time=4.76s
+  seed 1 MutualInfo-noRL  rules=   71 acc=0.9032 cov=1.0000 time=0.19s
+  seed 1 MutualInfo+RL    rules=    3 acc=0.8710 cov=0.8710 time=3.10s
+  seed 1 CramerV-noRL     rules=   71 acc=0.9032 cov=1.0000 time=0.19s
+  seed 1 CramerV+RL       rules=    3 acc=0.7097 cov=0.7742 time=3.13s
+  seed 1 Random-noRL      rules=   37 acc=0.7419 cov=1.0000 time=0.03s
+  seed 1 Random+RL        rules=    5 acc=0.8065 cov=0.9677 time=2.88s
+  seed 2 FP-Growth        rules=  378 acc=0.8710 cov=1.0000 time=0.39s
+  seed 2 PyAerial         rules=    0 acc=0.6129 cov=0.0000 time=0.87s
+  seed 2 Attention-noRL   rules=   47 acc=0.9677 cov=1.0000 time=1.75s
+  seed 2 Attention+RL     rules=    5 acc=0.8065 cov=0.9677 time=4.84s
+  seed 2 MutualInfo-noRL  rules=   64 acc=0.9355 cov=1.0000 time=0.18s
+  seed 2 MutualInfo+RL    rules=    5 acc=0.7742 cov=0.8710 time=3.14s
+  seed 2 CramerV-noRL     rules=   64 acc=0.9355 cov=1.0000 time=0.18s
+  seed 2 CramerV+RL       rules=    5 acc=0.7742 cov=0.8710 time=3.09s
+  seed 2 Random-noRL      rules=   36 acc=0.8065 cov=1.0000 time=0.02s
+  seed 2 Random+RL        rules=    4 acc=0.8387 cov=0.9355 time=2.82s
+  seed 3 FP-Growth        rules=  396 acc=0.7742 cov=1.0000 time=0.41s
+  seed 3 PyAerial         rules=    0 acc=0.6129 cov=0.0000 time=0.89s
+  seed 3 Attention-noRL   rules=   55 acc=0.7742 cov=1.0000 time=1.71s
+  seed 3 Attention+RL     rules=    3 acc=0.6452 cov=0.6774 time=4.69s
+  seed 3 MutualInfo-noRL  rules=   67 acc=0.8387 cov=1.0000 time=0.23s
+  seed 3 MutualInfo+RL    rules=    5 acc=0.7097 cov=0.8710 time=3.14s
+  seed 3 CramerV-noRL     rules=   67 acc=0.8387 cov=1.0000 time=0.23s
+  seed 3 CramerV+RL       rules=    5 acc=0.7097 cov=0.8710 time=3.19s
+  seed 3 Random-noRL      rules=   27 acc=0.8065 cov=1.0000 time=0.01s
+  seed 3 Random+RL        rules=    4 acc=0.8065 cov=1.0000 time=2.89s
+  seed 4 FP-Growth        rules=  328 acc=0.9032 cov=1.0000 time=0.52s
+  seed 4 PyAerial         rules=    0 acc=0.6129 cov=0.0000 time=1.00s
+  seed 4 Attention-noRL   rules=   42 acc=0.9032 cov=1.0000 time=1.90s
+  seed 4 Attention+RL     rules=    6 acc=0.8065 cov=1.0000 time=4.88s
+  seed 4 MutualInfo-noRL  rules=   57 acc=0.9355 cov=1.0000 time=0.23s
+  seed 4 MutualInfo+RL    rules=    4 acc=0.8387 cov=0.9355 time=3.25s
+  seed 4 CramerV-noRL     rules=   57 acc=0.9355 cov=1.0000 time=0.22s
+  seed 4 CramerV+RL       rules=    4 acc=0.8387 cov=0.8065 time=3.12s
+  seed 4 Random-noRL      rules=   42 acc=0.8387 cov=1.0000 time=0.02s
+  seed 4 Random+RL        rules=    3 acc=0.6774 cov=0.8065 time=2.86s
+
+=== [B] breast_cancer: class 'Class' {'no-recurrence-events': np.int64(196), 'recurrence-events': np.int64(81)}, K=6 features ===
+  seed 0 FP-Growth        rules=   65 acc=0.7229 cov=0.9880 time=0.04s
+  seed 0 PyAerial         rules=   19 acc=0.7108 cov=0.8193 time=2.13s
+  seed 0 Attention-noRL   rules=   25 acc=0.7349 cov=0.9518 time=3.86s
+  seed 0 Attention+RL     rules=    2 acc=0.7349 cov=0.7831 time=6.83s
+  seed 0 MutualInfo-noRL  rules=   33 acc=0.7470 cov=0.9518 time=0.12s
+  seed 0 MutualInfo+RL    rules=    2 acc=0.7349 cov=0.7831 time=3.06s
+  seed 0 CramerV-noRL     rules=   33 acc=0.7470 cov=0.9518 time=0.13s
+  seed 0 CramerV+RL       rules=    2 acc=0.7349 cov=0.7831 time=3.30s
+  seed 0 Random-noRL      rules=   32 acc=0.7108 cov=0.9398 time=0.04s
+  seed 0 Random+RL        rules=    2 acc=0.7108 cov=0.8313 time=3.06s
+  seed 1 FP-Growth        rules=   51 acc=0.7349 cov=0.9398 time=0.05s
+  seed 1 PyAerial         rules=   16 acc=0.7108 cov=0.8072 time=2.12s
+  seed 1 Attention-noRL   rules=   19 acc=0.7590 cov=0.8795 time=3.78s
+  seed 1 Attention+RL     rules=    4 acc=0.7590 cov=0.7952 time=7.00s
+  seed 1 MutualInfo-noRL  rules=   28 acc=0.7590 cov=0.8554 time=0.09s
+  seed 1 MutualInfo+RL    rules=    5 acc=0.7470 cov=0.6627 time=3.36s
+  seed 1 CramerV-noRL     rules=   28 acc=0.7590 cov=0.8554 time=0.10s
+  seed 1 CramerV+RL       rules=    6 acc=0.7470 cov=0.7349 time=3.56s
+  seed 1 Random-noRL      rules=   28 acc=0.7470 cov=0.8554 time=0.03s
+  seed 1 Random+RL        rules=    5 acc=0.7470 cov=0.6627 time=2.98s
+  seed 2 FP-Growth        rules=   57 acc=0.7108 cov=0.9639 time=0.04s
+  seed 2 PyAerial         rules=   22 acc=0.7108 cov=0.9277 time=1.84s
+  seed 2 Attention-noRL   rules=   22 acc=0.7108 cov=0.9398 time=4.45s
+  seed 2 Attention+RL     rules=    4 acc=0.7108 cov=0.9036 time=7.87s
+  seed 2 MutualInfo-noRL  rules=   33 acc=0.7108 cov=0.9518 time=0.12s
+  seed 2 MutualInfo+RL    rules=    3 acc=0.7108 cov=0.7831 time=3.23s
+  seed 2 CramerV-noRL     rules=   29 acc=0.7108 cov=0.9277 time=0.11s
+  seed 2 CramerV+RL       rules=    5 acc=0.7108 cov=0.8313 time=3.24s
+  seed 2 Random-noRL      rules=   20 acc=0.7108 cov=0.9157 time=0.03s
+  seed 2 Random+RL        rules=    2 acc=0.7108 cov=0.8072 time=3.04s
+  seed 3 FP-Growth        rules=   60 acc=0.7229 cov=1.0000 time=0.04s
+  seed 3 PyAerial         rules=   17 acc=0.7108 cov=0.8916 time=2.13s
+  seed 3 Attention-noRL   rules=   26 acc=0.6988 cov=0.9398 time=3.84s
+  seed 3 Attention+RL     rules=    4 acc=0.7590 cov=0.8916 time=6.97s
+  seed 3 MutualInfo-noRL  rules=   31 acc=0.7108 cov=0.9157 time=0.13s
+  seed 3 MutualInfo+RL    rules=    5 acc=0.7349 cov=0.7711 time=3.10s
+  seed 3 CramerV-noRL     rules=   31 acc=0.7108 cov=0.9157 time=0.13s
+  seed 3 CramerV+RL       rules=    5 acc=0.7349 cov=0.7711 time=3.14s
+  seed 3 Random-noRL      rules=   28 acc=0.7590 cov=0.9036 time=0.03s
+  seed 3 Random+RL        rules=    7 acc=0.7952 cov=0.8313 time=3.03s
+  seed 4 FP-Growth        rules=   61 acc=0.7349 cov=1.0000 time=0.04s
+  seed 4 PyAerial         rules=   11 acc=0.7108 cov=0.8313 time=1.87s
+  seed 4 Attention-noRL   rules=   29 acc=0.7711 cov=0.9880 time=3.40s
+  seed 4 Attention+RL     rules=    3 acc=0.7349 cov=0.9277 time=6.41s
+  seed 4 MutualInfo-noRL  rules=   31 acc=0.6988 cov=0.9398 time=0.11s
+  seed 4 MutualInfo+RL    rules=    2 acc=0.7108 cov=0.8072 time=3.16s
+  seed 4 CramerV-noRL     rules=   31 acc=0.6988 cov=0.9398 time=0.11s
+  seed 4 CramerV+RL       rules=    2 acc=0.7108 cov=0.8072 time=3.09s
+  seed 4 Random-noRL      rules=   30 acc=0.7229 cov=0.9639 time=0.03s
+  seed 4 Random+RL        rules=    4 acc=0.7349 cov=0.8795 time=3.03s
+
+=== [B] cervical_cancer_behavior_risk: class 'ca_cervix' {'0': np.int64(51), '1': np.int64(21)}, K=6 features ===
+D:\laragon\bin\python\python-3.13\Lib\site-packages\mlxtend\frequent_patterns\association_rules.py:184: RuntimeWarning: invalid value encountered in divide
+  cert_metric = np.where(certainty_denom == 0, 0, certainty_num / certainty_denom)
+  seed 0 FP-Growth        rules=  638 acc=0.7143 cov=1.0000 time=0.22s
+  seed 0 PyAerial         rules=    1 acc=0.7143 cov=0.3333 time=0.74s
+  seed 0 Attention-noRL   rules=   59 acc=0.7619 cov=1.0000 time=1.36s
+  seed 0 Attention+RL     rules=    3 acc=0.8095 cov=0.7619 time=4.30s
+  seed 0 MutualInfo-noRL  rules=   88 acc=0.8095 cov=1.0000 time=0.21s
+  seed 0 MutualInfo+RL    rules=    4 acc=0.8571 cov=0.6190 time=3.22s
+  seed 0 CramerV-noRL     rules=   84 acc=0.8571 cov=1.0000 time=0.21s
+  seed 0 CramerV+RL       rules=    4 acc=0.8095 cov=0.8571 time=3.21s
+  seed 0 Random-noRL      rules=   72 acc=0.7143 cov=1.0000 time=0.03s
+  seed 0 Random+RL        rules=    4 acc=0.6190 cov=0.4762 time=2.98s
+D:\laragon\bin\python\python-3.13\Lib\site-packages\mlxtend\frequent_patterns\association_rules.py:184: RuntimeWarning: invalid value encountered in divide
+  cert_metric = np.where(certainty_denom == 0, 0, certainty_num / certainty_denom)
+  seed 1 FP-Growth        rules=  591 acc=0.7143 cov=1.0000 time=0.26s
+  seed 1 PyAerial         rules=    0 acc=0.7143 cov=0.0000 time=0.70s
+  seed 1 Attention-noRL   rules=   63 acc=0.9048 cov=1.0000 time=1.24s
+  seed 1 Attention+RL     rules=    5 acc=0.7143 cov=0.7619 time=4.24s
+  seed 1 MutualInfo-noRL  rules=   71 acc=0.8571 cov=1.0000 time=0.20s
+  seed 1 MutualInfo+RL    rules=    4 acc=0.8095 cov=0.2857 time=3.13s
+  seed 1 CramerV-noRL     rules=   78 acc=0.9048 cov=1.0000 time=0.20s
+  seed 1 CramerV+RL       rules=    4 acc=0.8095 cov=0.7143 time=3.13s
+  seed 1 Random-noRL      rules=   50 acc=0.9048 cov=1.0000 time=0.03s
+  seed 1 Random+RL        rules=    4 acc=0.8095 cov=0.8095 time=2.87s
+D:\laragon\bin\python\python-3.13\Lib\site-packages\mlxtend\frequent_patterns\association_rules.py:184: RuntimeWarning: invalid value encountered in divide
+  cert_metric = np.where(certainty_denom == 0, 0, certainty_num / certainty_denom)
+  seed 2 FP-Growth        rules=  550 acc=0.7619 cov=1.0000 time=0.22s
+  seed 2 PyAerial         rules=    0 acc=0.7143 cov=0.0000 time=0.68s
+  seed 2 Attention-noRL   rules=   47 acc=0.7619 cov=1.0000 time=1.20s
+  seed 2 Attention+RL     rules=    5 acc=0.8095 cov=0.5714 time=4.20s
+  seed 2 MutualInfo-noRL  rules=   74 acc=0.8095 cov=1.0000 time=0.17s
+  seed 2 MutualInfo+RL    rules=    5 acc=0.6667 cov=0.7143 time=3.06s
+  seed 2 CramerV-noRL     rules=   74 acc=0.8095 cov=1.0000 time=0.18s
+  seed 2 CramerV+RL       rules=    5 acc=0.8095 cov=0.7619 time=3.09s
+  seed 2 Random-noRL      rules=   54 acc=0.7619 cov=0.9524 time=0.03s
+  seed 2 Random+RL        rules=    4 acc=0.7619 cov=0.7619 time=2.99s
+D:\laragon\bin\python\python-3.13\Lib\site-packages\mlxtend\frequent_patterns\association_rules.py:184: RuntimeWarning: invalid value encountered in divide
+  cert_metric = np.where(certainty_denom == 0, 0, certainty_num / certainty_denom)
+  seed 3 FP-Growth        rules=  538 acc=0.7619 cov=1.0000 time=0.35s
+  seed 3 PyAerial         rules=    0 acc=0.7143 cov=0.0000 time=0.74s
+  seed 3 Attention-noRL   rules=   59 acc=0.7143 cov=0.9524 time=1.38s
+  seed 3 Attention+RL     rules=    5 acc=0.7619 cov=0.7619 time=4.47s
+  seed 3 MutualInfo-noRL  rules=   81 acc=0.8571 cov=0.9524 time=0.22s
+  seed 3 MutualInfo+RL    rules=    5 acc=0.8095 cov=0.6667 time=3.14s
+  seed 3 CramerV-noRL     rules=   81 acc=0.8571 cov=0.9524 time=0.21s
+  seed 3 CramerV+RL       rules=    5 acc=0.7619 cov=0.3810 time=3.13s
+  seed 3 Random-noRL      rules=   46 acc=0.7619 cov=0.9048 time=0.03s
+  seed 3 Random+RL        rules=    4 acc=0.7619 cov=0.5714 time=2.84s
+D:\laragon\bin\python\python-3.13\Lib\site-packages\mlxtend\frequent_patterns\association_rules.py:184: RuntimeWarning: invalid value encountered in divide
+  cert_metric = np.where(certainty_denom == 0, 0, certainty_num / certainty_denom)
+  seed 4 FP-Growth        rules=  580 acc=0.7143 cov=1.0000 time=0.26s
+  seed 4 PyAerial         rules=    0 acc=0.7143 cov=0.0000 time=0.68s
+  seed 4 Attention-noRL   rules=   62 acc=0.8571 cov=1.0000 time=1.38s
+  seed 4 Attention+RL     rules=    6 acc=0.8095 cov=0.8571 time=4.37s
+  seed 4 MutualInfo-noRL  rules=   79 acc=0.7619 cov=1.0000 time=0.17s
+  seed 4 MutualInfo+RL    rules=    4 acc=0.9048 cov=0.6667 time=3.19s
+  seed 4 CramerV-noRL     rules=   77 acc=0.8095 cov=1.0000 time=0.17s
+  seed 4 CramerV+RL       rules=    4 acc=0.9048 cov=0.6667 time=3.16s
+  seed 4 Random-noRL      rules=   58 acc=0.9048 cov=1.0000 time=0.02s
+  seed 4 Random+RL        rules=    4 acc=0.9048 cov=0.6667 time=2.89s
+
+=== [B] chess_king_rook_vs_king_pawn: class 'wtoeg' {'nowin': np.int64(1527), 'won': np.int64(1669)}, K=6 features ===
+D:\laragon\bin\python\python-3.13\Lib\site-packages\mlxtend\frequent_patterns\association_rules.py:184: RuntimeWarning: invalid value encountered in divide
+  cert_metric = np.where(certainty_denom == 0, 0, certainty_num / certainty_denom)
+  seed 0 FP-Growth        rules=   94 acc=0.9020 cov=1.0000 time=13.49s
+  seed 0 PyAerial         rules=    0 acc=0.5224 cov=0.0000 time=3.42s
+  seed 0 Attention-noRL   rules=   15 acc=0.9020 cov=1.0000 time=25.47s
+  seed 0 Attention+RL     rules=    4 acc=0.9020 cov=1.0000 time=29.63s
+  seed 0 MutualInfo-noRL  rules=   18 acc=0.9020 cov=1.0000 time=0.33s
+  seed 0 MutualInfo+RL    rules=    4 acc=0.9020 cov=1.0000 time=4.45s
+  seed 0 CramerV-noRL     rules=   18 acc=0.9020 cov=1.0000 time=0.33s
+  seed 0 CramerV+RL       rules=    4 acc=0.9020 cov=1.0000 time=4.37s
+  seed 0 Random-noRL      rules=    7 acc=0.5224 cov=0.1950 time=0.03s
+  seed 0 Random+RL        rules=    1 acc=0.5224 cov=0.1950 time=4.20s
+D:\laragon\bin\python\python-3.13\Lib\site-packages\mlxtend\frequent_patterns\association_rules.py:184: RuntimeWarning: invalid value encountered in divide
+  cert_metric = np.where(certainty_denom == 0, 0, certainty_num / certainty_denom)
+  seed 1 FP-Growth        rules=   82 acc=0.9072 cov=1.0000 time=12.46s
+  seed 1 PyAerial         rules=    0 acc=0.5224 cov=0.0000 time=2.93s
+  seed 1 Attention-noRL   rules=    3 acc=0.6611 cov=0.1971 time=23.96s
+  seed 1 Attention+RL     rules=    2 acc=0.6611 cov=0.1971 time=28.23s
+  seed 1 MutualInfo-noRL  rules=   17 acc=0.9072 cov=1.0000 time=0.31s
+  seed 1 MutualInfo+RL    rules=    4 acc=0.9072 cov=1.0000 time=4.33s
+  seed 1 CramerV-noRL     rules=   17 acc=0.9072 cov=1.0000 time=0.31s
+  seed 1 CramerV+RL       rules=    4 acc=0.9072 cov=1.0000 time=4.35s
+  seed 1 Random-noRL      rules=    0 acc=0.5224 cov=0.0000 time=0.02s
+  seed 1 Random+RL        rules=    0 acc=0.5224 cov=0.0000 time=0.02s
+D:\laragon\bin\python\python-3.13\Lib\site-packages\mlxtend\frequent_patterns\association_rules.py:184: RuntimeWarning: invalid value encountered in divide
+  cert_metric = np.where(certainty_denom == 0, 0, certainty_num / certainty_denom)
+  seed 2 FP-Growth        rules=   78 acc=0.9072 cov=1.0000 time=12.34s
+  seed 2 PyAerial         rules=    0 acc=0.5224 cov=0.0000 time=3.51s
+  seed 2 Attention-noRL   rules=    0 acc=0.5224 cov=0.0000 time=24.68s
+  seed 2 Attention+RL     rules=    0 acc=0.5224 cov=0.0000 time=24.68s
+  seed 2 MutualInfo-noRL  rules=   17 acc=0.9072 cov=1.0000 time=0.29s
+  seed 2 MutualInfo+RL    rules=    4 acc=0.9072 cov=0.9896 time=4.64s
+  seed 2 CramerV-noRL     rules=   17 acc=0.9072 cov=1.0000 time=0.29s
+  seed 2 CramerV+RL       rules=    4 acc=0.9072 cov=0.9896 time=4.44s
+  seed 2 Random-noRL      rules=   10 acc=0.7508 cov=0.4818 time=0.03s
+  seed 2 Random+RL        rules=    3 acc=0.7508 cov=0.4818 time=4.30s
+  seed 3 FP-Growth        rules=  108 acc=0.9062 cov=1.0000 time=12.14s
+  seed 3 PyAerial         rules=    0 acc=0.5224 cov=0.0000 time=3.56s
+  seed 3 Attention-noRL   rules=   13 acc=0.7591 cov=0.4307 time=25.62s
+  seed 3 Attention+RL     rules=    2 acc=0.7591 cov=0.4077 time=29.93s
+  seed 3 MutualInfo-noRL  rules=   20 acc=0.9062 cov=1.0000 time=0.31s
+  seed 3 MutualInfo+RL    rules=    4 acc=0.8957 cov=0.9969 time=4.35s
+  seed 3 CramerV-noRL     rules=   20 acc=0.9062 cov=1.0000 time=0.31s
+  seed 3 CramerV+RL       rules=    4 acc=0.8957 cov=0.9969 time=4.68s
+  seed 3 Random-noRL      rules=    0 acc=0.5224 cov=0.0000 time=0.03s
+  seed 3 Random+RL        rules=    0 acc=0.5224 cov=0.0000 time=0.03s
+  seed 4 FP-Growth        rules=   77 acc=0.8926 cov=1.0000 time=12.44s
+  seed 4 PyAerial         rules=    0 acc=0.5224 cov=0.0000 time=4.39s
+  seed 4 Attention-noRL   rules=   11 acc=0.7508 cov=0.4067 time=25.06s
+  seed 4 Attention+RL     rules=    2 acc=0.7508 cov=0.4067 time=29.42s
+  seed 4 MutualInfo-noRL  rules=   17 acc=0.8926 cov=1.0000 time=0.32s
+  seed 4 MutualInfo+RL    rules=    4 acc=0.8926 cov=0.9917 time=4.49s
+  seed 4 CramerV-noRL     rules=   17 acc=0.8926 cov=1.0000 time=0.32s
+  seed 4 CramerV+RL       rules=    4 acc=0.8926 cov=0.9917 time=4.37s
+  seed 4 Random-noRL      rules=    0 acc=0.5224 cov=0.0000 time=0.03s
+  seed 4 Random+RL        rules=    0 acc=0.5224 cov=0.0000 time=0.03s
+
+=== [B] congressional_voting: class 'Class' {'democrat': np.int64(124), 'republican': np.int64(108)}, K=6 features ===
+  seed 0 FP-Growth        rules=  265 acc=1.0000 cov=1.0000 time=0.23s
+  seed 0 PyAerial         rules=   66 acc=0.9565 cov=1.0000 time=1.82s
+  seed 0 Attention-noRL   rules=   49 acc=1.0000 cov=1.0000 time=3.57s
+  seed 0 Attention+RL     rules=    2 acc=1.0000 cov=1.0000 time=6.58s
+  seed 0 MutualInfo-noRL  rules=   48 acc=1.0000 cov=1.0000 time=0.18s
+  seed 0 MutualInfo+RL    rules=    2 acc=0.9855 cov=0.9855 time=3.14s
+  seed 0 CramerV-noRL     rules=   48 acc=1.0000 cov=1.0000 time=0.18s
+  seed 0 CramerV+RL       rules=    2 acc=0.9855 cov=0.9855 time=3.09s
+  seed 0 Random-noRL      rules=   37 acc=0.9130 cov=1.0000 time=0.01s
+  seed 0 Random+RL        rules=    3 acc=0.9130 cov=0.9855 time=2.90s
+  seed 1 FP-Growth        rules=  305 acc=0.9710 cov=1.0000 time=0.37s
+  seed 1 PyAerial         rules=  122 acc=0.5362 cov=0.7826 time=2.25s
+  seed 1 Attention-noRL   rules=   40 acc=0.8986 cov=1.0000 time=3.90s
+  seed 1 Attention+RL     rules=    3 acc=0.8696 cov=0.9710 time=7.02s
+  seed 1 MutualInfo-noRL  rules=   46 acc=0.9565 cov=1.0000 time=0.16s
+  seed 1 MutualInfo+RL    rules=    2 acc=0.9710 cov=0.9855 time=3.12s
+  seed 1 CramerV-noRL     rules=   46 acc=0.9565 cov=1.0000 time=0.16s
+  seed 1 CramerV+RL       rules=    2 acc=0.9710 cov=0.9855 time=3.10s
+  seed 1 Random-noRL      rules=   49 acc=0.9710 cov=1.0000 time=0.01s
+  seed 1 Random+RL        rules=    2 acc=0.9855 cov=1.0000 time=2.97s
+  seed 2 FP-Growth        rules=  287 acc=0.9420 cov=1.0000 time=0.24s
+  seed 2 PyAerial         rules=   23 acc=0.9420 cov=1.0000 time=1.94s
+  seed 2 Attention-noRL   rules=   47 acc=0.9420 cov=1.0000 time=3.27s
+  seed 2 Attention+RL     rules=    2 acc=0.9565 cov=1.0000 time=6.42s
+  seed 2 MutualInfo-noRL  rules=   48 acc=0.9420 cov=1.0000 time=0.16s
+  seed 2 MutualInfo+RL    rules=    2 acc=0.9565 cov=1.0000 time=3.08s
+  seed 2 CramerV-noRL     rules=   48 acc=0.9420 cov=1.0000 time=0.16s
+  seed 2 CramerV+RL       rules=    2 acc=0.8551 cov=0.8406 time=3.09s
+  seed 2 Random-noRL      rules=   48 acc=0.9420 cov=1.0000 time=0.02s
+  seed 2 Random+RL        rules=    2 acc=0.8841 cov=0.9275 time=2.98s
+  seed 3 FP-Growth        rules=  316 acc=0.9565 cov=1.0000 time=0.22s
+  seed 3 PyAerial         rules=  149 acc=0.8986 cov=1.0000 time=2.38s
+  seed 3 Attention-noRL   rules=   43 acc=0.8116 cov=1.0000 time=4.02s
+  seed 3 Attention+RL     rules=    3 acc=0.8261 cov=0.9710 time=7.12s
+  seed 3 MutualInfo-noRL  rules=   47 acc=0.9565 cov=1.0000 time=0.16s
+  seed 3 MutualInfo+RL    rules=    3 acc=0.9565 cov=1.0000 time=3.12s
+  seed 3 CramerV-noRL     rules=   47 acc=0.9565 cov=1.0000 time=0.16s
+  seed 3 CramerV+RL       rules=    3 acc=0.9565 cov=1.0000 time=3.10s
+  seed 3 Random-noRL      rules=   47 acc=0.9565 cov=1.0000 time=0.01s
+  seed 3 Random+RL        rules=    3 acc=0.9710 cov=0.9855 time=2.93s
+  seed 4 FP-Growth        rules=  278 acc=0.9420 cov=1.0000 time=0.24s
+  seed 4 PyAerial         rules=  114 acc=0.9420 cov=1.0000 time=2.17s
+  seed 4 Attention-noRL   rules=   47 acc=0.9565 cov=1.0000 time=3.76s
+  seed 4 Attention+RL     rules=    3 acc=0.9710 cov=1.0000 time=6.77s
+  seed 4 MutualInfo-noRL  rules=   48 acc=0.9565 cov=1.0000 time=0.16s
+  seed 4 MutualInfo+RL    rules=    2 acc=0.9710 cov=1.0000 time=3.08s
+  seed 4 CramerV-noRL     rules=   48 acc=0.9565 cov=1.0000 time=0.16s
+  seed 4 CramerV+RL       rules=    2 acc=0.9710 cov=1.0000 time=3.15s
+  seed 4 Random-noRL      rules=   46 acc=0.9710 cov=1.0000 time=0.02s
+  seed 4 Random+RL        rules=    2 acc=0.9710 cov=1.0000 time=3.03s
+
+=== [B] fertility: class 'diagnosis' {'N': np.int64(88), 'O': np.int64(12)}, K=6 features ===
+  seed 0 FP-Growth        rules=  206 acc=0.8667 cov=1.0000 time=0.06s
+  seed 0 PyAerial         rules=  143 acc=0.8667 cov=1.0000 time=0.71s
+  seed 0 Attention-noRL   rules=   90 acc=0.8667 cov=1.0000 time=1.56s
+  seed 0 Attention+RL     rules=    2 acc=0.8667 cov=0.9667 time=4.67s
+  seed 0 MutualInfo-noRL  rules=  109 acc=0.8667 cov=1.0000 time=0.11s
+  seed 0 MutualInfo+RL    rules=    2 acc=0.8667 cov=1.0000 time=3.13s
+  seed 0 CramerV-noRL     rules=  109 acc=0.8667 cov=1.0000 time=0.11s
+  seed 0 CramerV+RL       rules=    2 acc=0.8667 cov=1.0000 time=3.12s
+  seed 0 Random-noRL      rules=   85 acc=0.8667 cov=1.0000 time=0.02s
+  seed 0 Random+RL        rules=    2 acc=0.8667 cov=0.9667 time=2.99s
+  seed 1 FP-Growth        rules=  203 acc=0.8667 cov=1.0000 time=0.06s
+  seed 1 PyAerial         rules=  132 acc=0.8667 cov=1.0000 time=0.80s
+  seed 1 Attention-noRL   rules=   95 acc=0.8667 cov=1.0000 time=1.53s
+  seed 1 Attention+RL     rules=    2 acc=0.8667 cov=0.9667 time=4.67s
+  seed 1 MutualInfo-noRL  rules=  117 acc=0.8667 cov=1.0000 time=0.12s
+  seed 1 MutualInfo+RL    rules=    3 acc=0.8667 cov=0.8333 time=3.24s
+  seed 1 CramerV-noRL     rules=  117 acc=0.8667 cov=1.0000 time=0.12s
+  seed 1 CramerV+RL       rules=    3 acc=0.8667 cov=0.8000 time=3.35s
+  seed 1 Random-noRL      rules=  103 acc=0.8667 cov=1.0000 time=0.04s
+  seed 1 Random+RL        rules=    1 acc=0.8667 cov=0.8667 time=3.92s
+  seed 2 FP-Growth        rules=  204 acc=0.8667 cov=1.0000 time=0.06s
+  seed 2 PyAerial         rules=  124 acc=0.8667 cov=1.0000 time=0.81s
+  seed 2 Attention-noRL   rules=   99 acc=0.8667 cov=1.0000 time=1.59s
+  seed 2 Attention+RL     rules=    2 acc=0.8667 cov=0.9667 time=4.77s
+  seed 2 MutualInfo-noRL  rules=  114 acc=0.8667 cov=1.0000 time=0.13s
+  seed 2 MutualInfo+RL    rules=    2 acc=0.8667 cov=1.0000 time=3.17s
+  seed 2 CramerV-noRL     rules=  114 acc=0.8667 cov=1.0000 time=0.13s
+  seed 2 CramerV+RL       rules=    2 acc=0.8667 cov=1.0000 time=3.44s
+  seed 2 Random-noRL      rules=  110 acc=0.8667 cov=1.0000 time=0.03s
+  seed 2 Random+RL        rules=    2 acc=0.8667 cov=1.0000 time=3.11s
+  seed 3 FP-Growth        rules=  215 acc=0.8667 cov=1.0000 time=0.06s
+  seed 3 PyAerial         rules=  122 acc=0.8667 cov=1.0000 time=0.66s
+  seed 3 Attention-noRL   rules=   87 acc=0.8667 cov=1.0000 time=1.53s
+  seed 3 Attention+RL     rules=    2 acc=0.8667 cov=0.9667 time=4.68s
+  seed 3 MutualInfo-noRL  rules=  122 acc=0.8667 cov=1.0000 time=0.12s
+  seed 3 MutualInfo+RL    rules=    3 acc=0.8667 cov=0.9000 time=3.21s
+  seed 3 CramerV-noRL     rules=  122 acc=0.8667 cov=1.0000 time=0.12s
+  seed 3 CramerV+RL       rules=    3 acc=0.8667 cov=0.9000 time=3.41s
+  seed 3 Random-noRL      rules=  103 acc=0.8667 cov=1.0000 time=0.04s
+  seed 3 Random+RL        rules=    2 acc=0.8667 cov=0.9667 time=3.26s
+  seed 4 FP-Growth        rules=  209 acc=0.8667 cov=1.0000 time=0.06s
+  seed 4 PyAerial         rules=  137 acc=0.8667 cov=1.0000 time=0.79s
+  seed 4 Attention-noRL   rules=  114 acc=0.8667 cov=1.0000 time=1.58s
+  seed 4 Attention+RL     rules=    2 acc=0.8667 cov=0.9333 time=4.73s
+  seed 4 MutualInfo-noRL  rules=  112 acc=0.8667 cov=1.0000 time=0.12s
+  seed 4 MutualInfo+RL    rules=    3 acc=0.8667 cov=0.8667 time=3.17s
+  seed 4 CramerV-noRL     rules=  112 acc=0.8667 cov=1.0000 time=0.12s
+  seed 4 CramerV+RL       rules=    2 acc=0.8667 cov=0.9000 time=3.22s
+  seed 4 Random-noRL      rules=   95 acc=0.8667 cov=1.0000 time=0.03s
+  seed 4 Random+RL        rules=    3 acc=0.8667 cov=1.0000 time=3.09s
+
+=== [B] hepatitis: class 'Class' {'1': np.int64(13), '2': np.int64(67)}, K=6 features ===
+  seed 0 FP-Growth        rules=  625 acc=0.8333 cov=1.0000 time=0.28s
+  seed 0 PyAerial         rules=  439 acc=0.8333 cov=1.0000 time=1.04s
+  seed 0 Attention-noRL   rules=   35 acc=0.8333 cov=1.0000 time=1.37s
+  seed 0 Attention+RL     rules=    2 acc=0.8333 cov=0.9583 time=4.54s
+  seed 0 MutualInfo-noRL  rules=   94 acc=0.8333 cov=1.0000 time=0.20s
+  seed 0 MutualInfo+RL    rules=    5 acc=0.8333 cov=0.7500 time=3.35s
+  seed 0 CramerV-noRL     rules=   81 acc=0.8333 cov=1.0000 time=0.20s
+  seed 0 CramerV+RL       rules=    5 acc=0.8750 cov=0.9167 time=3.19s
+  seed 0 Random-noRL      rules=   64 acc=0.8750 cov=1.0000 time=0.02s
+  seed 0 Random+RL        rules=    2 acc=0.8333 cov=0.9583 time=3.05s
+  seed 1 FP-Growth        rules=  694 acc=0.8333 cov=1.0000 time=0.44s
+  seed 1 PyAerial         rules=  466 acc=0.8333 cov=1.0000 time=1.05s
+  seed 1 Attention-noRL   rules=   65 acc=0.8333 cov=1.0000 time=1.45s
+  seed 1 Attention+RL     rules=    3 acc=0.8333 cov=1.0000 time=4.59s
+  seed 1 MutualInfo-noRL  rules=   98 acc=0.9167 cov=1.0000 time=0.22s
+  seed 1 MutualInfo+RL    rules=    4 acc=0.8333 cov=0.7917 time=3.45s
+  seed 1 CramerV-noRL     rules=   98 acc=0.9167 cov=1.0000 time=0.22s
+  seed 1 CramerV+RL       rules=    5 acc=0.8333 cov=0.7083 time=3.24s
+  seed 1 Random-noRL      rules=   55 acc=0.8333 cov=1.0000 time=0.02s
+  seed 1 Random+RL        rules=    2 acc=0.8333 cov=1.0000 time=2.95s
+  seed 2 FP-Growth        rules=  656 acc=0.8333 cov=1.0000 time=0.29s
+  seed 2 PyAerial         rules=  361 acc=0.8333 cov=1.0000 time=0.96s
+  seed 2 Attention-noRL   rules=   57 acc=0.8333 cov=1.0000 time=1.33s
+  seed 2 Attention+RL     rules=    2 acc=0.8333 cov=0.9583 time=4.32s
+  seed 2 MutualInfo-noRL  rules=   84 acc=0.8750 cov=1.0000 time=0.21s
+  seed 2 MutualInfo+RL    rules=    1 acc=0.8333 cov=0.8333 time=3.15s
+  seed 2 CramerV-noRL     rules=   84 acc=0.8750 cov=1.0000 time=0.21s
+  seed 2 CramerV+RL       rules=    1 acc=0.8333 cov=0.8333 time=3.14s
+  seed 2 Random-noRL      rules=   63 acc=0.8333 cov=1.0000 time=0.02s
+  seed 2 Random+RL        rules=    2 acc=0.8333 cov=0.9583 time=3.01s
+  seed 3 FP-Growth        rules=  699 acc=0.8333 cov=1.0000 time=0.47s
+  seed 3 PyAerial         rules=  472 acc=0.8333 cov=1.0000 time=1.01s
+  seed 3 Attention-noRL   rules=   48 acc=0.8333 cov=1.0000 time=1.37s
+  seed 3 Attention+RL     rules=    2 acc=0.8333 cov=0.8750 time=4.23s
+  seed 3 MutualInfo-noRL  rules=   90 acc=0.8333 cov=1.0000 time=0.20s
+  seed 3 MutualInfo+RL    rules=    3 acc=0.7500 cov=0.9583 time=3.17s
+  seed 3 CramerV-noRL     rules=   90 acc=0.8333 cov=1.0000 time=0.20s
+  seed 3 CramerV+RL       rules=    3 acc=0.7500 cov=0.9583 time=3.41s
+  seed 3 Random-noRL      rules=   46 acc=0.8333 cov=1.0000 time=0.01s
+  seed 3 Random+RL        rules=    2 acc=0.8333 cov=1.0000 time=2.80s
+  seed 4 FP-Growth        rules=  697 acc=0.8333 cov=1.0000 time=0.31s
+  seed 4 PyAerial         rules=  478 acc=0.8333 cov=1.0000 time=0.85s
+  seed 4 Attention-noRL   rules=   58 acc=0.8333 cov=1.0000 time=1.20s
+  seed 4 Attention+RL     rules=    2 acc=0.8333 cov=0.9583 time=4.20s
+  seed 4 MutualInfo-noRL  rules=   91 acc=0.8333 cov=1.0000 time=0.18s
+  seed 4 MutualInfo+RL    rules=    3 acc=0.8333 cov=0.8750 time=3.16s
+  seed 4 CramerV-noRL     rules=   91 acc=0.8333 cov=1.0000 time=0.18s
+  seed 4 CramerV+RL       rules=    3 acc=0.8333 cov=0.8750 time=3.21s
+  seed 4 Random-noRL      rules=   41 acc=0.8333 cov=1.0000 time=0.01s
+  seed 4 Random+RL        rules=    2 acc=0.8333 cov=1.0000 time=2.84s
+
+=== [B] mushroom: class 'poisonous' {'e': np.int64(3488), 'p': np.int64(2156)}, K=6 features ===
+D:\laragon\bin\python\python-3.13\Lib\site-packages\mlxtend\frequent_patterns\association_rules.py:184: RuntimeWarning: invalid value encountered in divide
+  cert_metric = np.where(certainty_denom == 0, 0, certainty_num / certainty_denom)
+  seed 0 FP-Growth        rules=  697 acc=0.9793 cov=1.0000 time=0.91s
+  seed 0 PyAerial         rules=  273 acc=0.8990 cov=1.0000 time=4.38s
+  seed 0 Attention-noRL   rules=   30 acc=0.8482 cov=0.9421 time=27.78s
+  seed 0 Attention+RL     rules=    3 acc=0.8482 cov=0.9333 time=32.74s
+  seed 0 MutualInfo-noRL  rules=   88 acc=0.8990 cov=1.0000 time=0.24s
+  seed 0 MutualInfo+RL    rules=    3 acc=0.8901 cov=0.9581 time=5.33s
+  seed 0 CramerV-noRL     rules=   69 acc=0.8990 cov=1.0000 time=0.23s
+  seed 0 CramerV+RL       rules=    3 acc=0.8901 cov=0.9504 time=5.25s
+  seed 0 Random-noRL      rules=   50 acc=0.8535 cov=0.9823 time=0.06s
+  seed 0 Random+RL        rules=    3 acc=0.8571 cov=0.9787 time=5.12s
+D:\laragon\bin\python\python-3.13\Lib\site-packages\mlxtend\frequent_patterns\association_rules.py:184: RuntimeWarning: invalid value encountered in divide
+  cert_metric = np.where(certainty_denom == 0, 0, certainty_num / certainty_denom)
+  seed 1 FP-Growth        rules=  702 acc=0.9817 cov=1.0000 time=0.68s
+  seed 1 PyAerial         rules=  224 acc=0.9214 cov=1.0000 time=4.41s
+  seed 1 Attention-noRL   rules=   54 acc=0.9492 cov=1.0000 time=27.76s
+  seed 1 Attention+RL     rules=    3 acc=0.9037 cov=0.9965 time=32.80s
+  seed 1 MutualInfo-noRL  rules=   85 acc=0.9073 cov=1.0000 time=0.23s
+  seed 1 MutualInfo+RL    rules=    3 acc=0.9037 cov=0.9965 time=5.42s
+  seed 1 CramerV-noRL     rules=   65 acc=0.9073 cov=1.0000 time=0.22s
+  seed 1 CramerV+RL       rules=    3 acc=0.9037 cov=0.9941 time=5.21s
+  seed 1 Random-noRL      rules=   29 acc=0.7744 cov=0.8145 time=0.05s
+  seed 1 Random+RL        rules=    5 acc=0.7720 cov=0.7714 time=5.08s
+D:\laragon\bin\python\python-3.13\Lib\site-packages\mlxtend\frequent_patterns\association_rules.py:184: RuntimeWarning: invalid value encountered in divide
+  cert_metric = np.where(certainty_denom == 0, 0, certainty_num / certainty_denom)
+  seed 2 FP-Growth        rules=  712 acc=0.9705 cov=1.0000 time=0.85s
+  seed 2 PyAerial         rules=  198 acc=0.9403 cov=1.0000 time=5.47s
+  seed 2 Attention-noRL   rules=   58 acc=0.9061 cov=0.9976 time=29.98s
+  seed 2 Attention+RL     rules=    3 acc=0.8984 cov=0.9876 time=35.36s
+  seed 2 MutualInfo-noRL  rules=   88 acc=0.9073 cov=1.0000 time=0.27s
+  seed 2 MutualInfo+RL    rules=    3 acc=0.8984 cov=0.9911 time=5.36s
+  seed 2 CramerV-noRL     rules=   69 acc=0.9073 cov=1.0000 time=0.26s
+  seed 2 CramerV+RL       rules=    3 acc=0.8984 cov=0.9911 time=5.46s
+  seed 2 Random-noRL      rules=   51 acc=0.8576 cov=1.0000 time=0.05s
+  seed 2 Random+RL        rules=    3 acc=0.8529 cov=0.9693 time=4.99s
+D:\laragon\bin\python\python-3.13\Lib\site-packages\mlxtend\frequent_patterns\association_rules.py:184: RuntimeWarning: invalid value encountered in divide
+  cert_metric = np.where(certainty_denom == 0, 0, certainty_num / certainty_denom)
+  seed 3 FP-Growth        rules=  703 acc=0.9581 cov=1.0000 time=0.69s
+  seed 3 PyAerial         rules=  229 acc=0.9102 cov=1.0000 time=4.46s
+  seed 3 Attention-noRL   rules=   59 acc=0.9203 cov=1.0000 time=27.80s
+  seed 3 Attention+RL     rules=    3 acc=0.8594 cov=0.9817 time=32.87s
+  seed 3 MutualInfo-noRL  rules=   85 acc=0.9025 cov=1.0000 time=0.25s
+  seed 3 MutualInfo+RL    rules=    3 acc=0.8943 cov=0.9882 time=5.62s
+  seed 3 CramerV-noRL     rules=   66 acc=0.9025 cov=1.0000 time=0.25s
+  seed 3 CramerV+RL       rules=    3 acc=0.8943 cov=0.9498 time=5.26s
+  seed 3 Random-noRL      rules=   35 acc=0.9368 cov=0.9492 time=0.05s
+  seed 3 Random+RL        rules=    5 acc=0.9368 cov=0.9492 time=4.99s
+D:\laragon\bin\python\python-3.13\Lib\site-packages\mlxtend\frequent_patterns\association_rules.py:184: RuntimeWarning: invalid value encountered in divide
+  cert_metric = np.where(certainty_denom == 0, 0, certainty_num / certainty_denom)
+  seed 4 FP-Growth        rules=  711 acc=0.9604 cov=1.0000 time=1.00s
+  seed 4 PyAerial         rules=  214 acc=0.9445 cov=1.0000 time=5.12s
+  seed 4 Attention-noRL   rules=   47 acc=0.8996 cov=0.9935 time=28.91s
+  seed 4 Attention+RL     rules=    3 acc=0.8996 cov=0.9604 time=34.10s
+  seed 4 MutualInfo-noRL  rules=   88 acc=0.9037 cov=1.0000 time=0.27s
+  seed 4 MutualInfo+RL    rules=    3 acc=0.8996 cov=0.9533 time=5.65s
+  seed 4 CramerV-noRL     rules=   88 acc=0.9037 cov=1.0000 time=0.26s
+  seed 4 CramerV+RL       rules=    3 acc=0.8996 cov=0.9533 time=5.74s
+  seed 4 Random-noRL      rules=   62 acc=0.9037 cov=1.0000 time=0.06s
+  seed 4 Random+RL        rules=    3 acc=0.8996 cov=0.9935 time=5.35s
+
+Multi-dataset benchmark | seeds=[0, 1, 2, 3, 4] | Part A: k=2 antecedent features per consequent, min_support=0.1 (gene: 0.512), min_conf=0.8 | Part B: K=6 features for the class, min_support=0.05
+
+Datasets (after PyAerial preparation):
+  acute_inflammations              rows=  120 features=   7 items=   17 sha256_ok=True
+  autism_screening_adolescent      rows=  104 features=  21 items=   90 sha256_ok=True
+  breast_cancer                    rows=  277 features=  10 items=   43 sha256_ok=True
+  cervical_cancer_behavior_risk    rows=   72 features=  20 items=   75 sha256_ok=True
+  chess_king_rook_vs_king_pawn     rows= 3196 features=  36 items=   73 sha256_ok=True
+  congressional_voting             rows=  232 features=  17 items=   34 sha256_ok=True
+  fertility                        rows=  100 features=  10 items=   33 sha256_ok=True
+  hepatitis                        rows=   80 features=  20 items=   58 sha256_ok=True
+  mushroom                         rows= 5644 features=  23 items=  100 sha256_ok=True
+  gene_1000                        rows=   86 features=1000 items= 2901 sha256_ok=True
+
+[A] Mean over seeds (equal budget for the five guides; FP-Growth/PyAerial unbudgeted):
+
+  average_zhang
+  method                         Attention  AttnBottom  CramerV  FP-Growth  MutualInfo  PyAerial  Random
+  dataset                                                                                               
+  acute_inflammations               0.6120      0.3687   0.5610     0.5056      0.5610    0.4793  0.5103
+  autism_screening_adolescent       0.1949      0.0929   0.2498     0.1380      0.2374    0.0444  0.1193
+  breast_cancer                     0.3864      0.0989   0.4766     0.2103      0.3656    0.2014  0.2446
+  cervical_cancer_behavior_risk     0.3920      0.1678   0.4867     0.2725      0.5000    0.0287  0.2891
+  chess_king_rook_vs_king_pawn      0.0972      0.0306   0.2737     0.0471      0.2335    0.0235  0.0491
+  congressional_voting              0.7469      0.5021   0.7790     0.5857      0.7790    0.5561  0.6240
+  fertility                         0.0391      0.0567   0.1023     0.0793      0.0977    0.0413  0.0551
+  gene_1000                         0.0979      0.1114   0.3954        NaN      0.3776       NaN  0.0785
+  hepatitis                         0.2014      0.1037   0.2657     0.1426      0.2371    0.0920  0.1182
+  mushroom                          0.2709      0.1929   0.3990     0.2753      0.4380    0.1838  0.2614
+
+  average_lift
+  method                         Attention  AttnBottom  CramerV  FP-Growth  MutualInfo  PyAerial  Random
+  dataset                                                                                               
+  acute_inflammations               1.7713      1.5078   1.7253     1.7339      1.7253    1.6354  1.6717
+  autism_screening_adolescent       1.1976      1.0657   1.3366     1.1556      1.2955    1.0351  1.1039
+  breast_cancer                     1.2688      1.0681   1.3105     1.1935      1.2931    1.1735  1.1689
+  cervical_cancer_behavior_risk     1.6516      1.2198   1.9020     1.4738      1.9479    1.0335  1.5086
+  chess_king_rook_vs_king_pawn      1.0984      1.0081   1.2374     1.0437      1.2227    1.0160  1.0392
+  congressional_voting              1.7032      1.5459   1.7076     1.6657      1.7076    1.5911  1.6298
+  fertility                         1.0368      1.0621   1.1214     1.0930      1.1068    1.0405  1.0585
+  gene_1000                         1.0300      1.0281   1.1211        NaN      1.1257       NaN  1.0241
+  hepatitis                         1.2441      1.0970   1.3700     1.1607      1.2743    1.0818  1.1443
+  mushroom                          1.4935      1.2805   1.6891     1.4990      1.7617    1.3414  1.4324
+
+  consequents_explained
+  method                         Attention  AttnBottom  CramerV  FP-Growth  MutualInfo  PyAerial  Random
+  dataset                                                                                               
+  acute_inflammations                  5.6         5.6      6.0        6.0         6.0       6.0     5.0
+  autism_screening_adolescent         12.4         8.6     17.0       17.0        16.0       7.6    10.8
+  breast_cancer                        4.4         3.2      5.0        6.0         5.0       5.0     3.6
+  cervical_cancer_behavior_risk        7.0         5.0     14.0       18.0        13.0       2.4     6.6
+  chess_king_rook_vs_king_pawn        27.4        19.2     34.0       34.0        34.0      25.6    23.2
+  congressional_voting                14.0        11.2     15.0       17.0        15.0      13.2    14.0
+  fertility                            2.4         3.4      4.0        7.0         4.0       2.6     3.0
+  gene_1000                          189.8       193.6    518.0        NaN       493.0       NaN   178.8
+  hepatitis                           11.6        10.4     16.0       17.0        14.0       8.6    12.0
+  mushroom                            10.2        13.8     17.0       18.0        18.0      17.4    14.8
+
+  rule_count
+  method                         Attention  AttnBottom  CramerV  FP-Growth  MutualInfo  PyAerial  Random
+  dataset                                                                                               
+  acute_inflammations                 24.2        17.4     34.0      167.0        34.0     113.0    18.0
+  autism_screening_adolescent         52.0        34.4     57.0     3814.0        56.0    2223.2    42.8
+  breast_cancer                       15.0         8.0     15.0      222.0        18.0     215.4    10.4
+  cervical_cancer_behavior_risk       25.2        19.2     54.0     1276.0        50.0     713.6    23.0
+  chess_king_rook_vs_king_pawn       130.6        76.4    139.0    27352.0       153.0   26199.4   103.0
+  congressional_voting                62.6        30.8     69.0     3158.0        69.0    1456.2    52.0
+  fertility                           17.4        17.8     21.0      299.0        21.0     244.6    19.0
+  gene_1000                          316.8       410.6   1034.0        NaN       869.0       NaN   295.6
+  hepatitis                           45.6        58.2     87.0     4168.0        83.0    3227.0    61.4
+  mushroom                            46.2        60.8     97.0     7594.0       105.0    7376.2    72.2
+
+  data_coverage
+  method                         Attention  AttnBottom  CramerV  FP-Growth  MutualInfo  PyAerial  Random
+  dataset                                                                                               
+  acute_inflammations               1.0000      0.9250   1.0000        1.0      1.0000    1.0000  0.9883
+  autism_screening_adolescent       1.0000      1.0000   1.0000        1.0      1.0000    1.0000  1.0000
+  breast_cancer                     0.9588      0.8780   0.9747        1.0      0.9386    0.9957  0.9307
+  cervical_cancer_behavior_risk     1.0000      0.9972   1.0000        1.0      1.0000    1.0000  1.0000
+  chess_king_rook_vs_king_pawn      1.0000      1.0000   1.0000        1.0      1.0000    1.0000  1.0000
+  congressional_voting              1.0000      1.0000   1.0000        1.0      1.0000    1.0000  1.0000
+  fertility                         1.0000      1.0000   1.0000        1.0      1.0000    1.0000  1.0000
+  gene_1000                         1.0000      1.0000   1.0000        NaN      1.0000       NaN  1.0000
+  hepatitis                         1.0000      1.0000   1.0000        1.0      1.0000    1.0000  1.0000
+  mushroom                          1.0000      1.0000   1.0000        1.0      1.0000    1.0000  1.0000
+
+  Zhang: MutualInfo > Attention on 8/10 datasets (mean difference +0.0788)
+  Zhang: CramerV > Attention on 9/10 datasets (mean difference +0.0950)
+  Zhang: Attention > Random on 9/10 datasets (mean difference +0.0689)
+  Zhang: Attention > AttnBottom on 8/10 datasets (mean difference +0.1313)
+  Zhang: MutualInfo > CramerV on 2/10 datasets (mean difference -0.0162)
+
+[B] Test accuracy, mean over seeds:
+  method                         Attention+RL  Attention-noRL  CramerV+RL  CramerV-noRL  FP-Growth  MutualInfo+RL  MutualInfo-noRL  PyAerial  Random+RL  Random-noRL
+  dataset                                                                                                                                                           
+  acute_inflammations                  0.9444          1.0000      0.9222        1.0000     1.0000         0.9222           1.0000    0.9778     0.9444       1.0000
+  autism_screening_adolescent          0.7936          0.8774      0.7871        0.9032     0.8774         0.8194           0.9032    0.6129     0.7613       0.7742
+  breast_cancer                        0.7397          0.7349      0.7277        0.7253     0.7253         0.7277           0.7253    0.7108     0.7397       0.7301
+  cervical_cancer_behavior_risk        0.7809          0.8000      0.8190        0.8476     0.7333         0.8095           0.8190    0.7143     0.7714       0.8095
+  chess_king_rook_vs_king_pawn         0.7191          0.7191      0.9009        0.9030     0.9030         0.9009           0.9030    0.5224     0.5681       0.5681
+  congressional_voting                 0.9246          0.9217      0.9478        0.9623     0.9623         0.9681           0.9623    0.8551     0.9449       0.9507
+  fertility                            0.8667          0.8667      0.8667        0.8667     0.8667         0.8667           0.8667    0.8667     0.8667       0.8667
+  hepatitis                            0.8333          0.8333      0.8250        0.8583     0.8333         0.8166           0.8583    0.8333     0.8333       0.8416
+  mushroom                             0.8819          0.9047      0.8972        0.9040     0.9700         0.8972           0.9040    0.9231     0.8637       0.8652
+
+[B] Number of rules, mean over seeds:
+  method                         Attention+RL  Attention-noRL  CramerV+RL  CramerV-noRL  FP-Growth  MutualInfo+RL  MutualInfo-noRL  PyAerial  Random+RL  Random-noRL
+  dataset                                                                                                                                                           
+  acute_inflammations                     3.4            46.2         3.2          46.2       46.2            3.2             46.2      11.2        3.4         46.2
+  autism_screening_adolescent             4.6            42.6         4.4          64.0      359.2            4.4             64.0       0.0        4.0         33.4
+  breast_cancer                           3.4            24.2         4.0          30.4       58.8            3.4             31.2      17.0        4.0         27.6
+  cervical_cancer_behavior_risk           4.8            58.0         4.4          78.8      579.4            4.4             78.6       0.2        4.0         56.0
+  chess_king_rook_vs_king_pawn            2.0             8.4         4.0          17.8       87.8            4.0             17.8       0.0        0.8          3.4
+  congressional_voting                    2.6            45.2         2.2          47.4      290.2            2.2             47.4      94.8        2.4         45.4
+  fertility                               2.0            97.0         2.4         114.8      207.4            2.6            114.8     131.6        2.0         99.2
+  hepatitis                               2.2            52.6         3.4          88.8      674.2            3.2             91.4     443.2        2.0         53.8
+  mushroom                                3.0            49.6         3.0          71.4      705.0            3.0             86.8     227.6        3.8         45.4
+
+Statistical tests: run statistical_tests.py on md_unsup_per_run.csv and md_sup_per_run.csv.
+
+SELESAI dalam 47.1 menit. Kirimkan md_summary.txt, md_unsup_per_run.csv, md_sup_per_run.csv, md_datasets.csv dan md_experiment_log.txt.

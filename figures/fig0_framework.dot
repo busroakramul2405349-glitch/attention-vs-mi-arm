@@ -1,0 +1,42 @@
+digraph G {
+  graph [rankdir=TB, fontname="Helvetica", nodesep=0.25, ranksep=0.32, pad=0.15, newrank=true];
+  node  [shape=box, style="rounded,filled", fillcolor="white", color="#333333", penwidth=1.1,
+         fontname="Helvetica", fontsize=10, margin="0.12,0.06"];
+  edge  [color="#333333", arrowsize=0.7, penwidth=1.0];
+
+  data  [label=<<B>Categorical table</B><BR/><FONT POINT-SIZE="9">n rows × d features: Mushroom, the 9 datasets of the PyAerial benchmark,<BR/>gene expression (up to 18,108 genes)</FONT>>];
+  items [label=<<B>One-hot items</B><BR/><FONT POINT-SIZE="9">item = (feature = value)</FONT>>];
+
+  ghdr [shape=box, style="filled", fillcolor="#f5f5f5", color="#555555", label=<<B>Guide: choose antecedent features S<SUB>i</SUB> for each consequent i</B><BR/><FONT POINT-SIZE="9">k = 2 per consequent feature (unsupervised); K = 6 for the class (supervised); same budget for every guide</FONT>>];
+  subgraph cluster_guide {
+    label="";
+    fontname="Helvetica"; fontsize=10; style="rounded,dashed"; color="#555555"; margin=10; label="";
+    att  [fillcolor="#e6e6e6", label=<<B>Attention (VATTEN-Rule)</B><BR/><FONT POINT-SIZE="9">value + feature-identity embedding<BR/>variational embedding (μ, log σ²)<BR/>self-attention, masked diagonal<BR/>S<SUB>i</SUB> = top-k of A<SUB>i·</SUB><BR/>9 configurations (Sec. 4.4)</FONT>>];
+    mi   [fillcolor="#e6e6e6", label=<<B>Dependence measures</B><BR/><FONT POINT-SIZE="9">mutual information I(X<SUB>i</SUB>; X<SUB>j</SUB>)<BR/>Cramér’s V<BR/>no training, deterministic<BR/>S<SUB>i</SUB> = top-k</FONT>>];
+    ctrl [fillcolor="#e6e6e6", label=<<B>Controls</B><BR/><FONT POINT-SIZE="9">random features<BR/>lowest-attention features</FONT>>];
+    {rank=same; att; mi; ctrl}
+  }
+
+  cand  [label=<<B>Budgeted candidate generation</B><BR/><FONT POINT-SIZE="9">single items and item pairs from S<SUB>i</SUB>; consequent value with highest confidence<BR/>at most 2c + c² candidates per consequent → linear in d</FONT>>];
+  filt  [label=<<B>Threshold filter</B><BR/><FONT POINT-SIZE="9">supp ≥ s<SUB>min</SUB>, conf ≥ c<SUB>min</SUB> = 0.8, at most two antecedent items</FONT>>];
+  dec   [shape=diamond, style="filled", fillcolor="white", label="Class\nlabel?", fontsize=9.5, margin="0.02,0.02", width=1.1, height=0.75];
+
+  rl    [label=<<B>RL pruning (REINFORCE)</B><BR/><FONT POINT-SIZE="9">reward = acc + λ<SUB>1</SUB>·coverage − λ<SUB>2</SUB>·|R|</FONT>>];
+  cba   [label=<<B>Rule-list classifier</B><BR/><FONT POINT-SIZE="9">same CBA-style classifier for all methods</FONT>>];
+  evs   [style="rounded,filled,bold", label=<<B>Supervised evaluation</B><BR/><FONT POINT-SIZE="9">Mushroom and 9 benchmark datasets<BR/>test accuracy, coverage, rule count, runtime<BR/>Tables 1–2, 7; Fig. 4</FONT>>];
+  evu   [style="rounded,filled,bold", label=<<B>Unsupervised evaluation</B><BR/><FONT POINT-SIZE="9">gene data and 9 benchmark datasets<BR/>lift, Zhang’s metric, consequents explained,<BR/>coverage, runtime at equal budget<BR/>Tables 3–6, 8; Figs. 2–3, 5</FONT>>];
+  stats [shape=box, style="rounded,filled", fillcolor="#f5f5f5", label=<<B>Statistical comparison</B><BR/><FONT POINT-SIZE="9">Friedman + Nemenyi CD;<BR/>Wilcoxon with Holm correction</FONT>>];
+  base  [style="rounded,dashed", label=<<B>Baselines</B><BR/><FONT POINT-SIZE="9">FP-Growth, Apriori (MLxtend),<BR/>PyAerial; 1,000 s limit</FONT>>];
+
+  data -> items;
+  items -> ghdr; ghdr -> att; ghdr -> mi; ghdr -> ctrl;
+  att -> cand; mi -> cand; ctrl -> cand;
+  cand -> filt -> dec;
+  dec -> rl  [label=" yes", fontsize=9, fontname="Helvetica"];
+  dec -> evu [label=" no", fontsize=9, fontname="Helvetica"];
+  rl -> cba -> evs;
+  base -> evs [style=dashed];
+  base -> evu [style=dashed];
+  evs -> stats; evu -> stats;
+  {rank=same; rl; base; evu}
+}

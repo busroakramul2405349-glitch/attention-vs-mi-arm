@@ -1,0 +1,42 @@
+Attention robustness | seeds=[0, 1, 2] | datasets=['chess_king_rook_vs_king_pawn', 'congressional_voting', 'gene_300', 'mushroom']
+
+Mean Zhang's metric, k = 1:
+  dataset          chess_king_rook_vs_king_pawn  congressional_voting  gene_300  mushroom
+  guide                                                                                  
+  Attention[base]                        0.1097                0.7968    0.0886    0.2763
+  MutualInfo                             0.2917                0.8057    0.3510    0.5168
+  Random                                 0.0368                0.6442    0.0649    0.2306
+
+Mean Zhang's metric, k = 2:
+  dataset               chess_king_rook_vs_king_pawn  congressional_voting  gene_300  mushroom
+  guide                                                                                       
+  Attention[base]                             0.1070                0.7542    0.0876    0.2927
+  Attention[beta0]                            0.0900                0.7476    0.0861    0.2879
+  Attention[beta1e-2]                         0.0905                0.7732    0.1011    0.3224
+  Attention[d128]                             0.0927                0.7459    0.0878    0.3337
+  Attention[epochs150]                        0.1167                0.7455    0.0972    0.2921
+  Attention[heads1]                           0.0729                0.7421    0.1010    0.3785
+  Attention[heads8]                           0.1025                0.7656    0.0994    0.2780
+  Attention[noVAE]                            0.0846                0.6729    0.1066    0.3161
+  Attention[sink]                             0.0923                0.7468    0.1001    0.3328
+  MutualInfo                                  0.2335                0.7790    0.3229    0.4380
+  Random                                      0.0605                0.6251    0.0783    0.2455
+
+Mean Zhang's metric, k = 3:
+  dataset          chess_king_rook_vs_king_pawn  congressional_voting  gene_300  mushroom
+  guide                                                                                  
+  Attention[base]                        0.0880                0.7316    0.0902    0.3403
+  MutualInfo                             0.1970                0.7593    0.3033    0.4089
+  Random                                 0.0374                0.6075    0.0714    0.2453
+
+k=2 base      : beats Random in 10/12 runs, beats MI in 0/12 runs; mean Zhang 0.3104 (Random 0.2523, MI 0.4433)
+k=2 epochs150 : beats Random in 11/12 runs, beats MI in 0/12 runs; mean Zhang 0.3129 (Random 0.2523, MI 0.4433)
+k=2 heads1    : beats Random in 9/12 runs, beats MI in 0/12 runs; mean Zhang 0.3236 (Random 0.2523, MI 0.4433)
+k=2 heads8    : beats Random in 9/12 runs, beats MI in 0/12 runs; mean Zhang 0.3114 (Random 0.2523, MI 0.4433)
+k=2 d128      : beats Random in 11/12 runs, beats MI in 0/12 runs; mean Zhang 0.3150 (Random 0.2523, MI 0.4433)
+k=2 beta0     : beats Random in 10/12 runs, beats MI in 0/12 runs; mean Zhang 0.3029 (Random 0.2523, MI 0.4433)
+k=2 beta1e-2  : beats Random in 11/12 runs, beats MI in 3/12 runs; mean Zhang 0.3218 (Random 0.2523, MI 0.4433)
+k=2 noVAE     : beats Random in 12/12 runs, beats MI in 0/12 runs; mean Zhang 0.2950 (Random 0.2523, MI 0.4433)
+k=2 sink      : beats Random in 11/12 runs, beats MI in 1/12 runs; mean Zhang 0.3180 (Random 0.2523, MI 0.4433); attention to sink 0.003
+
+Statistical tests: statistical_tests.py (section C).

@@ -1,0 +1,261 @@
+Python 3.13.0 | Windows-11-10.0.26200-SP0
+  numpy 2.5.4
+  pandas 3.1.0
+  torch 2.14.1
+
+=== gene_300: 86 rows x 300 features, min_support=0.438 ===
+  seed 0 k=1 Random                     rules=   59 zhang=0.047 lift=1.014 cons=59
+  seed 0 k=1 MutualInfo                 rules=  124 zhang=0.351 lift=1.117 cons=124
+  seed 0 k=2 Random                     rules=  159 zhang=0.089 lift=1.029 cons=76
+  seed 0 k=2 MutualInfo                 rules=  325 zhang=0.323 lift=1.125 cons=158
+  seed 0 k=3 Random                     rules=  290 zhang=0.078 lift=1.028 cons=98
+  seed 0 k=3 MutualInfo                 rules=  587 zhang=0.303 lift=1.122 cons=175
+  seed 0 k=1 Attention[base]            rules=   64 zhang=0.087 lift=1.023 cons=64
+  seed 0 k=2 Attention[base]            rules=  170 zhang=0.080 lift=1.028 cons=83
+  seed 0 k=3 Attention[base]            rules=  329 zhang=0.082 lift=1.030 cons=100
+  seed 0 k=2 Attention[epochs150]       rules=  154 zhang=0.090 lift=1.032 cons=82
+  seed 0 k=2 Attention[heads1]          rules=  188 zhang=0.083 lift=1.027 cons=82
+  seed 0 k=2 Attention[heads8]          rules=  169 zhang=0.083 lift=1.026 cons=81
+  seed 0 k=2 Attention[d128]            rules=  166 zhang=0.089 lift=1.033 cons=80
+  seed 0 k=2 Attention[beta0]           rules=  172 zhang=0.082 lift=1.029 cons=84
+  seed 0 k=2 Attention[beta1e-2]        rules=  186 zhang=0.089 lift=1.031 cons=93
+  seed 0 k=2 Attention[noVAE]           rules=  200 zhang=0.099 lift=1.036 cons=93
+  seed 0 k=2 Attention[sink]            rules=  185 zhang=0.098 lift=1.035 cons=90
+  seed 1 k=1 Random                     rules=   69 zhang=0.083 lift=1.024 cons=69
+  seed 1 k=1 MutualInfo                 rules=  124 zhang=0.351 lift=1.117 cons=124
+  seed 1 k=2 Random                     rules=  160 zhang=0.076 lift=1.023 cons=78
+  seed 1 k=2 MutualInfo                 rules=  325 zhang=0.323 lift=1.125 cons=158
+  seed 1 k=3 Random                     rules=  298 zhang=0.062 lift=1.023 cons=88
+  seed 1 k=3 MutualInfo                 rules=  587 zhang=0.303 lift=1.122 cons=175
+  seed 1 k=1 Attention[base]            rules=   64 zhang=0.078 lift=1.025 cons=64
+  seed 1 k=2 Attention[base]            rules=  182 zhang=0.089 lift=1.029 cons=81
+  seed 1 k=3 Attention[base]            rules=  325 zhang=0.089 lift=1.031 cons=92
+  seed 1 k=2 Attention[epochs150]       rules=  165 zhang=0.101 lift=1.036 cons=85
+  seed 1 k=2 Attention[heads1]          rules=  197 zhang=0.111 lift=1.035 cons=93
+  seed 1 k=2 Attention[heads8]          rules=  168 zhang=0.101 lift=1.036 cons=86
+  seed 1 k=2 Attention[d128]            rules=  160 zhang=0.089 lift=1.033 cons=86
+  seed 1 k=2 Attention[beta0]           rules=  181 zhang=0.084 lift=1.027 cons=79
+  seed 1 k=2 Attention[beta1e-2]        rules=  187 zhang=0.090 lift=1.034 cons=90
+  seed 1 k=2 Attention[noVAE]           rules=  176 zhang=0.098 lift=1.037 cons=86
+  seed 1 k=2 Attention[sink]            rules=  170 zhang=0.086 lift=1.029 cons=84
+  seed 2 k=1 Random                     rules=   65 zhang=0.064 lift=1.020 cons=65
+  seed 2 k=1 MutualInfo                 rules=  124 zhang=0.351 lift=1.117 cons=124
+  seed 2 k=2 Random                     rules=  159 zhang=0.070 lift=1.024 cons=79
+  seed 2 k=2 MutualInfo                 rules=  325 zhang=0.323 lift=1.125 cons=158
+  seed 2 k=3 Random                     rules=  299 zhang=0.074 lift=1.027 cons=95
+  seed 2 k=3 MutualInfo                 rules=  587 zhang=0.303 lift=1.122 cons=175
+  seed 2 k=1 Attention[base]            rules=   65 zhang=0.101 lift=1.033 cons=65
+  seed 2 k=2 Attention[base]            rules=  164 zhang=0.095 lift=1.031 cons=83
+  seed 2 k=3 Attention[base]            rules=  308 zhang=0.100 lift=1.036 cons=96
+  seed 2 k=2 Attention[epochs150]       rules=  159 zhang=0.101 lift=1.038 cons=89
+  seed 2 k=2 Attention[heads1]          rules=  194 zhang=0.109 lift=1.035 cons=90
+  seed 2 k=2 Attention[heads8]          rules=  194 zhang=0.114 lift=1.040 cons=91
+  seed 2 k=2 Attention[d128]            rules=  158 zhang=0.086 lift=1.031 cons=81
+  seed 2 k=2 Attention[beta0]           rules=  163 zhang=0.092 lift=1.030 cons=83
+  seed 2 k=2 Attention[beta1e-2]        rules=  173 zhang=0.124 lift=1.043 cons=86
+  seed 2 k=2 Attention[noVAE]           rules=  177 zhang=0.123 lift=1.043 cons=87
+  seed 2 k=2 Attention[sink]            rules=  169 zhang=0.116 lift=1.040 cons=86
+
+=== chess_king_rook_vs_king_pawn: 3196 rows x 36 features, min_support=0.1 ===
+  seed 0 k=1 Random                     rules=   35 zhang=0.062 lift=1.016 cons=22
+  seed 0 k=1 MutualInfo                 rules=   40 zhang=0.292 lift=1.216 cons=33
+  seed 0 k=2 Random                     rules=  116 zhang=0.048 lift=1.044 cons=25
+  seed 0 k=2 MutualInfo                 rules=  153 zhang=0.233 lift=1.223 cons=34
+  seed 0 k=3 Random                     rules=  228 zhang=0.041 lift=1.034 cons=26
+  seed 0 k=3 MutualInfo                 rules=  315 zhang=0.197 lift=1.192 cons=34
+  seed 0 k=1 Attention[base]            rules=   32 zhang=0.092 lift=1.058 cons=23
+  seed 0 k=2 Attention[base]            rules=  130 zhang=0.108 lift=1.105 cons=29
+  seed 0 k=3 Attention[base]            rules=  288 zhang=0.093 lift=1.091 cons=30
+  seed 0 k=2 Attention[epochs150]       rules=  130 zhang=0.092 lift=1.086 cons=29
+  seed 0 k=2 Attention[heads1]          rules=   92 zhang=0.106 lift=1.087 cons=24
+  seed 0 k=2 Attention[heads8]          rules=  148 zhang=0.127 lift=1.146 cons=30
+  seed 0 k=2 Attention[d128]            rules=  123 zhang=0.090 lift=1.108 cons=26
+  seed 0 k=2 Attention[beta0]           rules=  112 zhang=0.088 lift=1.059 cons=27
+  seed 0 k=2 Attention[beta1e-2]        rules=  158 zhang=0.092 lift=1.106 cons=30
+  seed 0 k=2 Attention[noVAE]           rules=  105 zhang=0.081 lift=1.093 cons=24
+  seed 0 k=2 Attention[sink]            rules=  109 zhang=0.092 lift=1.082 cons=25
+  seed 1 k=1 Random                     rules=   32 zhang=0.034 lift=1.007 cons=18
+  seed 1 k=1 MutualInfo                 rules=   40 zhang=0.292 lift=1.216 cons=33
+  seed 1 k=2 Random                     rules=  101 zhang=0.056 lift=1.035 cons=25
+  seed 1 k=2 MutualInfo                 rules=  153 zhang=0.233 lift=1.223 cons=34
+  seed 1 k=3 Random                     rules=  210 zhang=0.026 lift=1.015 cons=23
+  seed 1 k=3 MutualInfo                 rules=  315 zhang=0.197 lift=1.192 cons=34
+  seed 1 k=1 Attention[base]            rules=   38 zhang=0.081 lift=1.110 cons=24
+  seed 1 k=2 Attention[base]            rules=  138 zhang=0.089 lift=1.106 cons=26
+  seed 1 k=3 Attention[base]            rules=  300 zhang=0.070 lift=1.082 cons=27
+  seed 1 k=2 Attention[epochs150]       rules=  126 zhang=0.143 lift=1.196 cons=27
+  seed 1 k=2 Attention[heads1]          rules=   86 zhang=0.039 lift=1.037 cons=22
+  seed 1 k=2 Attention[heads8]          rules=  127 zhang=0.108 lift=1.100 cons=27
+  seed 1 k=2 Attention[d128]            rules=  122 zhang=0.096 lift=1.104 cons=27
+  seed 1 k=2 Attention[beta0]           rules=  111 zhang=0.067 lift=1.056 cons=24
+  seed 1 k=2 Attention[beta1e-2]        rules=  131 zhang=0.084 lift=1.066 cons=26
+  seed 1 k=2 Attention[noVAE]           rules=   98 zhang=0.065 lift=1.076 cons=23
+  seed 1 k=2 Attention[sink]            rules=  118 zhang=0.076 lift=1.076 cons=23
+  seed 2 k=1 Random                     rules=   28 zhang=0.014 lift=1.009 cons=20
+  seed 2 k=1 MutualInfo                 rules=   40 zhang=0.292 lift=1.216 cons=33
+  seed 2 k=2 Random                     rules=   95 zhang=0.078 lift=1.074 cons=22
+  seed 2 k=2 MutualInfo                 rules=  153 zhang=0.233 lift=1.223 cons=34
+  seed 2 k=3 Random                     rules=  197 zhang=0.045 lift=1.037 cons=25
+  seed 2 k=3 MutualInfo                 rules=  315 zhang=0.197 lift=1.192 cons=34
+  seed 2 k=1 Attention[base]            rules=   34 zhang=0.156 lift=1.083 cons=25
+  seed 2 k=2 Attention[base]            rules=  133 zhang=0.125 lift=1.125 cons=30
+  seed 2 k=3 Attention[base]            rules=  289 zhang=0.101 lift=1.104 cons=30
+  seed 2 k=2 Attention[epochs150]       rules=  132 zhang=0.115 lift=1.124 cons=29
+  seed 2 k=2 Attention[heads1]          rules=  103 zhang=0.073 lift=1.080 cons=24
+  seed 2 k=2 Attention[heads8]          rules=  146 zhang=0.072 lift=1.076 cons=28
+  seed 2 k=2 Attention[d128]            rules=  115 zhang=0.091 lift=1.100 cons=26
+  seed 2 k=2 Attention[beta0]           rules=  118 zhang=0.115 lift=1.112 cons=29
+  seed 2 k=2 Attention[beta1e-2]        rules=  157 zhang=0.096 lift=1.101 cons=30
+  seed 2 k=2 Attention[noVAE]           rules=   95 zhang=0.108 lift=1.111 cons=25
+  seed 2 k=2 Attention[sink]            rules=  129 zhang=0.108 lift=1.108 cons=29
+
+=== congressional_voting: 232 rows x 17 features, min_support=0.1 ===
+  seed 0 k=1 Random                     rules=   13 zhang=0.713 lift=1.596 cons=10
+  seed 0 k=1 MutualInfo                 rules=   24 zhang=0.806 lift=1.700 cons=15
+  seed 0 k=2 Random                     rules=   51 zhang=0.631 lift=1.623 cons=14
+  seed 0 k=2 MutualInfo                 rules=   69 zhang=0.779 lift=1.708 cons=15
+  seed 0 k=3 Random                     rules=  126 zhang=0.624 lift=1.645 cons=15
+  seed 0 k=3 MutualInfo                 rules=  138 zhang=0.759 lift=1.707 cons=16
+  seed 0 k=1 Attention[base]            rules=   21 zhang=0.810 lift=1.708 cons=13
+  seed 0 k=2 Attention[base]            rules=   63 zhang=0.777 lift=1.712 cons=13
+  seed 0 k=3 Attention[base]            rules=  129 zhang=0.751 lift=1.708 cons=16
+  seed 0 k=2 Attention[epochs150]       rules=   64 zhang=0.713 lift=1.664 cons=14
+  seed 0 k=2 Attention[heads1]          rules=   60 zhang=0.740 lift=1.669 cons=14
+  seed 0 k=2 Attention[heads8]          rules=   59 zhang=0.762 lift=1.710 cons=14
+  seed 0 k=2 Attention[d128]            rules=   59 zhang=0.737 lift=1.699 cons=13
+  seed 0 k=2 Attention[beta0]           rules=   64 zhang=0.719 lift=1.682 cons=16
+  seed 0 k=2 Attention[beta1e-2]        rules=   62 zhang=0.783 lift=1.721 cons=13
+  seed 0 k=2 Attention[noVAE]           rules=   58 zhang=0.704 lift=1.680 cons=15
+  seed 0 k=2 Attention[sink]            rules=   64 zhang=0.748 lift=1.688 cons=14
+  seed 1 k=1 Random                     rules=   10 zhang=0.589 lift=1.537 cons=9
+  seed 1 k=1 MutualInfo                 rules=   24 zhang=0.806 lift=1.700 cons=15
+  seed 1 k=2 Random                     rules=   45 zhang=0.629 lift=1.660 cons=13
+  seed 1 k=2 MutualInfo                 rules=   69 zhang=0.779 lift=1.708 cons=15
+  seed 1 k=3 Random                     rules=  112 zhang=0.603 lift=1.650 cons=14
+  seed 1 k=3 MutualInfo                 rules=  138 zhang=0.759 lift=1.707 cons=16
+  seed 1 k=1 Attention[base]            rules=   20 zhang=0.804 lift=1.694 cons=13
+  seed 1 k=2 Attention[base]            rules=   63 zhang=0.747 lift=1.698 cons=14
+  seed 1 k=3 Attention[base]            rules=  131 zhang=0.725 lift=1.693 cons=15
+  seed 1 k=2 Attention[epochs150]       rules=   63 zhang=0.758 lift=1.694 cons=15
+  seed 1 k=2 Attention[heads1]          rules=   62 zhang=0.757 lift=1.700 cons=14
+  seed 1 k=2 Attention[heads8]          rules=   59 zhang=0.777 lift=1.713 cons=14
+  seed 1 k=2 Attention[d128]            rules=   68 zhang=0.735 lift=1.668 cons=15
+  seed 1 k=2 Attention[beta0]           rules=   64 zhang=0.766 lift=1.685 cons=15
+  seed 1 k=2 Attention[beta1e-2]        rules=   58 zhang=0.779 lift=1.702 cons=14
+  seed 1 k=2 Attention[noVAE]           rules=   56 zhang=0.661 lift=1.679 cons=14
+  seed 1 k=2 Attention[sink]            rules=   64 zhang=0.764 lift=1.698 cons=14
+  seed 2 k=1 Random                     rules=   11 zhang=0.632 lift=1.605 cons=10
+  seed 2 k=1 MutualInfo                 rules=   24 zhang=0.806 lift=1.700 cons=15
+  seed 2 k=2 Random                     rules=   53 zhang=0.615 lift=1.619 cons=15
+  seed 2 k=2 MutualInfo                 rules=   69 zhang=0.779 lift=1.708 cons=15
+  seed 2 k=3 Random                     rules=   98 zhang=0.596 lift=1.626 cons=14
+  seed 2 k=3 MutualInfo                 rules=  138 zhang=0.759 lift=1.707 cons=16
+  seed 2 k=1 Attention[base]            rules=   18 zhang=0.776 lift=1.678 cons=13
+  seed 2 k=2 Attention[base]            rules=   59 zhang=0.739 lift=1.701 cons=14
+  seed 2 k=3 Attention[base]            rules=  130 zhang=0.719 lift=1.692 cons=15
+  seed 2 k=2 Attention[epochs150]       rules=   60 zhang=0.766 lift=1.700 cons=14
+  seed 2 k=2 Attention[heads1]          rules=   63 zhang=0.730 lift=1.664 cons=15
+  seed 2 k=2 Attention[heads8]          rules=   57 zhang=0.757 lift=1.688 cons=14
+  seed 2 k=2 Attention[d128]            rules=   63 zhang=0.765 lift=1.698 cons=13
+  seed 2 k=2 Attention[beta0]           rules=   63 zhang=0.758 lift=1.681 cons=15
+  seed 2 k=2 Attention[beta1e-2]        rules=   60 zhang=0.758 lift=1.686 cons=14
+  seed 2 k=2 Attention[noVAE]           rules=   49 zhang=0.654 lift=1.679 cons=14
+  seed 2 k=2 Attention[sink]            rules=   64 zhang=0.729 lift=1.674 cons=15
+
+=== mushroom: 5644 rows x 23 features, min_support=0.1 ===
+  seed 0 k=1 Random                     rules=   16 zhang=0.293 lift=1.523 cons=11
+  seed 0 k=1 MutualInfo                 rules=   33 zhang=0.517 lift=1.964 cons=18
+  seed 0 k=2 Random                     rules=   74 zhang=0.324 lift=1.551 cons=16
+  seed 0 k=2 MutualInfo                 rules=  105 zhang=0.438 lift=1.762 cons=18
+  seed 0 k=3 Random                     rules=  160 zhang=0.287 lift=1.504 cons=17
+  seed 0 k=3 MutualInfo                 rules=  211 zhang=0.409 lift=1.743 cons=18
+  seed 0 k=1 Attention[base]            rules=    9 zhang=0.088 lift=0.999 cons=6
+  seed 0 k=2 Attention[base]            rules=   36 zhang=0.144 lift=1.098 cons=7
+  seed 0 k=3 Attention[base]            rules=   93 zhang=0.268 lift=1.282 cons=11
+  seed 0 k=2 Attention[epochs150]       rules=   38 zhang=0.272 lift=1.225 cons=9
+  seed 0 k=2 Attention[heads1]          rules=   35 zhang=0.415 lift=1.480 cons=9
+  seed 0 k=2 Attention[heads8]          rules=   40 zhang=0.292 lift=1.244 cons=10
+  seed 0 k=2 Attention[d128]            rules=   60 zhang=0.264 lift=1.385 cons=15
+  seed 0 k=2 Attention[beta0]           rules=   38 zhang=0.153 lift=1.200 cons=8
+  seed 0 k=2 Attention[beta1e-2]        rules=   31 zhang=0.226 lift=1.097 cons=8
+  seed 0 k=2 Attention[noVAE]           rules=   36 zhang=0.329 lift=1.330 cons=8
+  seed 0 k=2 Attention[sink]            rules=   57 zhang=0.395 lift=1.557 cons=13
+  seed 1 k=1 Random                     rules=   23 zhang=0.201 lift=1.375 cons=12
+  seed 1 k=1 MutualInfo                 rules=   33 zhang=0.517 lift=1.964 cons=18
+  seed 1 k=2 Random                     rules=   75 zhang=0.218 lift=1.412 cons=13
+  seed 1 k=2 MutualInfo                 rules=  105 zhang=0.438 lift=1.762 cons=18
+  seed 1 k=3 Random                     rules=  146 zhang=0.204 lift=1.327 cons=17
+  seed 1 k=3 MutualInfo                 rules=  211 zhang=0.409 lift=1.743 cons=18
+  seed 1 k=1 Attention[base]            rules=   16 zhang=0.348 lift=1.963 cons=9
+  seed 1 k=2 Attention[base]            rules=   52 zhang=0.351 lift=1.848 cons=13
+  seed 1 k=3 Attention[base]            rules=  125 zhang=0.379 lift=1.746 cons=16
+  seed 1 k=2 Attention[epochs150]       rules=   43 zhang=0.367 lift=1.594 cons=10
+  seed 1 k=2 Attention[heads1]          rules=   55 zhang=0.376 lift=1.702 cons=15
+  seed 1 k=2 Attention[heads8]          rules=   47 zhang=0.240 lift=1.226 cons=10
+  seed 1 k=2 Attention[d128]            rules=   38 zhang=0.385 lift=1.626 cons=12
+  seed 1 k=2 Attention[beta0]           rules=   62 zhang=0.347 lift=1.604 cons=11
+  seed 1 k=2 Attention[beta1e-2]        rules=   64 zhang=0.481 lift=1.792 cons=15
+  seed 1 k=2 Attention[noVAE]           rules=   39 zhang=0.417 lift=1.653 cons=10
+  seed 1 k=2 Attention[sink]            rules=   58 zhang=0.459 lift=1.750 cons=13
+  seed 2 k=1 Random                     rules=   23 zhang=0.197 lift=1.213 cons=12
+  seed 2 k=1 MutualInfo                 rules=   33 zhang=0.517 lift=1.964 cons=18
+  seed 2 k=2 Random                     rules=   71 zhang=0.195 lift=1.297 cons=14
+  seed 2 k=2 MutualInfo                 rules=  105 zhang=0.438 lift=1.762 cons=18
+  seed 2 k=3 Random                     rules=  155 zhang=0.245 lift=1.430 cons=15
+  seed 2 k=3 MutualInfo                 rules=  211 zhang=0.409 lift=1.743 cons=18
+  seed 2 k=1 Attention[base]            rules=   19 zhang=0.393 lift=1.519 cons=10
+  seed 2 k=2 Attention[base]            rules=   68 zhang=0.383 lift=1.595 cons=14
+  seed 2 k=3 Attention[base]            rules=  153 zhang=0.374 lift=1.646 cons=16
+  seed 2 k=2 Attention[epochs150]       rules=   34 zhang=0.238 lift=1.339 cons=8
+  seed 2 k=2 Attention[heads1]          rules=   38 zhang=0.344 lift=1.427 cons=10
+  seed 2 k=2 Attention[heads8]          rules=   55 zhang=0.302 lift=1.404 cons=14
+  seed 2 k=2 Attention[d128]            rules=   57 zhang=0.352 lift=1.660 cons=14
+  seed 2 k=2 Attention[beta0]           rules=   65 zhang=0.364 lift=1.527 cons=14
+  seed 2 k=2 Attention[beta1e-2]        rules=   44 zhang=0.260 lift=1.600 cons=9
+  seed 2 k=2 Attention[noVAE]           rules=   40 zhang=0.202 lift=1.236 cons=9
+  seed 2 k=2 Attention[sink]            rules=   38 zhang=0.145 lift=1.112 cons=9
+
+Attention robustness | seeds=[0, 1, 2] | datasets=['chess_king_rook_vs_king_pawn', 'congressional_voting', 'gene_300', 'mushroom']
+
+Mean Zhang's metric, k = 1:
+  dataset          chess_king_rook_vs_king_pawn  congressional_voting  gene_300  mushroom
+  guide                                                                                  
+  Attention[base]                        0.1097                0.7968    0.0886    0.2763
+  MutualInfo                             0.2917                0.8057    0.3510    0.5168
+  Random                                 0.0368                0.6442    0.0649    0.2306
+
+Mean Zhang's metric, k = 2:
+  dataset               chess_king_rook_vs_king_pawn  congressional_voting  gene_300  mushroom
+  guide                                                                                       
+  Attention[base]                             0.1070                0.7542    0.0876    0.2927
+  Attention[beta0]                            0.0900                0.7476    0.0861    0.2879
+  Attention[beta1e-2]                         0.0905                0.7732    0.1011    0.3224
+  Attention[d128]                             0.0927                0.7459    0.0878    0.3337
+  Attention[epochs150]                        0.1167                0.7455    0.0972    0.2921
+  Attention[heads1]                           0.0729                0.7421    0.1010    0.3785
+  Attention[heads8]                           0.1025                0.7656    0.0994    0.2780
+  Attention[noVAE]                            0.0846                0.6729    0.1066    0.3161
+  Attention[sink]                             0.0923                0.7468    0.1001    0.3328
+  MutualInfo                                  0.2335                0.7790    0.3229    0.4380
+  Random                                      0.0605                0.6251    0.0783    0.2455
+
+Mean Zhang's metric, k = 3:
+  dataset          chess_king_rook_vs_king_pawn  congressional_voting  gene_300  mushroom
+  guide                                                                                  
+  Attention[base]                        0.0880                0.7316    0.0902    0.3403
+  MutualInfo                             0.1970                0.7593    0.3033    0.4089
+  Random                                 0.0374                0.6075    0.0714    0.2453
+
+k=2 base      : beats Random in 10/12 runs, beats MI in 0/12 runs; mean Zhang 0.3104 (Random 0.2523, MI 0.4433)
+k=2 epochs150 : beats Random in 11/12 runs, beats MI in 0/12 runs; mean Zhang 0.3129 (Random 0.2523, MI 0.4433)
+k=2 heads1    : beats Random in 9/12 runs, beats MI in 0/12 runs; mean Zhang 0.3236 (Random 0.2523, MI 0.4433)
+k=2 heads8    : beats Random in 9/12 runs, beats MI in 0/12 runs; mean Zhang 0.3114 (Random 0.2523, MI 0.4433)
+k=2 d128      : beats Random in 11/12 runs, beats MI in 0/12 runs; mean Zhang 0.3150 (Random 0.2523, MI 0.4433)
+k=2 beta0     : beats Random in 10/12 runs, beats MI in 0/12 runs; mean Zhang 0.3029 (Random 0.2523, MI 0.4433)
+k=2 beta1e-2  : beats Random in 11/12 runs, beats MI in 3/12 runs; mean Zhang 0.3218 (Random 0.2523, MI 0.4433)
+k=2 noVAE     : beats Random in 12/12 runs, beats MI in 0/12 runs; mean Zhang 0.2950 (Random 0.2523, MI 0.4433)
+k=2 sink      : beats Random in 11/12 runs, beats MI in 1/12 runs; mean Zhang 0.3180 (Random 0.2523, MI 0.4433); attention to sink 0.003
+
+Statistical tests: statistical_tests.py (section C).
+
+SELESAI dalam 76.4 menit. Kirimkan rob_summary.txt, rob_per_run.csv dan rob_experiment_log.txt.
